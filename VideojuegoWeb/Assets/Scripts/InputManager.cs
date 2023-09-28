@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public GameObject instance;
     Vector3 touchPosition;
     // Start is called before the first frame update
     void Start()
@@ -22,8 +21,7 @@ public class InputManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit)) 
             {
                 touchPosition = hit.point;
-                //Instantiate(instance, touchPosition, new Quaternion(0, 0, 0, 0));
-                Collider[] colliders = Physics.OverlapSphere(touchPosition, 1); 
+                Collider[] colliders = Physics.OverlapSphere(touchPosition, 0.1f); 
                 foreach (Collider collider in colliders) 
                 {
                     collider.gameObject.GetComponent<InteractableObject>()?.Interact();
