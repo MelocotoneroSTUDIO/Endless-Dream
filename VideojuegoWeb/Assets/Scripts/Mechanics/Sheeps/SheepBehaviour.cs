@@ -9,7 +9,7 @@ public class SheepBehaviour : InteractableObject
     public Transform playerFollow;
     public float updateTime= 0.5f;
 
-    private NavMeshAgent agent;
+    private NavMeshAgent agent=default;
     private Coroutine destinationCorutine;
     
     // Start is called before the first frame update
