@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class SheepBehaviour : InteractableObject
 {
     public Transform playerFollow;
+    public float updateTime= 0.5f;
 
     private NavMeshAgent agent;
     private Coroutine destinationCorutine;
@@ -22,7 +23,7 @@ public class SheepBehaviour : InteractableObject
         base.Interact();
         if (destinationCorutine == null) 
         {
-            destinationCorutine = StartCoroutine(updateDestination());
+            destinationCorutine = StartCoroutine(updateDestination(updateTime));
         }
         else 
         {
@@ -33,11 +34,11 @@ public class SheepBehaviour : InteractableObject
 
 
 
-    IEnumerator updateDestination()
+    IEnumerator updateDestination(float updateTime)
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(updateTime);
             SetDestination(playerFollow.position);
         }
     }
