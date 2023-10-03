@@ -18,9 +18,12 @@ public class SheepSpawner : InteractableObject
     private bool allowSpawn=true;
     private Vector3 startRot;
 
+    private SheepManager sheepManager;
+
     private void Start()
     {
         startRot = transform.rotation.eulerAngles;
+        sheepManager = FindObjectOfType<SheepManager>();
     }
 
     public override void Interact()
@@ -34,6 +37,7 @@ public class SheepSpawner : InteractableObject
             openDoor();
             SheepBehaviour sheepBehaviour = instance.GetComponent<SheepBehaviour>();
             sheepBehaviour.playerFollow = playerFollow;
+            sheepManager.addSheep(sheepBehaviour);
             //sheepBehaviour.SetDestination(exitDoorPosition.position);
             instance.transform.DOMove(exitDoorPosition.position,2);
             StartCoroutine(cooldown());

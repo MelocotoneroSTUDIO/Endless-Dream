@@ -8,6 +8,7 @@ public class SheepBehaviour : InteractableObject
 {
     public Transform playerFollow;
     public float updateTime= 0.5f;
+    public bool isFollowing = false;
 
     private NavMeshAgent agent=default;
     private Coroutine destinationCorutine;
@@ -21,14 +22,22 @@ public class SheepBehaviour : InteractableObject
     public override void Interact()
     {
         base.Interact();
+
+        if (transform.parent != null) 
+        {
+            transform.parent.GetComponent<SheepPlacer>()?.removeSheep(this);
+        }
+
         if (destinationCorutine == null) 
         {
+            isFollowing = true;
             destinationCorutine = StartCoroutine(updateDestination(updateTime));
         }
         else 
         {
             StopCoroutine(destinationCorutine);
             destinationCorutine = null;
+            isFollowing = false;
         }
     }
 
@@ -46,5 +55,13 @@ public class SheepBehaviour : InteractableObject
     public void SetDestination(Vector3 destination) 
     {
         agent.SetDestination(destination);
+    }
+
+    public void stopPlayerFollow()
+    {
+        if (destinationCorutine != null) 
+        {
+        StopCoroutine (destinationCorutine);
+        }
     }
 }

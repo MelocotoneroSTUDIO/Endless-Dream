@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         else 
         {
             InputMethod += joystickController;
+            joystick.gameObject.SetActive(true);
         }
     }
 
