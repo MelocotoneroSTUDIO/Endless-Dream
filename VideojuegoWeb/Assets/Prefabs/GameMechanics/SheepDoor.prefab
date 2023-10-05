@@ -66,7 +66,7 @@ Transform:
   - {fileID: 7923817412609605582}
   - {fileID: 6483451427631906814}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6724847692383825882
 BoxCollider:
@@ -105,7 +105,7 @@ MonoBehaviour:
   spawnPosition: {fileID: 7923817412609605582}
   exitDoorPosition: {fileID: 6483451427631906814}
   playerFollow: {fileID: 0}
-  sheep: {fileID: 0}
+  sheep: {fileID: 5721717789458765648, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
   door: {fileID: 222372313005176087}
   doorOpenRot: {x: 0, y: -90, z: 0}
   openTime: 1

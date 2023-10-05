@@ -40,4 +40,10 @@ public class MovingObject : InteractableObject
             other.gameObject.transform.parent = null;
     }
 
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position,endPos.position);
+    }
 }

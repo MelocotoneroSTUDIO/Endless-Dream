@@ -50,9 +50,12 @@ public class BeaconBehaviour : MonoBehaviour
         transform.DOMove(startPos, timeToMove).OnComplete(() => { moveBeamToEnd(); });
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, endPos.position);
+
+        Gizmos.color = Color.blue;
         Gizmos.DrawLine(beamOrigin.position, beamDirection.position+beamDirectionOffset);
         Gizmos.DrawWireSphere(touchPosition,3);
     }
