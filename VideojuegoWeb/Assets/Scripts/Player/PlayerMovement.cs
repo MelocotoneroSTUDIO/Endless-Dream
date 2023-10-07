@@ -6,22 +6,24 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [Header("Joystick")]
     public Joystick joystick;
     private Vector3 desiredMovement;
+    [Header("Movement stats")]
     public float speed;
     public float rotationSpeed;
     public float playerMass = 0.2f;
-    CharacterController controller;
+    private CharacterController controller;
     private bool grounded;
     private float gravity=0;
 
-    Action InputMethod;
-    // Start is called before the first frame update
+    private Action InputMethod; 
+
     void Start()
     {
         controller=GetComponent<CharacterController>();
         Debug.Log(SystemInfo.deviceType);
+        //Determine inputType
         if (SystemInfo.deviceType == DeviceType.Desktop) 
         {
             InputMethod += keyboardController;
@@ -38,9 +40,9 @@ public class PlayerMovement : MonoBehaviour
     {
         desiredMovement = Vector3.zero;
         InputMethod.Invoke();
-        //desiredMovement = new Vector3(joystick.Horizontal,0,joystick.Vertical)*speed;
         controller.Move(desiredMovement);
 
+        //Apply gravity
         grounded = controller.isGrounded;
         if (grounded) 
         {
@@ -52,16 +54,21 @@ public class PlayerMovement : MonoBehaviour
         }
         controller.Move(new Vector3(0, gravity * playerMass * Time.deltaTime, 0));
 
+        //Rotate to face movement direction
         if (desiredMovement.magnitude > 0)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement), rotationSpeed);
         }
     }
 
+
+
+    //Calculate movement vector depending on input
     void joystickController() 
     {
         desiredMovement = new Vector3(joystick.Horizontal, 0, joystick.Vertical) * speed * Time.deltaTime;
     }
+
     void keyboardController() 
     {
         float xInput = Input.GetAxis("Horizontal");

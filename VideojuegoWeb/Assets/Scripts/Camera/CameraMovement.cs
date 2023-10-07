@@ -6,24 +6,20 @@ using UnityEngine.EventSystems;
 
 public class CameraMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    [Header("Camera")]
     public CinemachineVirtualCamera VirtualCamera;
     private CinemachineOrbitalTransposer transposer;
+
+    [Header("Camera stats")]
     public float speed;
     public float swipeThreshold;
 
     private bool draggingStarted = false;
     private Vector2 startPos, endPos;
 
-    // Start is called before the first frame update
     void Start()
     {
         transposer = VirtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void OnDrag(PointerEventData eventData)

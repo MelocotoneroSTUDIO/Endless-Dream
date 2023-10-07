@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class SheepBehaviour : InteractableObject
 {
+    //Class that handles sheep behaviour
+    [Header("Sheep info")]
     public Transform playerFollow;
     public float updateTime= 0.5f;
     public bool isFollowing = false;
@@ -13,7 +15,6 @@ public class SheepBehaviour : InteractableObject
     private NavMeshAgent agent=default;
     private Coroutine destinationCorutine;
     
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -23,11 +24,13 @@ public class SheepBehaviour : InteractableObject
     {
         base.Interact();
 
+        //If placed remove the sheep from the place
         if (transform.parent != null) 
         {
             transform.parent.GetComponent<SheepPlacer>()?.removeSheep(this);
         }
 
+        //Follow the player or stop the sheep
         if (destinationCorutine == null) 
         {
             isFollowing = true;
@@ -35,9 +38,7 @@ public class SheepBehaviour : InteractableObject
         }
         else 
         {
-            StopCoroutine(destinationCorutine);
-            destinationCorutine = null;
-            isFollowing = false;
+            stopPlayerFollow();
         }
     }
 
@@ -45,6 +46,7 @@ public class SheepBehaviour : InteractableObject
 
     IEnumerator updateDestination(float updateTime)
     {
+        //Update follow position every updateTime
         while (true)
         {
             yield return new WaitForSeconds(updateTime);
@@ -61,7 +63,10 @@ public class SheepBehaviour : InteractableObject
     {
         if (destinationCorutine != null) 
         {
-        StopCoroutine (destinationCorutine);
+            StopCoroutine(destinationCorutine); //Stop updateDestinarion corutine
+            SetDestination(transform.position); //Stop in place
+            destinationCorutine = null;
+            isFollowing = false;
         }
     }
 }

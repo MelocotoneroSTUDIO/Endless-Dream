@@ -5,11 +5,12 @@ using DG.Tweening;
 
 public class CastleDoor : ActivableObject
 {
-    public float activationTime;
+    [Header("Door movement")]
+    public float openingTime;
     public Vector3 rotation;
 
     public override void Activate()
     {
-        transform.DORotate(rotation,activationTime);
+        transform.DORotate(rotation,openingTime);
     }
 }

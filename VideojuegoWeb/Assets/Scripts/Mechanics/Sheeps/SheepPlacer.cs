@@ -14,14 +14,9 @@ public class SheepPlacer : InteractableObject
         sheepManager = FindObjectOfType<SheepManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void Interact()
     {
+        //On interact get a following sheep to a placing destination
         base.Interact();
         SheepBehaviour sheep;
         sheep = sheepManager.getFollowSheep();

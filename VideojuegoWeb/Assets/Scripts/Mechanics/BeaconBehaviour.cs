@@ -5,15 +5,16 @@ using DG.Tweening;
 
 public class BeaconBehaviour : MonoBehaviour
 {
+    [Header("Beam ray")]
     public Transform beamOrigin;
     public Transform beamDirection;
-    public Vector3 beamDirectionOffset;
 
+    [Header("Beacon movement")]
     private Vector3 startPos;
     public Transform endPos;
     public float timeToMove;
 
-    public Vector3 touchPosition;
+    private Vector3 touchPosition;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class BeaconBehaviour : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-        Ray ray = new Ray(beamOrigin.position,beamDirection.position+beamDirectionOffset);
+        Ray ray = new Ray(beamOrigin.position,beamDirection.position);
         if (Physics.Raycast(ray, out hit))
         {
             touchPosition = hit.point;
@@ -34,6 +35,7 @@ public class BeaconBehaviour : MonoBehaviour
                 if (collider.gameObject.tag == "Player") 
                 {
                     Debug.Log("Pillado");
+                    //Mising behaviour when catched
                 }
             }
         }
@@ -52,11 +54,12 @@ public class BeaconBehaviour : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        //Moving guides gizmo
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, endPos.position);
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(beamOrigin.position, beamDirection.position+beamDirectionOffset);
+        Gizmos.DrawLine(beamOrigin.position, beamDirection.position);
         Gizmos.DrawWireSphere(touchPosition,3);
     }
 }

@@ -6,18 +6,20 @@ using UnityEngine;
 
 public class SheepSpawner : InteractableObject
 {
+    [Header("Sheep spawning")]
     public float spawnCooldown;
     public Transform spawnPosition;
     public Transform exitDoorPosition;
-    public Transform playerFollow;
     public GameObject sheep;
 
+    [Header("Door opening")]
     public GameObject door;
-    public Vector3 doorOpenRot;
+    public Vector3 doorOpenRotation;
     public float openTime;
+
+
     private bool allowSpawn=true;
     private Vector3 startRot;
-
     private SheepManager sheepManager;
 
     private void Start()
@@ -28,6 +30,7 @@ public class SheepSpawner : InteractableObject
 
     public override void Interact()
     {
+        //On door tocuh spawn sheep
         base.Interact();
         if (allowSpawn) 
         {
@@ -36,9 +39,8 @@ public class SheepSpawner : InteractableObject
             instance = Instantiate(sheep,spawnPosition.position,spawnPosition.rotation);
             openDoor();
             SheepBehaviour sheepBehaviour = instance.GetComponent<SheepBehaviour>();
-            sheepBehaviour.playerFollow = playerFollow;
+            sheepBehaviour.playerFollow = sheepManager.playerFollow;
             sheepManager.addSheep(sheepBehaviour);
-            //sheepBehaviour.SetDestination(exitDoorPosition.position);
             instance.transform.DOMove(exitDoorPosition.position,2);
             StartCoroutine(cooldown());
         }
@@ -52,6 +54,6 @@ public class SheepSpawner : InteractableObject
 
     void openDoor() 
     {
-        door.transform.DORotate(doorOpenRot, openTime).OnComplete(() => { door.transform.DORotate(startRot, openTime); });
+        door.transform.DORotate(doorOpenRotation, openTime).OnComplete(() => { door.transform.DORotate(startRot, openTime); });
     }
 }
