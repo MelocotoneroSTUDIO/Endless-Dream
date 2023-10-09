@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class MovingObject : InteractableObject
 {
+    //Class that handles moving object behaviour
+    [Header("Moving object stats")]
     private Vector3 startPos;
     public Transform endPos;
     public float time;
@@ -18,6 +20,7 @@ public class MovingObject : InteractableObject
 
     public override void Interact()
     {
+        base.Interact();
         if (!moved) 
         {
             transform.DOMove(endPos.position,time);

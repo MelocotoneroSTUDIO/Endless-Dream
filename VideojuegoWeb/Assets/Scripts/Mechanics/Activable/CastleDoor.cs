@@ -5,7 +5,8 @@ using DG.Tweening;
 
 public class CastleDoor : ActivableObject
 {
-    [Header("Door movement")]
+    //Class that handles castle door behaviour
+    [Header("Door movement stats")]
     public float openingTime;
     public Vector3 rotation;
 

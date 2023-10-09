@@ -10,6 +10,7 @@ public class LeverBehaviour : InteractableObject
 
     public override void Interact()
     {
+        base.Interact();
         if (isPlayerNear)
         {
             connectedObject.Activate();
