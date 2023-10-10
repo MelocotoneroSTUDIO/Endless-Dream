@@ -21,6 +21,6 @@ public class TreasureUI : MonoBehaviour
 
     public void UIUpdate()
     {
-        
+        Debug.Log("Cojo tesoro");
     }
 }

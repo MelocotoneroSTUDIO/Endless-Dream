@@ -20,7 +20,8 @@ public class CoinBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") 
         {
-            eventSystem.OnCoinPicked.Invoke(); ;
+            eventSystem.OnCoinPicked.Invoke();
+            DOTween.Clear(transform);
             Destroy(gameObject);
         }
     }

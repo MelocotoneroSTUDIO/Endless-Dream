@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,16 +6,13 @@ using UnityEngine;
 public class TreasureBehaviour : MonoBehaviour
 {
     EventSystem eventSystem;
-    // Start is called before the first frame update
+    [Header("Coin rotation stats")]
+    public Vector3 rot;
+    public float rotTime;
     void Start()
     {
         eventSystem = FindObjectOfType<EventSystem>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        transform.DORotate(rot, rotTime).SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +20,7 @@ public class TreasureBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player") 
         {
             eventSystem.OnTreasurePicked.Invoke();
+            DOTween.Clear(transform);
             Destroy(gameObject);
         }
     }

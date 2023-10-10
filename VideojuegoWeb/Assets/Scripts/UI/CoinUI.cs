@@ -11,7 +11,7 @@ public class CoinUI : MonoBehaviour
     void Start()
     {
         eventSystem = FindObjectOfType<EventSystem>();
-        eventSystem.OnTreasurePicked += UIUpdate;
+        eventSystem.OnCoinPicked += UIUpdate;
     }
 
     // Update is called once per frame
