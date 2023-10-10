@@ -22,6 +22,6 @@ public class CoinUI : MonoBehaviour
 
     public void UIUpdate()
     {
-        
+        Debug.Log("Cojo Moneda");
     }
 }
