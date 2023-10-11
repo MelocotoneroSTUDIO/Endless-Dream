@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
     public float playerMass = 0.2f;
     private CharacterController controller;
-    private bool grounded;
-    private float gravity=0;
+    public bool grounded;
+    public float gravity = 0;
+    private float gravityMultiplyer = 1f;
 
-    private Action InputMethod; 
+    private Action InputMethod;
+
+    public bool forceJoystick=false;
 
     void Start()
     {
@@ -26,11 +30,16 @@ public class PlayerMovement : MonoBehaviour
         //Determine inputType
         if (SystemInfo.deviceType == DeviceType.Desktop) 
         {
-            InputMethod += keyboardController;
+            InputMethod += KeyboardController;
+            if (forceJoystick)
+            {
+                InputMethod += JoystickController;
+                joystick.gameObject.SetActive(true);
+            }
         }
         else 
         {
-            InputMethod += joystickController;
+            InputMethod += JoystickController;
             joystick.gameObject.SetActive(true);
         }
     }
@@ -43,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(desiredMovement);
 
         //Apply gravity
+        gravity = 0;
         grounded = controller.isGrounded;
         if (grounded) 
         {
@@ -50,30 +60,47 @@ public class PlayerMovement : MonoBehaviour
         }
         else 
         {
-            gravity -= 1;
+            gravity -= 100;
         }
-        controller.Move(new Vector3(0, gravity * playerMass * Time.deltaTime, 0));
+        controller.Move(new Vector3(0, gravity * gravityMultiplyer * playerMass * Time.deltaTime, 0));
 
         //Rotate to face movement direction
         if (desiredMovement.magnitude > 0)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement), rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement*gravityMultiplyer), rotationSpeed);
         }
     }
 
 
 
     //Calculate movement vector depending on input
-    void joystickController() 
+    void JoystickController() 
     {
         desiredMovement = new Vector3(joystick.Horizontal, 0, joystick.Vertical) * speed * Time.deltaTime;
     }
 
-    void keyboardController() 
+    void KeyboardController() 
     {
         float xInput = Input.GetAxis("Horizontal");
         float yInput = Input.GetAxis("Vertical");
 
         desiredMovement = new Vector3(xInput, 0, yInput) * speed * Time.deltaTime;
+    }
+
+    //Change gravity method
+    public void ChangeGravity() 
+    {
+        gravityMultiplyer = gravityMultiplyer * -1f;
+        if (gravityMultiplyer > 0) 
+        {
+            transform.DORotate(new Vector3(0,transform.rotation.y,transform.rotation.z),1f);
+            transform.localScale = Vector3.one;
+        }
+        else 
+        {
+            transform.DORotate(new Vector3(180, transform.rotation.y, transform.rotation.z), 1f);
+            transform.localScale = -Vector3.one;
+        }
+        
     }
 }
