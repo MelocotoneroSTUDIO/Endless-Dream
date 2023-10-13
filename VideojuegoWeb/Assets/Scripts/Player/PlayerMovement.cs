@@ -23,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool forceJoystick=false;
 
+
+    public GameObject model;
+
     void Start()
     {
         controller=GetComponent<CharacterController>();
@@ -67,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         //Rotate to face movement direction
         if (desiredMovement.magnitude > 0)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement*gravityMultiplyer), rotationSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement), rotationSpeed);
         }
     }
 
@@ -91,16 +94,21 @@ public class PlayerMovement : MonoBehaviour
     public void ChangeGravity() 
     {
         gravityMultiplyer = gravityMultiplyer * -1f;
-        if (gravityMultiplyer > 0) 
-        {
-            transform.DORotate(new Vector3(0,transform.rotation.y,transform.rotation.z),1f);
-            transform.localScale = Vector3.one;
-        }
-        else 
-        {
-            transform.DORotate(new Vector3(180, transform.rotation.y, transform.rotation.z), 1f);
-            transform.localScale = -Vector3.one;
-        }
+
+        transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1);
+        model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0f, RotateMode.FastBeyond360);
+
+        model.transform.DOLocalRotate(new Vector3(-180, 0, 0), 2f,RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutExpo).OnComplete(
+            () => { /*transform.DOScale(new Vector3(1, 1 * gravityMultiplyer, 1), 0.1f); 
+                    model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear);*/ });
+        //DOVirtual.Float(0, 180, 1, GravityRotation).OnComplete(() => { transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1); }); ;
         
     }
+
+    public void GravityRotation(float x) 
+    {
+        Debug.Log(x);
+        model.transform.localRotation = new Quaternion(x,model.transform.localRotation.y,model.transform.localRotation.z,model.transform.localRotation.w);
+    }
+
 }
