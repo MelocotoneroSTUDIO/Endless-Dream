@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class SheepPlacer : InteractableObject
 {
     public List<SheepPlacementData> positions;
+    public Vector3 faceRotation;
 
     private SheepManager sheepManager;
 
@@ -37,7 +39,7 @@ public class SheepPlacer : InteractableObject
             if (placementData != null)
             {
                 //If there is spot place sheep
-                sheep.SetDestination(placementData.Position);
+                sheep.SetDestinationAndRotation(placementData.Position,faceRotation);
                 sheep.transform.parent = transform;
                 placementData.isOcuppied = true;
                 placementData.Sheep=sheep;
@@ -52,8 +54,17 @@ public class SheepPlacer : InteractableObject
             if (data.Sheep == sheep) 
             {
                 data.isOcuppied = false;
+                data.Sheep.transform.parent=null;
                 data.Sheep=null;
             }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        foreach (SheepPlacementData data in positions) 
+        {
+            Gizmos.DrawWireCube(data.Position,Vector3.one);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using DG.Tweening;
 
 public class SheepBehaviour : InteractableObject
 {
@@ -56,7 +57,34 @@ public class SheepBehaviour : InteractableObject
 
     public void SetDestination(Vector3 destination) 
     {
+        agent.stoppingDistance = 2;
         agent.SetDestination(destination);
+    }
+
+    public void SetDestinationAndRotation(Vector3 destination, Vector3 rotation) 
+    {
+        agent.stoppingDistance = 1;
+        agent.SetDestination(destination);
+        StartCoroutine(WaitDestinationComplete(rotation));
+    }
+
+    IEnumerator WaitDestinationComplete(Vector3 rotation) 
+    {
+        while (true) 
+        {
+            if (!agent.pathPending)
+            {
+                if (agent.remainingDistance <= agent.stoppingDistance)
+                {
+                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                    {
+                        transform.DORotate(rotation, 1f);
+                    }
+                }
+            }
+
+            yield return null;
+        }
     }
 
     public void stopPlayerFollow()
