@@ -20,7 +20,8 @@ public class BreakingBlock : InteractableObject
         transform.DOShakePosition(shakeTime,shakeStrength);
         if (hits >= breakResistance) 
         {
-        Destroy(gameObject);
+            DOTween.Clear(transform);
+            Destroy(gameObject);
         }
     }
 }
