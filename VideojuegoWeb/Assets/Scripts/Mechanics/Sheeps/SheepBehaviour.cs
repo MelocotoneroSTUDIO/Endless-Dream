@@ -78,7 +78,8 @@ public class SheepBehaviour : InteractableObject
                 {
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                     {
-                        transform.DORotate(rotation, 1f);
+                        transform.DORotate(rotation, 1f).OnComplete(() => DOTween.Complete(transform)); ;
+                        break;
                     }
                 }
             }

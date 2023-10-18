@@ -20,7 +20,7 @@ public class TreasureBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player") 
         {
             eventSystem.OnTreasurePicked.Invoke();
-            DOTween.Clear(transform);
+            DOTween.Kill(transform);
             Destroy(gameObject);
         }
     }

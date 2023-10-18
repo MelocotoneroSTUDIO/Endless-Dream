@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using TMPro;
+using DG.Tweening;
 
 public class CoinUI : MonoBehaviour
 {
+    public TextMeshProUGUI coinText;
+    public Transform coinImage;
+    private EventSystem eventSystem;
+    private int coinAmount=0;
 
-    EventSystem eventSystem;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,10 @@ public class CoinUI : MonoBehaviour
 
     public void UIUpdate()
     {
-        Debug.Log("Cojo Moneda");
+        coinAmount++;
+        coinImage.DOPunchScale(Vector3.one * 1.5f,0.2f);
+        coinText.text = coinAmount.ToString();
     }
+
+
 }
