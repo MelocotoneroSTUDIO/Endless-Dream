@@ -8,6 +8,14 @@ public class WaterBehaviour : MonoBehaviour
     public List<float> waterLevels = new List<float>();
     public float time = 1;
 
+    private EventSystem eventSystem;
+
+    private void Start()
+    {
+        eventSystem = FindObjectOfType<EventSystem>();
+        eventSystem.OnHit += ResetWaterLevel;
+    }
+
     public void changeWaterLevel(int level) 
     {
         if (level > waterLevels.Count) { level = waterLevels.Count; }
@@ -18,7 +26,12 @@ public class WaterBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") 
         {
-        //Glu Glu Glu
+            eventSystem.OnHit.Invoke();
         }
+    }
+
+    public void ResetWaterLevel()
+    {
+        transform.DOMoveY(waterLevels[0], 0.2f);
     }
 }
