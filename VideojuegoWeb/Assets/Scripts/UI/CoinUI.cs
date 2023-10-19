@@ -27,7 +27,7 @@ public class CoinUI : MonoBehaviour
     {
         coinAmount++;
         coinImage.DOPunchScale(Vector3.one * punchScaleFactor,0.2f);
-        coinText.text = coinAmount.ToString();
+        coinText.text = coinAmount.ToString("00");
     }
 
 
