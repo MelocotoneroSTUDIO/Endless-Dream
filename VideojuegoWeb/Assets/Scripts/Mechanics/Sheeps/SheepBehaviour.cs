@@ -13,18 +13,20 @@ public class SheepBehaviour : InteractableObject
     public float updateTime= 0.5f;
     public bool isFollowing = false;
 
+    AudioSource audioSource;
     private NavMeshAgent agent=default;
     private Coroutine destinationCorutine;
     
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
     }
 
     public override void Interact()
     {
         base.Interact();
-
+        audioSource.Play();
         //If placed remove the sheep from the place
         if (transform.parent != null) 
         {
