@@ -48,13 +48,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystick: {fileID: 0}
-  speed: 10
+  velocity: 10
   rotationSpeed: 1
   playerMass: 0.2
   grounded: 0
   gravity: 0
   forceJoystick: 0
   model: {fileID: 9125718391660105473}
+  blockPlayerMovement: 0
+  allowPlayerMovementThreshold: 0.1
 --- !u!143 &4459986680913797890
 CharacterController:
   m_ObjectHideFlags: 0
