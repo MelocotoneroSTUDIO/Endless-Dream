@@ -5,12 +5,16 @@ using UnityEngine;
 public class PickUpSounds : MonoBehaviour
 {
     EventSystem eventSystem;
+    AudioSource audioSource;
+    public AudioClip coinSound;
+    public AudioClip treasureSound;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         eventSystem = FindObjectOfType<EventSystem>();
         eventSystem.OnCoinPicked += playCoinSound;
-        eventSystem.OnTresurePicked += playTreasureSound;
+        eventSystem.OnTreasurePicked += playTreasureSound;
     }
 
     // Update is called once per frame
@@ -20,10 +24,12 @@ public class PickUpSounds : MonoBehaviour
     }
     public void playCoinSound()
     {
-
+        audioSource.clip = coinSound;
+        audioSource.Play();
     }
     public void playTreasureSound()
     {
-
+        audioSource.clip = treasureSound    ;
+        audioSource.Play();
     }
 }
