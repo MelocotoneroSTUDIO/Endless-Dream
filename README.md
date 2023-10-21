@@ -86,8 +86,23 @@ Para finalizar con este apartado, cabe destacar cuáles con los roles específic
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/5.png)
 
+## 5. INFLUENCIAS PARA EL DESARROLLO DE ENDLESS DREAM
+Como ya se ha comentado con anterioridad, pese a que *Endless Dream* es un videojuego original creado y desarrollado por *Melocotonero Studio*, existen una serie de influencias que nos han ayudado a diseñar todo el mundo y las mecánicas que lo engloban. Antes de comenzar a hablar de factores de diseño como los personajes o las mecánicas, es de suma importancia visualizar cuáles han sido las principales referencias y sobre todo, saber de qué nos hemos nutrido de cada una de ellas:
 
+### 5.1. Capitan Toad
+*Capitán Toad* es un juego de rompecabezas y plataformas que fue desarrollado y publicado por Nintendo exclusivamente para la consola Wii U. Este título es un spin-off de la exitosa franquicia Mario y se originó a partir de un minijuego que hizo su debut en *Super Mario 3D World*. En este juego, los jugadores asumen el control del intrépido capitán Toad, quien se enfrenta al desafío de navegar de manera segura a través de una serie de obstáculos con el objetivo de alcanzar una codiciada estrella de oro al final de cada nivel. Lo que hace que Capitán Toad sea verdaderamente singular es la premisa de que este personaje **no puede saltar**, lo que añade un toque distintivo a las mecánicas de juego.
+Este título se convierte en nuestro principal referente en términos de mecánicas, ya que presenta un mundo en 3D con dimensiones reducidas, lo que permite a los jugadores visualizar todo el nivel de un vistazo. Esta característica única, junto con la prohibición de saltar, desafía a los jugadores al requerir una gestión cuidadosa de recursos y la exploración minuciosa del entorno para identificar los elementos interactivos clave que les permitirán superar con éxito cada nivel (véase IMAGEN 6).
+Es importante recordar que, más allá de ser simplemente un videojuego, estamos desarrollando una herramienta que tiene como objetivo ayudar a los más jóvenes a desarrollar una serie de habilidades, como se detalla en la introducción. Por lo tanto, la restricción del salto, combinada con otras mecánicas adicionales que se explorarán en secciones posteriores, amplía significativamente nuestras posibilidades para diseñar rompecabezas funcionales que cumplan con este propósito educativo.
 
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/6.png)
 
+### 5.2. Monument Valley
+Se trata de un juego de rompecabezas independiente desarrollado y publicado por Ustwo Games. En este juego, los jugadores acompañan a la princesa Ida a través de intrincados laberintos llenos de ilusiones ópticas y objetos aparentemente imposibles, mientras manipulan el entorno que la rodea para alcanzar distintas plataformas.
+Lo que nos ha impresionado como estudio, y lo que nos ha llevado a considerarlo como una referencia fundamental al crear Endless Dream, es el sorprendente arte minimalista que presenta (véase IMAGEN 7). Además, es digno de destacar que este juego ha sido diseñado específicamente para dispositivos móviles y tabletas, lo cual coincide con nuestro cometido en cuanto a las plataformas de desarrollo. Como mencionamos anteriormente, nuestro objetivo es crear un videojuego que atraiga a una amplia audiencia, no solo a niños, pese a que sean el público objetivo. Por lo tanto, la elección de un estilo minimalista para la creación de escenarios y personajes no sólo resulta atractiva para los más jóvenes, sino que, si se maneja con esmero, puede ser apreciada por un público de todas las edades, evitando ser percibida como una estética infantilizada.
 
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/7.png)
+
+Este enfoque, que también es evidente en otros juegos como Hollow Knight (véase IMAGEN 8), demuestra que un estilo visual llamativo para los niños puede, al mismo tiempo, ser una opción atractiva y válida para un público adulto.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/8.png)
 
