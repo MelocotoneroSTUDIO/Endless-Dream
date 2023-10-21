@@ -48,5 +48,7 @@ public class MovingObject : InteractableObject
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position,endPos.position);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(endPos.position, transform.localScale);
     }
 }
