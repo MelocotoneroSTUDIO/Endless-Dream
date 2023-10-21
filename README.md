@@ -34,3 +34,37 @@ Al tratarse de un documento vivo, ciertos contenidos pueden verse afectados/actu
 | Ambientación  | Fantasía, mundo de los sueños |
 | Sinopsis  | Evadiendo el mundo real, supera los distintos mundo que trae este sueño sin fin. |
 | Elevator pitch  | *¿Cansado de que los videojuegos solo se centren en la diversión?* En el maravilloso mundo de Endless Dream te enfrentarás a una serie de desafíos en mundos de ensueño que te ayudarán a evadirte de la realidad y dar rienda suelta a tu imaginación, pero no solo eso. Juega y diviértete a la vez que desarrollas una serie de capacidades cognitivas y además, podrás medir tus capacidades, poniéndote a prueba en cada nivel. Aquí no hablamos de edades, sino de disfrutar desde los más pequeños hasta los más grandes. |
+
+## 3. HERRAMIENTAS DE DESARROLLO
+En este apartado se exponen las herramientas utilizadas a lo largo del desarrollo de Endless Dream y para qué se han utilizado. Se clasifican en los 3 campos esenciales en los que se divide el desarrollo de un videojuego: 
+
+### 3.1. Herramientas de diseño
+- **Blender:** Dedicado especialmente al modelado, iluminación, renderizado, la animación y gráficos tridimensionales, es utilizado para la creación de los mundos en 3D y del personaje.
+- **Photoshop:** Programa de Adobe que ha sido utilizado para la creación de los concepts del personaje e items que encontramos a lo largo del juego.
+- **Clip Studio Paint:**  Aplicación de ilustración utilizada para los concepts del mundo.
+- **Procreate:** Con una funcionalidad parecida a la de Clip Studio Paint pero perteneciente a IOS, se ha utilizado para la creación de las interfaces.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/1.png)
+
+### 3.2. Herramientas de programación y montaje del videojuego
+- **Unity:** Motor de videojuego multiplataforma creado por Unity Technologies. Es el principal foco de trabajo del videojuego.
+- **C#:** Lenguaje de programación del videojuego que viene asociado a Unity.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/2.png)
+
+### 3.3. Herramientas de creación de los efectos de sonidos y música:
+- **Audacity:** Editor de sonidos utilizado para la creación de los efectos de sonido.
+- **LMMS Studio:** A diferencia de audacity, está especializado en la creación de música.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/3.png)
+
+
+
+
+
+
+
+
+
+
+
