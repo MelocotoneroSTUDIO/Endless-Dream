@@ -1,34 +1,56 @@
+using DG.Tweening;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    [Header("Joystick")]
     public Joystick joystick;
     private Vector3 desiredMovement;
-    public float speed;
-    public float rotationSpeed;
+    [Header("Movement stats")]
+    public float velocity=10;
+    public float rotationSpeed=1;
     public float playerMass = 0.2f;
-    CharacterController controller;
-    private bool grounded;
-    private float gravity=0;
+    private CharacterController controller;
+    public bool grounded;
+    public float gravity = 0;
+    private float gravityMultiplyer = 1f;
 
-    Action InputMethod;
-    // Start is called before the first frame update
+    private Action InputMethod;
+
+    public bool forceJoystick=false;
+
+
+    public GameObject model;
+
+    public bool blockPlayerMovement=false;
+
+    private Camera cam;
+
+    float xInput;
+    float yInput;
+    float speed;
+    public float allowPlayerMovementThreshold=0.2f;
+
+
     void Start()
     {
+        cam = Camera.main;
         controller=GetComponent<CharacterController>();
         Debug.Log(SystemInfo.deviceType);
+        //Determine inputType
         if (SystemInfo.deviceType == DeviceType.Desktop) 
         {
-            InputMethod += keyboardController;
+            InputMethod += KeyboardController;
+            if (forceJoystick)
+            {
+                InputMethod += JoystickController;
+                joystick.gameObject.SetActive(true);
+            }
         }
         else 
         {
-            InputMethod += joystickController;
+            InputMethod += JoystickController;
             joystick.gameObject.SetActive(true);
         }
     }
@@ -36,11 +58,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        desiredMovement = Vector3.zero;
-        InputMethod.Invoke();
-        //desiredMovement = new Vector3(joystick.Horizontal,0,joystick.Vertical)*speed;
-        controller.Move(desiredMovement);
+        CharacterMoveAndRotation();
 
+        //Apply gravity
+        gravity = 0;
         grounded = controller.isGrounded;
         if (grounded) 
         {
@@ -48,25 +69,66 @@ public class PlayerMovement : MonoBehaviour
         }
         else 
         {
-            gravity -= 1;
+            gravity -= 100;
         }
-        controller.Move(new Vector3(0, gravity * playerMass * Time.deltaTime, 0));
+        controller.Move(new Vector3(0, gravity * gravityMultiplyer * playerMass * Time.deltaTime, 0));
+    }
 
-        if (desiredMovement.magnitude > 0)
+
+    void CharacterMoveAndRotation() 
+    {
+        InputMethod.Invoke();
+        speed = new Vector2(xInput,yInput).sqrMagnitude;
+        if (speed >= allowPlayerMovementThreshold && !blockPlayerMovement)
         {
+            Vector3 forward = cam.transform.forward;
+            Vector3 right = cam.transform.right;
+
+            forward.y = 0f;
+            right.y = 0f;
+
+            forward.Normalize();
+            right.Normalize();
+
+            desiredMovement = (forward * yInput + right * xInput) * Time.deltaTime * velocity;
+
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement), rotationSpeed);
+            controller.Move(desiredMovement);
         }
     }
 
-    void joystickController() 
+    //Calculate movement vector depending on input
+    void JoystickController() 
     {
-        desiredMovement = new Vector3(joystick.Horizontal, 0, joystick.Vertical) * speed * Time.deltaTime;
+        xInput = joystick.Horizontal;
+        yInput = joystick.Vertical;
     }
-    void keyboardController() 
-    {
-        float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical");
 
-        desiredMovement = new Vector3(xInput, 0, yInput) * speed * Time.deltaTime;
+    void KeyboardController() 
+    {
+        xInput = Input.GetAxis("Horizontal");
+        yInput = Input.GetAxis("Vertical");
     }
+
+    //Change gravity method
+    public void ChangeGravity() 
+    {
+        gravityMultiplyer = gravityMultiplyer * -1f;
+
+        transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1);
+        model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0f, RotateMode.FastBeyond360);
+
+        model.transform.DOLocalRotate(new Vector3(-180, 0, 0), 2f,RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutExpo).OnComplete(
+            () => { /*transform.DOScale(new Vector3(1, 1 * gravityMultiplyer, 1), 0.1f); 
+                    model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear);*/ });
+        //DOVirtual.Float(0, 180, 1, GravityRotation).OnComplete(() => { transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1); }); ;
+        
+    }
+
+    public void GravityRotation(float x) 
+    {
+        Debug.Log(x);
+        model.transform.localRotation = new Quaternion(x,model.transform.localRotation.y,model.transform.localRotation.z,model.transform.localRotation.w);
+    }
+
 }

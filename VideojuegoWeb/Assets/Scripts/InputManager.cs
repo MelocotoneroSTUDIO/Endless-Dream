@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    //Class that handles screen touches or clicks and checks for interactable objects on that position
     Vector3 touchPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(0))

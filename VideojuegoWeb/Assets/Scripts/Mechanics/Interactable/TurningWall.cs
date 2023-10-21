@@ -5,11 +5,13 @@ using DG.Tweening;
 
 public class TurningWall : InteractableObject
 {
+    //Class that handles Turning wall behaviour
+    [Header("Turning wall stats")]
     public float rotationTime;
     private bool activated = false;
     public override void Interact()
     {
-        Debug.Log("Interaccion");
+        base.Interact();
         if (!activated) 
         {
             transform.parent.DORotate(new Vector3(0, 180, 0), rotationTime);

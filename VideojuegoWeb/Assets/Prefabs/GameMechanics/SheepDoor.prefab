@@ -104,10 +104,9 @@ MonoBehaviour:
   spawnCooldown: 5
   spawnPosition: {fileID: 7923817412609605582}
   exitDoorPosition: {fileID: 6483451427631906814}
-  playerFollow: {fileID: 0}
   sheep: {fileID: 5721717789458765648, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
   door: {fileID: 222372313005176087}
-  doorOpenRot: {x: 0, y: -90, z: 0}
+  doorOpenRotation: {x: 0, y: 0, z: 0}
   openTime: 1
 --- !u!1 &3251207084969856884
 GameObject:
@@ -163,14 +162,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4769016664977231129}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: -0.98, z: 2.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2189242469395901208}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6136490002614503545
 GameObject:
   m_ObjectHideFlags: 0
