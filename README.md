@@ -58,10 +58,33 @@ En este apartado se exponen las herramientas utilizadas a lo largo del desarroll
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/3.png)
 
+## 4. METODOLOGÍA
+Al tratarse de la ejecución de un videojuego y por lo tanto de un proyecto software, el equipo en su conjunto decidió optar por utilizar SCRUM y KANBAN como metodologías ágiles a poner en práctica. 
+En cuanto a las herramientas utilizadas para la organización del trabajo, se ha utilizado Trello para gestionar las distintas tareas del proyecto siguiendo la premisa del:
+- **DO:** Tareas por hacer
+- **DOING:** Tareas en Curso
+- **DONE:** Tareas finalizadas
+Trello ha sido elegido frente a cualquier otra herramienta de gestión de proyectos (Jira, Confluence…) ya que todos los miembros del estudio lo conocen, es completamente gratuita y, además, muy visual y sencilla de utilizar.
 
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/4.png)
 
+Aparte de utilizar simplemente Trello (Véase “Imagen 4”) con su respectiva repartición de tareas, se han utilizado distintas técnicas de SCRUM para agilizar el proceso de desarrollo del proyecto.
+Lo más común eran las Dailys, reuniones que realizamos varias veces por semana y en la que exponemos cuánto trabajo hemos avanzado individualmente, además comentamos que es lo siguiente que vamos a desarrollar y proponemos ciertas horas de trabajo conjunto por Teams o de manera presencial, sobre todo para aquellos casos en los que se necesitan juntar los resultados de los distintos campos de un videojuego. 
+Además de los Dailys,  se hizo una pequeña selección de distintas técnicas probando cuál puede venirle mejor al equipo (conocido también como Cherry Picking). De esta manera, se decidió comenzar a usar la estimación de tareas Punto-Historia, en la que se comenzó a puntuar las tareas en función de las horas y complejidad que conllevan. Sin embargo, ya que con las reuniones se tiene claro cuál va a ser la próxima tarea a realizar y las fechas en las que tenían que ser realizadas, se optó por dejar de utilizar dicha técnica. 
 
+### 4.1. Roles del equipo
+Para finalizar con este apartado, cabe destacar cuáles con los roles específicos de cada miembro y su división:
+- **Portavoz:** Encargado de la comunicación sobre los problemas surgidos y de comunicarse con el resto de entidades. 
+- **Organizadores/Equipo de dirección :** Encargados de la planificación del trabajo, así como de la comprobación de que todas las tareas se van realizando con éxito y en el tiempo acordado. 
+- **Redactores:** Encargados de la redacción final del GDD, de su maquetación y revisión..
+- **Diseñadores UI:** Encargados del diseño de las interfaces.
+- **Concept Artist:** Parte artística 2D del videojuego (personajes y mundos).
+- **Modeladores 3D:**  Creación de los escenarios y personajes 3D.
+- **Programadores:** Encargados de todo lo relacionado con la programación del videojuego.
+- **Efectos de sonido y música:** Encargados de toda la parte acústica del videojuego.
+- **Game & Level Design:** Encargados de la creación de los niveles y ambientación del videojuego.
 
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/5.png)
 
 
 
