@@ -405,4 +405,125 @@ A modo de referencia, esta mecánica está basada en el gimnasio de tipo hielo d
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/30.png)
 
+## 8. FLUJO DE PANTALLAS
+Integrar el concepto del "flujo de pantallas" en un Game Design Document es esencial para delinear de manera efectiva la experiencia de juego que se está desarrollando. En un videojuego es un aspecto fundamental que define la experiencia del jugador y la estructura narrativa del juego. Es la forma en que el juego guía al jugador a través de diferentes momentos, desafíos y narrativas, y tiene un profundo impacto en la inmersión y la jugabilidad.
+En este sentido, hemos llevado a cabo un minucioso diseño de las diversas pantallas del videojuego, ajustándonos en todo momento a los requisitos y las historias de usuario proporcionados por nuestros clientes. Antes de presentar el esquema del flujo del videojuego, proporcionaremos una breve explicación de lo que el jugador experimentará en cada una de las pantallas:
 
+1. **Pantalla de Inicio:** Se muestra el logo de la empresa junto a la imagen promocional principal del videojuego.
+2. **Pantalla de Login:** Es la primera pantalla interactiva que se encuentra el jugador en la cual podrá acceder al menú principal  si rellena las credenciales correspondientes o, pulsar otro botón que se ubicará debajo del inicio de sesión y el cual dirigirá al jugador a la pantalla de creación de cuenta en caso de no poseer una.
+3. **Pantalla de creación de cuenta:** El jugador podrá crearse una cuenta y pasar automáticamente a la pantalla de Login.
+4. **Menú principal:** Se encuentran las siguientes opciones:
+a. **JUGAR:** Lleva al jugador a la pantalla de selección de mundo.
+b. **OPCIONES:** Lleva al jugador a la pantalla de opciones.
+c. **COSMÉTICOS:** El jugador es dirigido a la pantalla correspondiente donde podrá aplicar cosméticos al personaje.
+5. **Pantalla de selección de mundo:** Estarán los distinto mundos jugables (bloqueados y desbloqueados) y se podrá seleccionar uno para acceder a él.
+6. **Pantalla de selección de nivel:** Se podrá seleccionar el nivel que se quiera del mundo correspondiente en caso de estar desbloqueado.
+7. **Pantalla de juego:** Se ubica el personaje y el escenario jugable.
+8. **Pantalla de Opciones:** Accesible desde casi cualquier pantalla, el jugador podrá realizar los ajustes que están disponibles y crea pertinentes al juego (subir o bajar el volumen, apartado de gráficos…)
+9. **Pantalla de personalización de cosméticos:** Se mostrarán todos los cosméticos desbloqueados por el jugador y podrá realizar cambios visuales en el personaje.
+10. **Pantalla de gráficos de las métricas:** En caso de poseer una cuenta de docente y tratarse de la versión educativa, los profesores dispondrán en el menú principal de esta opción la cual muestra distintas gráficas de las métricas obtenidas.
+Una vez explicada cada una de las pantallas, véase la IMAGEN 31 (esquema del flujo).
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/31.png)
+
+## 9. NIVELES
+
+La creación y el diseño de niveles son una parte fundamental en el desarrollo de un videojuego puesto que son la combinación de las mecánicas, arte y narrativa creadas ya comentadas en secciones anteriores.
+En este apartado,  se explica con detalle cómo planificamos y diseñamos los diversos mundos y niveles que compondrán nuestro juego. Para ello, usaremos las fichas de nivel creadas por el estudio donde se recoge la siguiente información de cada mundo:
+- **Nombre del mundo.**
+- **Imagen o mockup del mundo.**
+- **Mecánica principal:**  Cuál es la mecánica característica del mundo comentado, sobre todo de cara al primer nivel.
+- **Mecánicas secundarias:** Las cuales se combinarán junto a la principal para el desarrollo del resto de niveles.
+- **Ambientación del mundo:** Comentaremos que sueño o pesadilla representa , es decir, el tema principal del mundo.
+
+Antes de comenzar a mostrar las fichas, cabe resaltar que al tratarse de un documento vivo, algo que ya comentamos en la introducción, la mayoría de  imágenes utilizadas son mockups y referencias que hemos tomado para la creación de esos niveles. Una vez esté el nivel terminado, se cambiará por su imagen correspondiente.
+
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/32.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/33.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/34.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/35.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/36.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/37.png)
+
+## 10. INTERFACES
+Las interfaces en un videojuego no son simples herramientas funcionales; son la manifestación de la visión y la narrativa del juego, una extensión de su alma digital. Estos elementos hacen posible que los jugadores naveguen, tomen decisiones y se sumerjan en los mundos que hemos creado. En este apartado, se mostrará la composición de las interfaces de todas las pantallas comentadas en el punto 8. FLUJO DE PANTALLAS.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/38.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/39.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/40.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/41.png)
+
+## 11. ARTE Y CONCEPTOS
+Que el arte es lo primero que entra por los ojos a la hora de jugar a un videojuego es un hecho; pero su importancia va mucho más allá. Es el sello de identidad, encargado de transmitir al jugador el concepto y sumergirlo en el juego en una experiencia inmersiva que le haga disfrutar de todo lo que le rodea.
+Por ello, en Endless Dream, se ha decidido dar a esta sección el valor que se merece, cuidando cada decisión de diseño, tal y como se va a explicar a continuación.
+
+### 11.1. Referencias 
+Endless Dream ha optado por empaparse del estilo visual de grandes juegos como The Legend of Zelda: Tears of the Kingdom,  Journey y Genshin Impact. Estos destacan por su estética cel-shading, una técnica que viene del mundo de la animación tradicional, que consiste en un sombreado sin degradados, con escasas valoraciones, en la que los personajes destacan sobre un fondo de acuarela, dando como resultado gran dinamismo y belleza plástica, tal y como se aprecia en el mundo del cine en películas como las de Walt Disney o de los anime de Studio Ghibli.
+Pues bien, esta técnica llevada a grandes títulos como los mencionados, da como resultado un mundo dinámico con gran cantidad de detalle y acabados de mayor riqueza a los escenarios, que contrastan con el sombreado plano multicapa de los personajes y hacen que todos los elementos configuren en un conjunto sólido y coherente.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/42.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/43.png)
+
+
+### 11.2. Estilo Artístico
+Siguiendo con las referencias tomadas como base, Endless Dream ha optado por seguir ese estilo sencillo con sombras simples y sin degradado y texturas estilizadas de aspecto hand-painted (pintado a mano), dentro de una temática fantasía que se mantiene constante a lo largo de todo el juego. De esta forma, los jugadores pueden adentrarse en un mundo onírico y mágico que invita a los jugadores a sumergirse en la imaginación y la creatividad. Aunque el estilo artístico se mantiene coherente, cada uno de los mundos temáticos en el juego se distingue por transmitir distintas sensaciones, lo que enriquece la experiencia del jugador y agrega variedad visual al juego.
+Este estilo se manifiesta a través de elementos visuales como personajes y entornos con formas orgánicas y fluidas, inspiradas en elementos de la naturaleza y la fantasía. Este estilo proporciona un lienzo visualmente cautivador que se mantiene constante a lo largo del juego, al tiempo que permite la exploración de diversas emociones y sensaciones a medida que los jugadores avanzan a través de los distintos mundos temáticos.
+
+### 11.3. Paleta de color
+La paleta de colores en "Endless Dream" está diseñada para crear un ambiente onírico y mágico que refleje el mundo de los sueños y la imaginación. En su mayor parte, la paleta se compone de tonos suaves y etéreos que evocan una sensación de tranquilidad y calma. Estos colores suaves se utilizan para el fondo y el entorno general de cada nivel, creando un telón de fondo relajante para las aventuras de Milo, el protagonista.
+Sin embargo, también se han incorporado tonos azules y morados más saturados dentro de la misma paleta. Estos colores más vibrantes se utilizan con moderación y estratégicamente para resaltar elementos importantes en el juego, como el propio personaje Milo, el portal mágico que representa el final de cada nivel, los objetos coleccionables y otros elementos clave de la jugabilidad.
+
+Cada mundo temático dentro del juego tiene su propia paleta de colores distinta, pero sigue manteniendo la coherencia con la paleta principal de tonos suaves. Esto permite que cada nivel tenga su propia identidad visual única y que los jugadores puedan identificar rápidamente en qué mundo se encuentran. A pesar de las variaciones en la paleta, el uso consistente de colores suaves en todo el juego contribuye a la sensación de ensoñación y armonía que "Endless Dream" busca transmitir.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/44.png)
+
+
+### 10.4. Concepts
+En este apartado se van a mostrar los concepts que se han desarrollado con el objetivo de describir cómo se iban a plasmar el estilo y la paleta de color definidos en el juego, y servir de guía para poder posteriormente llevarlos al mundo del 3D.
+
+#### 10.4.1. Personaje
+- **Nombre del Personaje:** Milo
+- **Descripción:** Milo es una pequeña criatura de apariencia amigable y entrañable. Su cuerpo es de un tono azul claro que irradia un brillo suave, dándole un aspecto etéreo. Lleva una bandana morada alrededor de su cuello, que le confiere un toque de color en contraste con su tonalidad azulada. Milo tiene ojos brillantes y expresivos que son prácticamente la única característica facial visible en su rostro. Sus brazos son largos, los cuales, va arrastrando por el suelo mientras camina, lo que le da un aspecto somnoliento y sosegado.
+- **Concepto:** Milo es el protagonista de "Endless Dream", y su papel en el juego es guiar a los jugadores a través de los niveles temáticos del mundo de los sueños. Representa la personificación del subconsciente del protagonista y actúa como un compañero leal en esta aventura onírica. Aunque no es un luchador, Milo tiene la capacidad de resolver enigmas y superar obstáculos de manera ingeniosa y creativa. Su comportamiento es curioso, valiente y comprensivo.
+- **Encuentro:** Milo está presente en todo el juego y acompaña al jugador a lo largo de cada nivel temático. Aparece desde el inicio de la aventura y actúa como el vínculo entre el mundo de los sueños y la mente del protagonista.
+- **Habilidades:** Milo no posee habilidades físicas excepcionales, ya que es un ser pequeño y aparentemente frágil. Sin embargo, es inteligente y tiene la capacidad de resolver rompecabezas y desafíos en el mundo de los sueños. Puede interactuar con los elementos del entorno de manera creativa, como mover objetos, activar mecanismos y utilizar su ingenio para superar obstáculos. Su verdadera fuerza radica en su determinación y su deseo de ayudar al protagonista a descifrar los enigmas de su mente.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/45.png)
+
+#### 10.4.2. Escenarios
+En lo que a escenarios se refiere, se han desarrollado unos concepts sencillos que plasman tanto el entorno por el que se va a desplazar el personaje como lo que se quiere transmitir al jugador en base al mundo en el que se encuentra y siguiendo siempre el estilo y la paleta definidos.
+- ***Mundo “Ovejas”:***
+Se trata del primer mundo al que entra el jugador al comenzar el juego, y por ello es una bienvenida agradable y tranquila para que comprenda de qué va el juego, cómo es el estilo y vaya familiarizándose con las mecánicas. Es por eso que comienza en un prado con ovejas como referencia al común sueño de contar ovejas con el que sentirse identificado y de esta forma el jugador se sienta desde el primer momento como en casa.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/46.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/47.png)
+
+## 12. MÚSICA Y EFECTOS DE SONIDOS
+La música y efectos de sonido son una parte esencial en cualquier producto audiovisual, ya sea en una película, en una animación o en los videojuegos. El sonido aporta carácter, intencionalidad y estilo a la obra que acompaña; convirtiéndola en un trabajo mucho más completo. Además en los videojuegos adquiere más utilidad, ya que sirve como feedback de una acción del jugador, o una acción sobre el jugador. 
+En resumen, la música y los sonidos desempeñan un papel fundamental en la experiencia de un videojuego, así como en obras audiovisuales en general. En Endless Dream, la música y los sonidos son esenciales para varias razones:
+
+- **Inmersión:** La música y los sonidos transportan a los jugadores a otro mundo, creando un ambiente que los sumerge completamente en la narrativa y el entorno del juego. Esto permite a los jugadores conectarse emocionalmente con la historia siendo en este caso los distintos mundos que desempeñan una temática de sueño o pesadilla.
+- **Narrativa:** La música y los efectos de sonido pueden comunicar información importante y emociones a los jugadores. En Endless Dream, utilizamos música y sonidos para enfatizar la magia y el misterio del mundo onírico, ayudando a contar la historia y aportando un elemento narrativo crucial.
+- **Feedback y Guiado:** Los efectos de sonido, como el sonido de un objeto recogido, proporcionan retroalimentación inmediata y refuerzan las acciones del jugador. Esto es útil para indicar al jugador por ejemplo, que un objeto es un bloque destructible al realizar un sonido de quebrarse al tocarlo.
+
+### 12.1. Estilo musical
+En Endless Dream, hemos elegido un estilo musical que refleja el mundo de los sueños y aporta misterio y magia a la experiencia del juego. Hemos utilizado sintetizadores para emular sonidos asociados a los sueños, como cajas de música y flautas. Además, hemos aplicado efectos de reverberación para crear un ambiente misterioso y etéreo que sumerja a los jugadores en el mundo onírico.
+La elección de acordes que siguen la escala lidia es fundamental en nuestro enfoque musical. La escala lidia se caracteriza por dar una sensación mágica y misteriosa, lo que complementa perfectamente la atmósfera del juego y acentúa la sensación de estar inmerso en un mundo de ensueño.
+
+### 12.2. Efectos de Sonido
+Hemos creado cuidadosamente dos efectos de sonido esenciales:
+- **Efecto de Recogida de Monedas:** Para el sonido asociado a la recogida de monedas, hemos mezclado el ruido de monedas cayendo sobre otras monedas con un arpegio ascendente de teclado. Esto aporta una sensación de recompensa y logro al jugador, al tiempo que crea una conexión auditiva con la acción en pantalla.
+- **Efecto de Sonido de Ovejas con Cencerros:** Hemos incorporado un sonido de ovejas balando junto con el tintineo de cencerros. Este efecto proporciona realismo al entorno del juego y añade una capa de autenticidad a la experiencia de los jugadores al explorar el mundo de los sueños.
+  
+En resumen, la música y los sonidos desempeñan un papel vital en Endless Dream, ya que contribuyen a la inmersión, la narrativa, la retroalimentación y la atmósfera general del juego. Nuestro enfoque en el estilo musical, la elección de la escala lidia y la creación de efectos de sonido específicos son aspectos clave que enriquecerán la experiencia de los jugadores en el mundo de los sueños.
