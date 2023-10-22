@@ -260,3 +260,65 @@ Nuestro modelo de financiamiento para el videojuego se basa en las siguientes fu
 - Para iniciar el desarrollo del proyecto, contamos con una startup que respaldará financieramente esta etapa inicial.
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/14.png)
+
+## 7. MECÁNICAS
+En un videojuego, las mecánicas representan uno de los pilares fundamentales del desarrollo. Comprenden todas las acciones llevadas a cabo por el jugador que tienen el poder de modificar el "estado del juego", es decir, la posición y las características específicas de todos los objetos y entornos en un momento particular del tiempo.
+A lo largo de este amplio apartado, tocaremos una serie de puntos en relación a las acciones que puede realizar el jugador, la composición de los mundos e interacciones de Endless Dream:
+
+1. **Tipo de cámara:** Se presentará una breve descripción de la posición de la cámara del jugador y se explicará la razón detrás de su disposición.
+2. **Controles:** Se proporcionará una representación gráfica de los controles del videojuego, acompañada de comentarios explicativos.
+3. **Métricas, puntuación y sistema de guardado:** Se abordará el tema de la medición de métricas discutidas en secciones previas, destacando su importancia para el desarrollo del pensamiento computacional a través del juego.
+4. **Jugabilidad y curva de dificultad:** Se analizará la progresión de la dificultad a lo largo de los diferentes mundos y niveles del juego, describiendo cómo evoluciona la experiencia del jugador.
+5. **Objetos interactuables e interacciones:** Se identificarán los principales elementos con los que el jugador puede interactuar y se explicará su función dentro del juego.
+
+### 7.1. Tipo de cámara
+Uno de los aspectos más destacados del diseño es la elección de la perspectiva de la cámara. En el caso de Endless Dream, hemos decidido utilizar una cámara en tercera persona donde se observa al personaje desde un punto de vista situado detrás y ligeramente por encima (véase IMAGEN 15) de este aunque, el jugador podrá realizar una serie de rotaciones laterales a la cámara para poder visualizarlo desde distintas perspectivas estando limitadas las rotaciones verticales ya que es el propio juego quien se encarga de seguir automáticamente al jugador en el eje Y. Ahora bien, ¿Por qué hemos tomado la decisión de utilizar esta perspectiva de cámara que es ampliamente reconocida en otros videojuegos?
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/15.png)
+
+1. **Visión más completa:** La perspectiva en tercera persona proporciona una vista más completa del entorno del juego. Esto es particularmente beneficioso en juegos que requieren una conciencia espacial, exploración y resolución de rompecabezas. Los jugadores en Endless Dream, al tratarse de un videojuego de puzzles, van a tener una mejor comprensión de la disposición de los obstáculos, enemigos y elementos del juego, lo que facilita la toma de decisiones estratégicas.
+2. **Atractivo visual y espectáculo:** La cámara en tercera persona a menudo se asocia con un mayor atractivo visual. El modo de construcción de escenarios en nuestro videojuego, está realizado de tal manera que sea disfrutable su visualización por lo tanto, la cámara en tercera persona hace que se pueda ver mucho mejor todas las partes del mapa en cada nivel.
+3. **Conexión con el personaje:** La cámara en tercera persona permite una mayor empatía y conexión entre el jugador y el personaje que controla. Al tener una visión clara del personaje y su entorno, los jugadores pueden sentir una identificación más profunda, ya que pueden ver las acciones y reacciones del personaje en pantalla. Esta conexión emocional puede mejorar la inmersión y el compromiso del jugador.
+En resumen, la elección de una cámara en tercera persona en un videojuego se basa en una combinación de factores que van desde la conexión emocional con el personaje hasta la jugabilidad, el estilo visual y la narrativa. Esta perspectiva ha demostrado ser una opción efectiva para proporcionar experiencias de juego envolventes y satisfactorias, y su popularidad continuará siendo sólida en el mundo del diseño de videojuegos.
+
+### 7.2. Controles
+Cuando se trata de los controles en Endless Dream, es importante considerar que el videojuego se está desarrollando para dos plataformas. Además, dado que el público objetivo son niños pequeños, hemos optado por mantener la simplicidad en las acciones del juego, evitando una sobrecarga de controles para poder enfocarnos en los aspectos previamente mencionados.
+#### 7.2.1. Controles para PC
+Para los controles en PC (véase IMAGEN 16) la disposición es la siguiente:
+- WASD para el movimiento del personaje siendo W avanzar hacia delante del modelo del personaje, S hacia atrás, A hacia la izquierda y D hacia la derecha.
+- El puntero del ratón será visible en el videojuego para PC por lo tanto, el click izquierdo del ratón será quien rote la cámara y ejecute las acciones de los items interactuables.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/16.png)
+
+#### 7.2.2. Controles para móvil
+Los controles para móvil (véase IMAGEN 17) son similares a los de PC con la diferencia que:
+La rotación de la cámara y la ejecución de las interacciones con los distintos objetos se llevan a cabo de manera sencilla, simplemente tocando o deslizando el dedo por la pantalla. 
+Para el movimiento del personaje, hemos implementado un joystick circular que permite desplazar al protagonista en todas las direcciones del escenario.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/17.png)
+
+
+### 7.3. Métricas, puntuación y sistema de guardado
+A lo largo de todo el documento, hemos abordado en varias ocasiones el enfoque que va más allá de ser simplemente un videojuego. Nuestra principal meta es desarrollar una herramienta destinada a ayudar a los niños a cultivar competencias cognitivas que desarrollen el pensamiento computacional. Además, buscamos medir una serie de métricas que serán de gran utilidad para el sector educativo, permitiéndoles llevar a cabo estudios más específicos, rápidos y eficaces sobre los alumnos.
+Por lo tanto, en esta sección, además de explicar el sistema de guardado típico de un videojuego convencional, nos centraremos en la característica distintiva de nuestro videojuego: la medición de métricas.
+
+#### 7.3.1 Sistema de guardado
+El sistema de guardado se presenta de manera sencilla y se divide en dos enfoques:
+1. **Versión Educativa:**
+En la versión educativa, el sistema realizará guardados automáticos del progreso del juego al alcanzar logros, desbloquear objetos o completar niveles. Estos datos se almacenarán en la nube, ya que la versión educativa se centra en la gestión de cuentas y la integración con redes sociales.
+
+2. **Versión Completa para Jugadores Casuales:**
+En la versión completa dirigida a jugadores casuales, el guardado también es automático, pero los datos se guardarán localmente en el sistema en lugar de la nube. Esto se aplicará cuando se cumplan los mismos requisitos mencionados anteriormente.
+Es importante señalar que la recolección de métricas se realizará exclusivamente en la versión educativa del juego.
+
+####7.3.2 Puntuación
+La puntuación es un elemento que el jugador podrá visualizar independientemente de otros sistemas de medición dentro del videojuego. Esta puntuación se centra en aspectos competitivos y se calculará y evaluará de la siguiente manera:
+1. El jugador acumulará puntos en función de una regla que calcula la puntuación en intervalos de tiempo, basada en el tiempo que le lleve completar cada nivel.
+2. Además, se sumarán puntos por recoger diversos objetos coleccionables esparcidos por los mapas en forma de monedas (véase IMAGEN 18). Cada nivel incluye una serie de elementos que el jugador podrá recolectar. Aunque no son esenciales para superar el nivel, su recolección desbloqueará elementos cosméticos, logros y aumentará la puntuación final.
+Cada uno de estos elementos coleccionables otorgará 100 puntos adicionales, y en total, existen tres de ellos en cada nivel.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/18.png)
+
+
+
+
