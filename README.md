@@ -451,3 +451,13 @@ Antes de comenzar a mostrar las fichas, cabe resaltar que al tratarse de un docu
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/37.png)
 
+## 10. INTERFACES
+Las interfaces en un videojuego no son simples herramientas funcionales; son la manifestación de la visión y la narrativa del juego, una extensión de su alma digital. Estos elementos hacen posible que los jugadores naveguen, tomen decisiones y se sumerjan en los mundos que hemos creado. En este apartado, se mostrará la composición de las interfaces de todas las pantallas comentadas en el punto 8. FLUJO DE PANTALLAS.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/38.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/39.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/40.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/41.png)
