@@ -311,7 +311,7 @@ En la versión educativa, el sistema realizará guardados automáticos del progr
 En la versión completa dirigida a jugadores casuales, el guardado también es automático, pero los datos se guardarán localmente en el sistema en lugar de la nube. Esto se aplicará cuando se cumplan los mismos requisitos mencionados anteriormente.
 Es importante señalar que la recolección de métricas se realizará exclusivamente en la versión educativa del juego.
 
-####7.3.2 Puntuación
+#### 7.3.2 Puntuación
 La puntuación es un elemento que el jugador podrá visualizar independientemente de otros sistemas de medición dentro del videojuego. Esta puntuación se centra en aspectos competitivos y se calculará y evaluará de la siguiente manera:
 1. El jugador acumulará puntos en función de una regla que calcula la puntuación en intervalos de tiempo, basada en el tiempo que le lleve completar cada nivel.
 2. Además, se sumarán puntos por recoger diversos objetos coleccionables esparcidos por los mapas en forma de monedas (véase IMAGEN 18). Cada nivel incluye una serie de elementos que el jugador podrá recolectar. Aunque no son esenciales para superar el nivel, su recolección desbloqueará elementos cosméticos, logros y aumentará la puntuación final.
@@ -319,6 +319,90 @@ Cada uno de estos elementos coleccionables otorgará 100 puntos adicionales, y e
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/18.png)
 
+#### 7.3.3 Métricas
+A lo largo de todo el documento, hemos estado haciendo un gran inciso en el sistema de métricas. Esta sección es un componente crítico en el desarrollo de nuestro videojuego puesto que en este apartado es donde delinearemos con detalle las distintas variables y datos que planeamos medir a lo largo de la experiencia de juego. Estas métricas son esenciales para evaluar el progreso del jugador, su nivel de compromiso, así como el impacto educativo de nuestro juego. No solo nos permitirá cuantificar el desempeño de los jugadores, sino también refinar y ajustar la experiencia de juego para lograr nuestros objetivos educativos. A continuación, exploraremos las métricas clave que rastrearemos y cómo estas se relacionan con nuestra visión de reforzar el pensamiento computacional de una manera atractiva y efectiva.
+Ajustandonos a la siguiente tabla (véase IMAGEN 19):
 
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/19.png)
+
+1. **Tiempo tardado:** Medir el tiempo que tardan los jugadores en superar un nivel para poder visualizar cómo de rápido desarrollan o tienen desarrolladas ciertas habilidades.
+2. **Coleccionables recogidos:** Los distintos coleccionables mencionados en el apartado anterior harán que los jugadores cambien de objetivo, ajustándose a recorrer el mapa de distintas maneras en función de qué quieren conseguir antes de finalizar el nivel. 
+3. **Objetos activables:** Dado que la métrica más crucial es la frecuencia de las interacciones del jugador, registraremos cuántas veces utiliza un objeto específico en el entorno. Esto nos permitirá evaluar la capacidad de deducción del jugador, y junto con esta métrica, se considerarán otras habilidades de gran importancia:
+a. **Reconocer elementos claves en un problema:** Visualizando que items y zonas son interactuables.
+b. **Decidir sobre el buen uso de recursos:** Habrá niveles en los que el jugador dispondrá de una serie de combinaciones limitadas para poder pasar el nivel con la mayor puntuación posible.
+c. **Resolver problemas basándose en soluciones anteriores:** Al reciclar mecánicas en distintos niveles. 
+d. **Identificación de patrones, conexiones, similitudes:** Igual que en el punto anterior, ver como volver a resolver el mismo problema con una mecánica nueva.
+4. **Número de muertes:** Al igual que con el tiempo tardado, ayuda a visualizar la capacidad de deducción.
+
+### 7.4. Jugabilidad y curva de dificultad
+Al tratarse de un juego de puzles y plataformas, como diseñadores de niveles debemos mantener un equilibrio entre la diversión y el desafío sin olvidarnos quien es el público objetivo de nuestro videojuego. La curva de dificultad debe mantener a los jugadores comprometidos y motivados a medida que avanzan en el juego. 
+Esta sección es crucial para garantizar que la experiencia de juego sea gratificante y accesible para una amplia audiencia, al tiempo que proporciona un desafío significativo para aquellos que buscan un puzle estimulante (haciendo inciso en esta parte en los jugadores más casual para que no parezca un videojuego infantil). A lo largo de las próximas páginas, desglosaremos cómo planeamos lograr un equilibrio óptimo en términos de jugabilidad y dificultad, y cómo esto contribuirá a una experiencia de juego inmersiva y envolvente que mantendrá a los jugadores comprometidos de principio a fin.
+
+La estructura de niveles, aunque no profundizaremos en su diseño específico en este punto, se presenta de la siguiente manera:
+- El juego constará de un total de 5 mundos, cada uno con un tema relacionado con sueños o pesadillas.
+- Cada mundo albergará 3 niveles que los jugadores podrán completar.
+- El primer nivel de cada mundo estará diseñado en torno a una mecánica específica, lo que permitirá que los jugadores se familiaricen con ella.
+- Los otros dos niveles de cada mundo presentarán una combinación de mecánicas de otros mundos, aumentando la complejidad del desafío a medida que se avanza en el juego.
+- Además, habrá escenarios que se repetirán, pero sin la mecánica principal, lo que requerirá que los jugadores los superen de manera diferente.
+Por lo tanto, la curva de dificultad del videojuego se caracteriza por un aumento gradual a medida que los jugadores avanzan a través de los niveles de los distintos mundos. Sin embargo, esta curva no siempre sigue un aumento constante, ya que, al comenzar cada mundo, el nivel de desafío disminuye cierto grado. Pese a ello, el primer nivel del cuarto mundo será más complejo que el primer nivel del segundo mundo. El objetivo es proporcionar una experiencia de juego equilibrada que mantenga a los jugadores comprometidos sin abrumarlos con una dificultad excesiva (véase IMAGEN 20).
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/20.png)
+
+### 7.5. Objetos interactuables e interacciones
+Un elemento fundamental en cualquier videojuego es la capacidad de sumergir al jugador en un mundo interactivo y envolvente. Para lograr esto, es esencial incorporar objetos interactuables que permitan a los jugadores explorar, experimentar y dar vida a la narrativa del juego. En esta sección desglosaremos cada una de las interacciones y objetos que formarán parte de las mecánicas base de los niveles:
+
+#### 7.5.1. Baldosas/bloques transportadores
+Se trata de una serie de bloques o baldosas que transportarán al jugador de una zona específica a otra. Este tipo de plataformas se usarán sobretodo para llegar a lugares elevados y limitar zonas de acceso al no poder saltar.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/21.png)
+
+#### 7.5.2. Elevadores de agua
+Se trata de una serie de botones que cambian el nivel del agua de cierta zona. En caso de que el jugador toque el agua, morirá. Por ello existirán una serie de plataformas que variarán según el propio nivel del agua y por las que el jugador podrá pasar.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/22.png)
+
+#### 7.5.3. Foco de luz
+El foco de luz giratorio es un elemento de juego que, de ser iluminado por él, el jugador sufre un efecto letal, lo que puede resultar en su muerte en el juego. Este elemento agrega un desafío adicional, ya que el jugador debe evitar la luz giratoria para sobrevivir, lo que podría requerir habilidades de sigilo o resolución de acertijos para avanzar con éxito en el juego sin ser detectado por la luz giratoria. Este tipo de mecánica puede aportar tensión y emoción al juego al crear un obstáculo mortal y la necesidad de estrategia por parte del jugador.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/23.png)
+
+#### 7.5.4. Ovejas
+Cuando el jugador hace clic en una oveja, esta comienza a perseguirlo. Son útiles ya que activan una serie de plataformas las cuáles requieren de un número determinado de ovejas. La mecánica de hacer clic en una oveja agrega un elemento de desafío y estrategia, ya que el jugador debe equilibrar la gestión de las ovejas mientras trabaja para alcanzar el número requerido y activar las plataformas elevadoras evitando que se caigan. Esto puede requerir planificación y resolución de acertijos para superar obstáculos y avanzar en el juego.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/24.png)
+
+#### 7.5.5. Plataforma de cambio de gravedad
+La plataforma de cambio de gravedad es un elemento de juego que, al ser pisado por el personaje, modifica la dirección de la gravedad a su alrededor. Esto significa que el personaje, después de activar la plataforma, caerá en una dirección diferente a la gravedad convencional, lo que puede abrir oportunidades para exploración, resolución de acertijos y superar obstáculos únicos en el juego. Este tipo de plataforma agrega una mecánica de juego intrigante que desafía la percepción y la estrategia del jugador, creando situaciones y rompecabezas innovadores en el juego.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/25.png)
+
+#### 7.5.6. Palanca del puente
+El puente controlado por una palanca es un elemento de juego que permite al jugador controlar el acceso a ciertas zonas. Al activar la palanca, el puente se despliega o se retrae, afectando la accesibilidad a diferentes áreas del juego. Si el puente no está activado, ciertas zonas pueden volverse inaccesibles, lo que agrega un componente de resolución de acertijos y estrategia al juego. Los jugadores deben tomar decisiones estratégicas sobre cuándo y cómo activar la palanca para garantizar que puedan acceder a las áreas deseadas y avanzar en el juego.
+
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/26.png)
+
+#### 7.5.6. Puertas giratorias
+La pared giratoria es un elemento de juego que agrega una mecánica de exploración y descubrimiento. Cuando el jugador pisa la zona adecuada, la pared comienza a girar, revelando una nueva área o pasaje. La plataforma de activación se encuentra escondida, lo que impulsa a los jugadores a buscar y descubrir la forma de avanzar en el juego. Esta mecánica fomenta la exploración y la interacción con el entorno, ofreciendo sorpresas y desafíos a medida que los jugadores descubren cómo utilizarla para acceder a nuevas zonas.
+
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/27.png)
+
+#### 7.5.7. Bloques destructibles
+La mecánica de los bloques destructibles es un elemento de juego en el que uno o varios bloques están ocultos en el escenario. Cuando el jugador los toca varias veces, estos bloques se rompen, lo que proporciona acceso a nuevas zonas o áreas previamente inaccesibles. Esta mecánica fomenta la exploración y la interacción con el entorno, ya que los jugadores deben descubrir la ubicación de los bloques camuflados y tocarlos repetidamente para avanzar en el juego. Los bloques camuflados pueden ocultar sorpresas, tesoros o desafíos adicionales, lo que agrega un elemento de descubrimiento y recompensa a la experiencia de juego.
+
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/28.png)
+
+#### 7.5.8. Dientes que se caen 
+La mecánica de los dientes que se caen es un elemento de juego el cual actúa de plataformas. Una vez pisadas por el jugador, comienzan a caerse después de un cierto período de tiempo. El jugador debe ser rápido y estratégico al usar estas plataformas, ya que deben moverse rápidamente para evitar caer cuando las plataformas se desploman. Esta mecánica agrega un elemento de tiempo y habilidad al juego, ya que los jugadores deben calcular el momento adecuado para avanzar a través de estas plataformas antes de que se vuelvan inestables y los hagan caer.
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/29.png)
+
+#### 7.5.9. Bloques de hielo
+Esta mecánica es un elemento de juego en el que el jugador avanza sin parar sobre superficies de hielo hasta que choca con una pared o se desliza fuera de la plataforma, lo que puede resultar en la muerte del personaje. Esta mecánica agrega un desafío de control y navegación, ya que el jugador debe anticipar y planificar los movimientos para evitar caer o llegar a la zona correcta deslizándose por las zonas indicadas. Puede requerir reflejos rápidos y estrategia para superar obstáculos en el juego mientras se desliza sobre estas superficies de hielo aparte de resolver problemas como una especie de laberinto.
+A modo de referencia, esta mecánica está basada en el gimnasio de tipo hielo de pokemon Diamante y Perla (véase IMAGEN 30).
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/30.png)
 
 
