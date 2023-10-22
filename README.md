@@ -405,4 +405,49 @@ A modo de referencia, esta mecánica está basada en el gimnasio de tipo hielo d
 
 ![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/30.png)
 
+## 8. FLUJO DE PANTALLAS
+Integrar el concepto del "flujo de pantallas" en un Game Design Document es esencial para delinear de manera efectiva la experiencia de juego que se está desarrollando. En un videojuego es un aspecto fundamental que define la experiencia del jugador y la estructura narrativa del juego. Es la forma en que el juego guía al jugador a través de diferentes momentos, desafíos y narrativas, y tiene un profundo impacto en la inmersión y la jugabilidad.
+En este sentido, hemos llevado a cabo un minucioso diseño de las diversas pantallas del videojuego, ajustándonos en todo momento a los requisitos y las historias de usuario proporcionados por nuestros clientes. Antes de presentar el esquema del flujo del videojuego, proporcionaremos una breve explicación de lo que el jugador experimentará en cada una de las pantallas:
+
+1. **Pantalla de Inicio:** Se muestra el logo de la empresa junto a la imagen promocional principal del videojuego.
+2. **Pantalla de Login:** Es la primera pantalla interactiva que se encuentra el jugador en la cual podrá acceder al menú principal  si rellena las credenciales correspondientes o, pulsar otro botón que se ubicará debajo del inicio de sesión y el cual dirigirá al jugador a la pantalla de creación de cuenta en caso de no poseer una.
+3. **Pantalla de creación de cuenta:** El jugador podrá crearse una cuenta y pasar automáticamente a la pantalla de Login.
+4. **Menú principal:** Se encuentran las siguientes opciones:
+a. **JUGAR:** Lleva al jugador a la pantalla de selección de mundo.
+b. **OPCIONES:** Lleva al jugador a la pantalla de opciones.
+c. **COSMÉTICOS:** El jugador es dirigido a la pantalla correspondiente donde podrá aplicar cosméticos al personaje.
+5. **Pantalla de selección de mundo:** Estarán los distinto mundos jugables (bloqueados y desbloqueados) y se podrá seleccionar uno para acceder a él.
+6. **Pantalla de selección de nivel:** Se podrá seleccionar el nivel que se quiera del mundo correspondiente en caso de estar desbloqueado.
+7. **Pantalla de juego:** Se ubica el personaje y el escenario jugable.
+8. **Pantalla de Opciones:** Accesible desde casi cualquier pantalla, el jugador podrá realizar los ajustes que están disponibles y crea pertinentes al juego (subir o bajar el volumen, apartado de gráficos…)
+9. **Pantalla de personalización de cosméticos:** Se mostrarán todos los cosméticos desbloqueados por el jugador y podrá realizar cambios visuales en el personaje.
+10. **Pantalla de gráficos de las métricas:** En caso de poseer una cuenta de docente y tratarse de la versión educativa, los profesores dispondrán en el menú principal de esta opción la cual muestra distintas gráficas de las métricas obtenidas.
+Una vez explicada cada una de las pantallas, véase la IMAGEN 31 (esquema del flujo).
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/31.png)
+
+## 9. NIVELES
+
+La creación y el diseño de niveles son una parte fundamental en el desarrollo de un videojuego puesto que son la combinación de las mecánicas, arte y narrativa creadas ya comentadas en secciones anteriores.
+En este apartado,  se explica con detalle cómo planificamos y diseñamos los diversos mundos y niveles que compondrán nuestro juego. Para ello, usaremos las fichas de nivel creadas por el estudio donde se recoge la siguiente información de cada mundo:
+- **Nombre del mundo.**
+- **Imagen o mockup del mundo.**
+- **Mecánica principal:**  Cuál es la mecánica característica del mundo comentado, sobre todo de cara al primer nivel.
+- **Mecánicas secundarias:** Las cuales se combinarán junto a la principal para el desarrollo del resto de niveles.
+- **Ambientación del mundo:** Comentaremos que sueño o pesadilla representa , es decir, el tema principal del mundo.
+
+Antes de comenzar a mostrar las fichas, cabe resaltar que al tratarse de un documento vivo, algo que ya comentamos en la introducción, la mayoría de  imágenes utilizadas son mockups y referencias que hemos tomado para la creación de esos niveles. Una vez esté el nivel terminado, se cambiará por su imagen correspondiente.
+
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/32.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/33.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/34.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/35.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/36.png)
+
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/37.png)
 
