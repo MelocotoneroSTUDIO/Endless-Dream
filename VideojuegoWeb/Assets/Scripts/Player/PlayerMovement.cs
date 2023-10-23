@@ -39,19 +39,14 @@ public class PlayerMovement : MonoBehaviour
         controller=GetComponent<CharacterController>();
         Debug.Log(SystemInfo.deviceType);
         //Determine inputType
-        if (SystemInfo.deviceType == DeviceType.Desktop) 
-        {
-            InputMethod += KeyboardController;
-            if (forceJoystick)
-            {
-                InputMethod += JoystickController;
-                joystick.gameObject.SetActive(true);
-            }
-        }
-        else 
+        if (SystemInfo.deviceType == DeviceType.Handheld || Application.isMobilePlatform || forceJoystick) 
         {
             InputMethod += JoystickController;
             joystick.gameObject.SetActive(true);
+        }
+        else 
+        {
+            InputMethod += KeyboardController;
         }
     }
 
