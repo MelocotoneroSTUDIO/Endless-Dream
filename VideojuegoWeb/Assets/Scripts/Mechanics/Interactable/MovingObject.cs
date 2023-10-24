@@ -7,14 +7,17 @@ public class MovingObject : InteractableObject
 {
     //Class that handles moving object behaviour
     [Header("Moving object stats")]
-    private Vector3 startPos;
+    
     public Transform endPos;
     public float time;
     private bool moved=false;
+    private Vector3 endPostion;
+    private Vector3 startPos;
 
     private void Start()
     {
         startPos = transform.position;
+        endPostion = endPos.position;
     }
 
 
@@ -23,7 +26,7 @@ public class MovingObject : InteractableObject
         base.Interact();
         if (!moved) 
         {
-            transform.DOMove(endPos.position,time);
+            transform.DOMove(endPostion,time);
             moved = true;
         }
         else 
