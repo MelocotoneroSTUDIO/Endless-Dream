@@ -15,12 +15,6 @@ public class RespawnPlatform : MonoBehaviour
         eventSystem.OnHit += Respawn;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Respawn() 
     {
         player.blockPlayerMovement = true;
