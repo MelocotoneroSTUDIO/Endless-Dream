@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataCollector : MonoBehaviour
 {
@@ -11,9 +13,9 @@ public class DataCollector : MonoBehaviour
     private void Start()
     {
         eventSystem = GetComponent<EventSystem>();
-        eventSystem.OnHit += () => addValue(data.deaths);
-        eventSystem.OnCoinPicked += () => addValue(data.coins);
-        eventSystem.OnTreasurePicked += () => addValue(data.treasures);
+        eventSystem.OnHit += addDeath;
+        eventSystem.OnCoinPicked += addCoin;
+        eventSystem.OnTreasurePicked += addTreasure;
     }
 
     //Need method/s to update current data
@@ -27,15 +29,42 @@ public class DataCollector : MonoBehaviour
         data.time = value;
     }
 
-    public void addValue(int data)
+    public void addCoin()
     {
-        data += 1;
+        Debug.Log("Moneda");
+        data.coins += 1;
+    }
+    public void addTreasure()
+    {
+        Debug.Log("Tesoro");
+        data.treasures += 1;
+    }
+    public void addDeath()
+    {
+        Debug.Log("Muerte");
+        data.deaths += 1;
     }
 
     public void SaveData() 
     {
         //Called at the end of the level
         //Needs to call static data saver to upload current data to the txt or database
+        data.level = SceneManager.GetActiveScene().name;
         DataSaver.SaveData(data);
+    }
+}
+
+[CustomEditor(typeof(DataCollector))]
+public class ObjectBuilderEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        DataCollector myScript = (DataCollector)target;
+        if (GUILayout.Button("Save data"))
+        {
+            myScript.SaveData();
+        }
     }
 }
