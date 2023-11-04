@@ -21,7 +21,7 @@ public class DataClass
         result = result + "Gender: " + gender + "\n";
         result = result + "Level: " + level + "\n";
         result = result + "Interacions: " + interactions + "\n";
-        result = result + "Time: " + time + "\n";
+        result = result + "Time: " + time.ToString("0.00") + "\n";
         result = result + "Coins: " + coins + "\n";
         result = result + "Treasures: " + treasures + "\n";
         result = result + "Deaths: " + deaths + "\n";
