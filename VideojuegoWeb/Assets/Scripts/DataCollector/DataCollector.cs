@@ -8,6 +8,7 @@ public class DataCollector : MonoBehaviour
 {
     //Data variables updated onruntime
     DataClass data = new DataClass();
+    public DataClass _data { get { return data; } }
 
     EventSystem eventSystem;
     private void Start()
