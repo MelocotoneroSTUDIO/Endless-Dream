@@ -4,21 +4,20 @@ using UnityEngine;
 
 public static class DataSaver
 {
-    static string writepath = Application.streamingAssetsPath + "/Data/Levels/";
-    static string readpath = Application.streamingAssetsPath + "/Data/Personal/PData.txt";
+    
+
+    //Packs personal data and level data and sends it to txt
+    //TODO missing save into database
     public static void SaveData(DataClass data) 
     {
-        Debug.Log(Application.streamingAssetsPath);
-        //Missing add gender and age from save
-        using (StreamReader reader = new StreamReader(readpath)) 
-        {
-            data.gender = reader.ReadLine();
-            data.age = int.Parse(reader.ReadLine());
-        }
-
-        //Upload data to txt or database (if connection available?)
-        //Might need a serializable data class to store all data and transfer it
-        using (StreamWriter outputFile = new StreamWriter(Path.Combine(writepath, "data.txt")))
+        //TODO change username to unknown player id for confidentiallity
+        data.ID = SaveSystem.save.username;
+        data.gender = SaveSystem.save.gender;
+        data.age = SaveSystem.save.age;
+        
+        string writepath = Application.persistentDataPath + "/Data/Levels/";
+        Directory.CreateDirectory(writepath);
+        using (StreamWriter outputFile = new StreamWriter(writepath + data.level + ".txt"))
         {
             outputFile.WriteLine(data.DataToString());
         }

@@ -28,7 +28,6 @@ public class ExitDoorBehaviour : MonoBehaviour
             timer.stopTimer();
             collector.setTime(timer.getCurrentTimeSeconds());
             collector.SaveData();
-            //Data has been saved to stats proceed to load next level
             
             if(levelID >= SaveSystem.save.completedLevels) 
             {
@@ -43,8 +42,9 @@ public class ExitDoorBehaviour : MonoBehaviour
             SaveSystem.save.coins += collector._data.coins;
             //Save file info updated proceed to save
             SaveSystem.SaveData();
-            
-            //Missing change to next level or menu pop up
+
+            //Data has been saved to stats and savefile proceed to load next level
+            //TODO Missing change to next level or menu pop up
         }
     }
 }

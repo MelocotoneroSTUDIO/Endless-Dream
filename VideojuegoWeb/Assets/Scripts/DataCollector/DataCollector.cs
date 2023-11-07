@@ -48,8 +48,6 @@ public class DataCollector : MonoBehaviour
 
     public void SaveData() 
     {
-        //Called at the end of the level
-        //Needs to call static data saver to upload current data to the txt or database
         data.level = SceneManager.GetActiveScene().name;
         DataSaver.SaveData(data);
     }

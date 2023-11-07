@@ -3,10 +3,10 @@ using System;
 [Serializable]
 public class SaveInfo
 {
-    public string username;
-    public string gender;
-    public int age;
+    public string username = "Vectorcs";
+    public string gender = "M";
+    public int age = 21;
     public int completedLevels;
-    public int[] levelStars;
+    public int[] levelStars = new int[30];
     public int coins;
 }

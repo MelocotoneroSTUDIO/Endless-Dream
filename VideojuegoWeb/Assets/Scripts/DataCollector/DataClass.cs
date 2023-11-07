@@ -3,7 +3,7 @@ using System;
 [Serializable]
 public class DataClass
 {
-    //Add current level info
+    public string ID = "";
     public string gender = null;
     public int age = 0;
     public string level = "";
@@ -17,6 +17,7 @@ public class DataClass
     {
         string result="";
 
+        result = result + "ID: " + ID + "\n";
         result = result + "Age: " + age + "\n";
         result = result + "Gender: " + gender + "\n";
         result = result + "Level: " + level + "\n";
