@@ -10,7 +10,6 @@ public static class SaveSystem
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string savePath = Application.persistentDataPath + "/Saves/";
-        //string savePath = Application.persistentDataPath + "/Saves/" + save.username + ".sav";
 
         Directory.CreateDirectory(savePath);
         FileStream stream = new FileStream(savePath + "save.sav", FileMode.Create);
@@ -21,13 +20,11 @@ public static class SaveSystem
     }
 
     //TODO Missing call at game start to load save file
-    //TODO Also when DB is active need to pull save file from DB
+    //TODO Also when DB is active need to pull save file from DB at login
     public static void LoadData() 
     {
-        //TODO Maybe change loadPath to find files in a folder to have custom name save file instead of save.sav
         string loadPath = Application.persistentDataPath + "/Saves/";
         Directory.CreateDirectory(loadPath);
-        //string loadPath = Application.persistentDataPath + "/Saves/" + save.username + ".sav";
 
         if (File.Exists(loadPath + "save.sav")) 
         {
