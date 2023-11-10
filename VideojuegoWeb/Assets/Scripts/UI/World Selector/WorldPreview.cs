@@ -6,7 +6,9 @@ using UnityEngine;
 public class WorldPreview : MonoBehaviour
 {
 
-    Rotation worldRotation => FindAnyObjectByType<Rotation>();
+    Rotation WorldRotation => FindAnyObjectByType<Rotation>();
+
+    WorldPreview[] WorldPreviews => FindObjectsByType<WorldPreview>(FindObjectsSortMode.None);
 
     [SerializeField] CinemachineVirtualCamera worldCamera;
     [SerializeField] CinemachineVirtualCamera zoomCamera;
@@ -15,22 +17,30 @@ public class WorldPreview : MonoBehaviour
 
     [SerializeField] float angle;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Canvas canvas;
 
-    // Update is called once per frame
-    void Update()
+    public bool selected;
+
+    private void OnMouseDown()
     {
-        
+        Click();
     }
 
     [ContextMenu("Select For Preview")]
     void SelectForPreview()
     {
-        worldRotation.SetRotation(angle);
+        canvas.gameObject.SetActive(false);
+
+        WorldRotation.SetRotation(angle);
+
+        foreach (var r in WorldPreviews)
+        {
+            r.Deselect();
+        }
+
+        selected = true;
+        
+        worldCamera.enabled = true;
 
     }
 
@@ -39,5 +49,27 @@ public class WorldPreview : MonoBehaviour
     {
         worldCamera.enabled = false;
         zoomCamera.enabled = true;
+        canvas.gameObject.SetActive(true); 
     }
+
+
+    public void Click()
+    {
+        if (selected)
+        {
+            SelectForLevelSelection();
+            
+        }
+        else
+        {
+            SelectForPreview();
+        }
+    }
+
+    public void Deselect()
+    {
+        selected = false;
+        canvas.gameObject.SetActive(false);
+    }
+
 }
