@@ -7,6 +7,7 @@ public class ExitDoorBehaviour : MonoBehaviour
     TimerBehaviour timer;
     DataCollector collector;
     public int levelID;
+    public EndScreenBehaviour endScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,12 @@ public class ExitDoorBehaviour : MonoBehaviour
 
             //Data has been saved to stats and savefile proceed to load next level
             //TODO Missing change to next level or menu pop up
+            endScreen.gameObject.SetActive(true);
+            endScreen.currentLevelID = levelID;
+            endScreen.treasuresObtained = collector._data.treasures;
+            endScreen.time = timer.getCurrentTimeSeconds();
+
+            endScreen.ShowStats();
         }
     }
 }
