@@ -42,8 +42,17 @@ public class Rotation : MonoBehaviour
         desiredRotation = Quaternion.Euler(0,angle,0);
         startingRotation = transform.rotation;
         float dif = Quaternion.Angle(desiredRotation, startingRotation);
-        totalTime = dif / speed;
-        elapsedTime = 0;
+        if (dif < 1)
+        {
+            totalTime = 1;
+            elapsedTime = 0;
+        }
+        else
+        {
+            totalTime = dif / speed;
+            elapsedTime = 0;
+        }
+        
 
     }
 }
