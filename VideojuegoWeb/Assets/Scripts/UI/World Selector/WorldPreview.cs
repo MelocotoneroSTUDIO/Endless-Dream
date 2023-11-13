@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WorldPreview : MonoBehaviour
@@ -20,6 +21,20 @@ public class WorldPreview : MonoBehaviour
     [SerializeField] Canvas canvas;
 
     public bool selected;
+
+    [SerializeField] bool startAsSelected;
+
+
+    WorldHub WorldHub => FindAnyObjectByType<WorldHub>();
+
+
+    private void Start()
+    {
+        if(startAsSelected)
+        {
+            selected = true;
+        }
+    }
 
     private void OnMouseDown()
     {
@@ -49,6 +64,7 @@ public class WorldPreview : MonoBehaviour
     {
         worldCamera.enabled = false;
         zoomCamera.enabled = true;
+        WorldHub.StartPreviewMode();
         canvas.gameObject.SetActive(true); 
     }
 

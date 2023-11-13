@@ -9,8 +9,8 @@ public class Rotation : MonoBehaviour
 
     [SerializeField] float speed;
 
-    Vector3 desiredAngle;
-    Vector3 startingAngle;
+    Quaternion desiredRotation;
+    Quaternion startingRotation;
 
     float elapsedTime;
     float totalTime;
@@ -21,14 +21,14 @@ public class Rotation : MonoBehaviour
     void Start()
     {
         totalTime = 1;
-        desiredAngle = transform.eulerAngles;
-        startingAngle = transform.eulerAngles;
+        desiredRotation = transform.rotation;
+        startingRotation = transform.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rotationPivot.eulerAngles = Vector3.Lerp(startingAngle, desiredAngle, elapsedTime / totalTime);
+        rotationPivot.rotation = Quaternion.Lerp(startingRotation, desiredRotation, elapsedTime / totalTime);
         elapsedTime += Time.deltaTime;
         if(elapsedTime >= totalTime)
         {
@@ -39,11 +39,20 @@ public class Rotation : MonoBehaviour
 
     public void SetRotation(float angle)
     {
-        desiredAngle = Vector3.up * angle;
-        startingAngle = transform.eulerAngles;
-        float dif = Mathf.Abs(desiredAngle.y - startingAngle.y);
-        totalTime = dif / speed;
-        elapsedTime = 0;
+        desiredRotation = Quaternion.Euler(0,angle,0);
+        startingRotation = transform.rotation;
+        float dif = Quaternion.Angle(desiredRotation, startingRotation);
+        if (dif < 1)
+        {
+            totalTime = 1;
+            elapsedTime = 0;
+        }
+        else
+        {
+            totalTime = dif / speed;
+            elapsedTime = 0;
+        }
+        
 
     }
 }
