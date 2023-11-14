@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class InteractableObject: MonoBehaviour
 {
+    //[HideInInspector]
     public DataCollector collector;
     private void Start()
     {
@@ -12,8 +13,6 @@ public abstract class InteractableObject: MonoBehaviour
     //Abstract class for interactable objects
     public virtual void Interact() 
     {
-        Debug.Log(collector);
         collector.addInteracion();
-        Debug.Log("Interaction added");
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class SheepPlacementData
 {
-    public Vector3 Position;
+    public Transform Position;
     public bool isOcuppied=false;
     public SheepBehaviour Sheep = null;
 }
