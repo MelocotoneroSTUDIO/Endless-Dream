@@ -32,7 +32,7 @@ Material:
   m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _Radius
+  m_LockedProperties: _Radius _foamColor
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -77,6 +77,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_25f7665ad7d74c30af87c9fe6070b5cd_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 5644b474de5fe03479a47e816e02d658, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5160de9abe874518b63d373f75eaf286_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 5644b474de5fe03479a47e816e02d658, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -137,7 +141,7 @@ Material:
     - _ZWriteControl: 0
     - _flowSpeed: 0.01
     - _foamAmount: 7.85
-    - _foamCutoff: 2.59
+    - _foamCutoff: 1.74
     - _foamDensity: 5
     - _foamScale: 1
     - _foamSpeed: 1
@@ -153,11 +157,11 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ObjectPosition: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _deepWater: {r: 0, g: 0.29491222, b: 0.90588236, a: 0.2784314}
+    - _deepWater: {r: 0.08235294, g: 0.5647059, b: 0.79215693, a: 1}
     - _flowDirection: {r: 0.47, g: 1, b: 0, a: 0}
     - _foamColor: {r: 1, g: 1, b: 1, a: 1}
     - _light: {r: 1, g: 1, b: 1, a: 0}
     - _shadow: {r: 0, g: 0, b: 0, a: 0}
-    - _shallowWater: {r: 0, g: 0.29625097, b: 0.497, a: 0.12156863}
+    - _shallowWater: {r: 0.05490196, g: 0.48931542, b: 0.8784314, a: 0.29803923}
     - _waterColor: {r: 1, g: 1, b: 1, a: 0.14901961}
   m_BuildTextureStacks: []
