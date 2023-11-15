@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7a004d93c1d9a1f4f9caca2b31adb6dd
+guid: 74b21a4515e93cb47a11842d1687bb84
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: n1_Baked
-    second: {fileID: 2100000, guid: 72fd1f4e80fa0f74b9831780abfe0b21, type: 2}
+      name: Clouds
+    second: {fileID: 2100000, guid: 83199b5a67346974ab4075ea5da96c3e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,13 +46,13 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
