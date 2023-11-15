@@ -5,6 +5,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
 
+public enum SheepStates 
+{
+    idle,
+    moving
+}
+
 public class SheepBehaviour : InteractableObject
 {
     //Class that handles sheep behaviour
@@ -16,6 +22,8 @@ public class SheepBehaviour : InteractableObject
     AudioSource audioSource;
     private NavMeshAgent agent=default;
     private Coroutine destinationCorutine;
+
+    public SheepStates state = SheepStates.idle;
     
     void Start()
     {
@@ -26,6 +34,7 @@ public class SheepBehaviour : InteractableObject
     public override void Interact()
     {
         base.Interact();
+        agent.enabled = true;
         audioSource.Play();
         //If placed remove the sheep from the place
         if (transform.parent != null) 
@@ -59,12 +68,14 @@ public class SheepBehaviour : InteractableObject
 
     public void SetDestination(Vector3 destination) 
     {
+        state = SheepStates.moving;
         agent.stoppingDistance = 2;
         agent.SetDestination(destination);
     }
 
     public void SetDestinationAndRotation(Vector3 destination, Vector3 rotation) 
     {
+        state = SheepStates.moving;
         agent.stoppingDistance = 1;
         agent.SetDestination(destination);
         StartCoroutine(WaitDestinationComplete(rotation));
@@ -80,7 +91,12 @@ public class SheepBehaviour : InteractableObject
                 {
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                     {
-                        transform.DORotate(rotation, 1f).OnComplete(() => DOTween.Complete(transform)); ;
+                        transform.DORotate(rotation, 1f).OnComplete(() =>
+                        {
+                            DOTween.Complete(transform); 
+                            state = SheepStates.idle;
+                            agent.enabled = false;
+                        });
                         break;
                     }
                 }
@@ -94,6 +110,7 @@ public class SheepBehaviour : InteractableObject
     {
         if (destinationCorutine != null) 
         {
+            state = SheepStates.idle;
             StopCoroutine(destinationCorutine); //Stop updateDestinarion corutine
             SetDestination(transform.position); //Stop in place
             destinationCorutine = null;

@@ -40,6 +40,7 @@ public class SheepSpawner : InteractableObject
             openDoor();
             SheepBehaviour sheepBehaviour = instance.GetComponent<SheepBehaviour>();
             sheepBehaviour.playerFollow = sheepManager.playerFollow;
+            sheepBehaviour.collector = collector;
             sheepManager.addSheep(sheepBehaviour);
             instance.transform.DOMove(exitDoorPosition.position,2);
             StartCoroutine(cooldown());

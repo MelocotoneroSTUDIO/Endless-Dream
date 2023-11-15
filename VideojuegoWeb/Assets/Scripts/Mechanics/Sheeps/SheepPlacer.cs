@@ -7,6 +7,9 @@ public class SheepPlacer : InteractableObject
 {
     public List<SheepPlacementData> positions;
     public Vector3 faceRotation;
+    int placedSheeps = 0;
+    public ActivableObject attachedObject;
+    public int requiredForActivation=1;
 
     private SheepManager sheepManager;
 
@@ -39,10 +42,13 @@ public class SheepPlacer : InteractableObject
             if (placementData != null)
             {
                 //If there is spot place sheep
-                sheep.SetDestinationAndRotation(placementData.Position,faceRotation);
+                Debug.Log("PlacingSheep");
+                sheep.SetDestinationAndRotation(placementData.Position.position,faceRotation);
                 sheep.transform.parent = transform;
                 placementData.isOcuppied = true;
                 placementData.Sheep=sheep;
+                placedSheeps++;
+                activateObject(sheep);
             }
         }
     }
@@ -56,15 +62,34 @@ public class SheepPlacer : InteractableObject
                 data.isOcuppied = false;
                 data.Sheep.transform.parent=null;
                 data.Sheep=null;
+                placedSheeps--;
+                activateObject(sheep);
             }
         }
     }
 
-    private void OnDrawGizmosSelected()
+    void activateObject(SheepBehaviour lastSheep) 
+    {
+        if (attachedObject != null) 
+        {
+            if (placedSheeps >= requiredForActivation) 
+            {
+                StartCoroutine(waitForSheepArrival(lastSheep));
+            }
+        }
+    }
+
+    IEnumerator waitForSheepArrival(SheepBehaviour sheep) 
+    {
+        yield return new WaitUntil(() => { return sheep.state != SheepStates.moving; });
+        attachedObject.Activate();
+    }
+
+    private void OnDrawGizmos()
     {
         foreach (SheepPlacementData data in positions) 
         {
-            Gizmos.DrawWireCube(data.Position,Vector3.one);
+            Gizmos.DrawWireCube(data.Position.position,Vector3.one);
         }
     }
 }
