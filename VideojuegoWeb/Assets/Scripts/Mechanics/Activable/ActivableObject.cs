@@ -9,4 +9,8 @@ public abstract class ActivableObject : MonoBehaviour
     {
     
     }
+    public virtual void Deactivate() 
+    {
+    
+    }
 }

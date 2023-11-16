@@ -51,12 +51,13 @@ MonoBehaviour:
   velocity: 10
   rotationSpeed: 1
   playerMass: 0.2
+  feet: {fileID: 0}
   grounded: 0
   gravity: 0
   forceJoystick: 0
   model: {fileID: 9125718391660105473}
   blockPlayerMovement: 0
-  allowPlayerMovementThreshold: 0.1
+  allowPlayerMovementThreshold: 0.01
 --- !u!143 &4459986680913797890
 CharacterController:
   m_ObjectHideFlags: 0

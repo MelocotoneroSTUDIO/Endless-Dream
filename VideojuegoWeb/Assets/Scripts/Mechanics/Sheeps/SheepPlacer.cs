@@ -43,6 +43,7 @@ public class SheepPlacer : InteractableObject
             {
                 //If there is spot place sheep
                 Debug.Log("PlacingSheep");
+                sheepManager.removeSheep(sheep);
                 sheep.SetDestinationAndRotation(placementData.Position.position,faceRotation);
                 sheep.transform.parent = transform;
                 placementData.isOcuppied = true;
@@ -59,11 +60,12 @@ public class SheepPlacer : InteractableObject
         {
             if (data.Sheep == sheep) 
             {
+                sheepManager.addSheep(sheep);
                 data.isOcuppied = false;
                 data.Sheep.transform.parent=null;
                 data.Sheep=null;
                 placedSheeps--;
-                activateObject(sheep);
+                attachedObject.Deactivate();
             }
         }
     }

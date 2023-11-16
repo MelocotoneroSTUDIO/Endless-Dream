@@ -17,6 +17,8 @@ public class ActivableMovingObject : ActivableObject
     private Vector3 endPostion;
     private Vector3 startPos;
 
+    public float timeBeforeFall=2;
+
     public NavMeshSurface mesh;
 
     private void Start()
@@ -34,11 +36,24 @@ public class ActivableMovingObject : ActivableObject
             transform.DOMove(endPostion, time).OnComplete(() => { mesh?.BuildNavMesh(); });
             moved = true;
         }
-        else
+
+    }
+
+    public override void Deactivate()
+    {
+        base.Deactivate();
+        if (moved)
         {
-            transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); });
-            moved = false;
+            StartCoroutine(waitDeactivate());
         }
+    }
+
+    IEnumerator waitDeactivate() 
+    {
+        yield return new WaitForSeconds(time);
+        transform.DOShakePosition(timeBeforeFall, 0.1f).OnComplete(() => { transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); }); });
+        
+        moved = false;
     }
 
     private void OnTriggerEnter(Collider other)

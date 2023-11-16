@@ -26,4 +26,9 @@ public class SheepManager : MonoBehaviour
     {
         sheeps.Add(sheep);
     }
+
+    public void removeSheep(SheepBehaviour sheep) 
+    {
+        sheeps.Remove(sheep);
+    }
 }
