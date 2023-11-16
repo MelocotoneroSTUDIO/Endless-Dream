@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour
 {
     //Class that handles screen touches or clicks and checks for interactable objects on that position
     Vector3 touchPosition;
+    //public GameObject sphere;
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -20,6 +21,7 @@ public class InputManager : MonoBehaviour
                 {
                     collider.gameObject.GetComponent<InteractableObject>()?.Interact();
                 }
+                //Instantiate(sphere,touchPosition,sphere.transform.rotation);
             }
         }
     }

@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed=1;
     public float playerMass = 0.2f;
     private CharacterController controller;
+    [SerializeField]
+    private Transform feet;
     public bool grounded;
     public float gravity = 0;
     private float gravityMultiplyer = 1f;
@@ -54,17 +56,29 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CharacterMoveAndRotation();
+        checkGravity();
+    }
 
+    void checkGravity() 
+    {
         //Apply gravity
-        gravity = 0;
-        grounded = controller.isGrounded;
-        if (grounded) 
+        Collider[] colliders = Physics.OverlapSphere(feet.position, 0.2f,7);
+        if(colliders.Length > 0 ) 
         {
-            gravity = 0;
+            grounded = true;
         }
         else 
         {
-            gravity -= 100;
+            grounded = false; 
+        }
+        //grounded = controller.isGrounded;
+        if (grounded)
+        {
+            gravity = 0;
+        }
+        else
+        {
+            gravity -= 5;
         }
         controller.Move(new Vector3(0, gravity * gravityMultiplyer * playerMass * Time.deltaTime, 0));
     }
@@ -126,4 +140,9 @@ public class PlayerMovement : MonoBehaviour
         model.transform.localRotation = new Quaternion(x,model.transform.localRotation.y,model.transform.localRotation.z,model.transform.localRotation.w);
     }
 
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(feet.position, 0.2f);
+    }
 }

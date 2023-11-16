@@ -18,6 +18,7 @@ public class RespawnPlatform : MonoBehaviour
     public void Respawn() 
     {
         player.blockPlayerMovement = true;
+        player.gravity = 0;
         player.transform.position = respawnPosition.position;
         player.transform.rotation = Quaternion.Slerp(player.transform.rotation, respawnPosition.rotation, 1f);
         StartCoroutine(DisableBlockPlayerMovement());
