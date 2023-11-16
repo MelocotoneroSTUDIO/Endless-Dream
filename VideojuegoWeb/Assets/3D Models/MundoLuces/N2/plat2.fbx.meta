@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e05ca8a8b0e4d64b812d27454572c79
+guid: 3fd109ee4519fb748892a0bc4c971c48
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: puente
-    second: {fileID: 2100000, guid: b643c315cdd17094cbd7996a72660f22, type: 2}
+      name: plataforma.002
+    second: {fileID: 2100000, guid: b445238693d2d2444a282e73a691d510, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plataforma.005
+    second: {fileID: 2100000, guid: 937213c6cfc84774e9fd0916a9a4b728, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -38,11 +43,40 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature.006|Armature.006Action
-      takeName: Armature.006|Armature.006Action
-      internalID: -1288334537179099229
+      name: paArriba
+      takeName: Armature.001|ArmatureAction.001
+      internalID: -8639993316982285888
       firstFrame: 0
-      lastFrame: 73
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: paAbajo
+      takeName: Armature.001|ArmatureAction.001
+      internalID: -7624139304998363525
+      firstFrame: 100
+      lastFrame: 190
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
