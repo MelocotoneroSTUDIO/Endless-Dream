@@ -1,7 +1,10 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
+using UnityEditor.AI;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ActivableMovingObject : ActivableObject
 {
@@ -13,6 +16,8 @@ public class ActivableMovingObject : ActivableObject
     private bool moved = false;
     private Vector3 endPostion;
     private Vector3 startPos;
+
+    public NavMeshSurface mesh;
 
     private void Start()
     {
@@ -26,12 +31,12 @@ public class ActivableMovingObject : ActivableObject
         base.Activate();
         if (!moved)
         {
-            transform.DOMove(endPostion, time);
+            transform.DOMove(endPostion, time).OnComplete(() => { mesh?.BuildNavMesh(); });
             moved = true;
         }
         else
         {
-            transform.DOMove(startPos, time);
+            transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); });
             moved = false;
         }
     }
@@ -47,7 +52,7 @@ public class ActivableMovingObject : ActivableObject
     }
 
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, endPos.position);

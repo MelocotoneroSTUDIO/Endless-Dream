@@ -29,6 +29,7 @@ public class SheepBehaviour : InteractableObject
     {
         audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
+        agent.enabled = false;
     }
 
     public override void Interact()
