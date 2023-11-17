@@ -3,6 +3,8 @@ using System;
 [Serializable]
 public class SaveInfo
 {
+    public string useremail;
+    public string password;
     public string username;
     public string gender;
     public int age;

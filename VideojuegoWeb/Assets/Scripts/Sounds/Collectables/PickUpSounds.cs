@@ -33,3 +33,5 @@ public class PickUpSounds : MonoBehaviour
         audioSource.Play();
     }
 }
+
+
