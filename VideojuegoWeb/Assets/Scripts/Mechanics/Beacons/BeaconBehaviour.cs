@@ -25,7 +25,8 @@ public class BeaconBehaviour : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-        Ray ray = new Ray(beamOrigin.position,beamDirection.position);
+        Vector3 direction = beamDirection.position - beamOrigin.position;
+        Ray ray = new Ray(beamOrigin.position,direction);
         if (Physics.Raycast(ray, out hit))
         {
             touchPosition = hit.point;
@@ -52,7 +53,7 @@ public class BeaconBehaviour : MonoBehaviour
         transform.DOMove(startPos, timeToMove).OnComplete(() => { moveBeamToEnd(); });
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         //Moving guides gizmo
         Gizmos.color = Color.red;
