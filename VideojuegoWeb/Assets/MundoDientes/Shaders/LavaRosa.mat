@@ -24,14 +24,18 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 8f78de84d70baaa498e1e7c9822002fd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _RECEIVE_SHADOWS_OFF
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
+  disabledShaderPasses:
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -50,15 +54,29 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 1
+    - _AlphaToMask: 1
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _CastShadows: 0
+    - _Cull: 2
+    - _DstBlend: 0
     - _Metallic: 0.12
     - _NormalStrength: 0.12
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Radius: 0
+    - _ReceiveShadows: 0
     - _Smoothness: 3.49
+    - _SrcBlend: 1
+    - _Surface: 0
     - _VoronoiAgitation: 2.73
     - _VoronoiPower: 10.31
     - _VoronoiScale: 115.5
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
     m_Colors:
     - ObjectsPosition: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
