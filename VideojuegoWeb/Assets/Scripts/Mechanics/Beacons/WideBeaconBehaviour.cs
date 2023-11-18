@@ -20,6 +20,7 @@ public class WideBeaconBehaviour : MonoBehaviour
 
     public Collider[] colliders;
 
+
     private void Start()
     {
         startPos = transform.position;
@@ -52,13 +53,14 @@ public class WideBeaconBehaviour : MonoBehaviour
 
     void moveBeamToEnd()
     {
-        transform.DOMove(endPos.position, timeToMove).OnComplete(() => { moveBeamToStart(); });
+        transform.parent.transform.DOMove(endPos.position, timeToMove).OnComplete(() => { moveBeamToStart(); });
     }
 
     void moveBeamToStart()
     {
-        transform.DOMove(startPos, timeToMove).OnComplete(() => { moveBeamToEnd(); });
+        transform.parent.transform.DOMove(startPos, timeToMove).OnComplete(() => { moveBeamToEnd(); });
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
