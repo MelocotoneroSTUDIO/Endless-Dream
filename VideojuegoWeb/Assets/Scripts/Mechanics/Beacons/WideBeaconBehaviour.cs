@@ -10,20 +10,23 @@ public class WideBeaconBehaviour : MonoBehaviour
     //public Transform beamDirection;
 
     [Header("Beacon movement")]
-    private Vector3 startPos;
-    public Transform endPos;
+    public List<Transform> positions;
     public float timeToMove;
+    private int count = 1;
 
     private Vector3 touchPosition;
 
     public Transform playerAim;
 
     public Collider[] colliders;
+    private EventSystem eventSystem;
+
+
 
     private void Start()
     {
-        startPos = transform.position;
-        moveBeamToEnd();
+        eventSystem = FindObjectOfType<EventSystem>();
+        moveBeam(positions[1].position, positions[1].rotation.eulerAngles);
     }
 
     private void Update()
@@ -42,7 +45,7 @@ public class WideBeaconBehaviour : MonoBehaviour
                     if (collider.tag == "Player")
                     {
                         Debug.Log("Pillado");
-                        //Mising behaviour when catched
+                        eventSystem.OnHit.Invoke();
                     }
                 }
             }
@@ -50,14 +53,16 @@ public class WideBeaconBehaviour : MonoBehaviour
     }
 
 
-    void moveBeamToEnd()
+    void moveBeam(Vector3 pos, Vector3 rot)
     {
-        transform.DOMove(endPos.position, timeToMove).OnComplete(() => { moveBeamToStart(); });
-    }
-
-    void moveBeamToStart()
-    {
-        transform.DOMove(startPos, timeToMove).OnComplete(() => { moveBeamToEnd(); });
+        transform.parent.transform.DORotate(rot, timeToMove);
+        transform.parent.transform.DOMove(pos, timeToMove).OnComplete(() => {
+            count++;
+            if (positions.Count <= count)
+            {
+                count = 0;
+            }
+            moveBeam(positions[count].position, positions[count].rotation.eulerAngles); });
     }
 
     private void OnTriggerEnter(Collider other)
@@ -80,7 +85,11 @@ public class WideBeaconBehaviour : MonoBehaviour
     {
         //Moving guides gizmo
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, endPos.position);
+        for(int i = 0; i < positions.Count; i++)
+        {
+            Gizmos.DrawLine(positions[i].position, positions[i+1>=positions.Count? 0:i+1].position);
+        }
+
 
         if (playerAim != null)
         {
