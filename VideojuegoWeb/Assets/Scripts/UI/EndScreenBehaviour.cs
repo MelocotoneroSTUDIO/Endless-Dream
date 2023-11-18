@@ -47,6 +47,7 @@ public class EndScreenBehaviour : MonoBehaviour
 
     IEnumerator DisplayTreasures() 
     {
+        Debug.Log(treasuresObtained);
         for(int i = 0; i < treasuresObtained; i++) 
             {
                 treasureImages[i].transform.DOScale(Vector3.one,0.3f);
