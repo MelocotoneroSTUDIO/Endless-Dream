@@ -33,6 +33,7 @@ public class OptionMenu : MonoBehaviour
         currentSensitivity = 0;
         ChangeVolume(OptionsSaver.Options.volume);
         ChangeSensitivity(OptionsSaver.Options.cameraSensitivity);
+        SetQuality(OptionsSaver.Options.quality);
         
         volumeUp.onClick.AddListener(() => ChangeVolume(1));
         volumeDown.onClick.AddListener(() => ChangeVolume(-1));
@@ -111,7 +112,7 @@ public class OptionMenu : MonoBehaviour
                 graphicMid.image.color = Color.white;
                 graphicHigh.image.color = Color.white;
 
-                QualitySettings.SetQualityLevel(0);
+                QualitySettings.SetQualityLevel(0,true);
 
                 break;
 
@@ -124,7 +125,7 @@ public class OptionMenu : MonoBehaviour
                 graphicMid.image.color = selectedColor;
                 graphicHigh.image.color = Color.white;
 
-                QualitySettings.SetQualityLevel(1);
+                QualitySettings.SetQualityLevel(1,true);
 
                 break;
 
@@ -137,10 +138,11 @@ public class OptionMenu : MonoBehaviour
                 graphicMid.image.color = Color.white;
                 graphicHigh.image.color = selectedColor;
 
-                QualitySettings.SetQualityLevel(2);
+                QualitySettings.SetQualityLevel(2, true);
 
                 break;
         }
+        OptionsSaver.Options.quality = level;
     }
 
 
