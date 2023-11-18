@@ -25,17 +25,21 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
   - _ALPHATEST_ON
   - _RECEIVE_SHADOWS_OFF
+  - _SPECULAR_SETUP
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Transparent
   disabledShaderPasses:
   - SHADOWCASTER
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -55,35 +59,35 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 1
-    - _AlphaToMask: 1
+    - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _CastShadows: 0
     - _Cull: 2
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _Metallic: 0.12
-    - _NormalStrength: 0.12
+    - _NormalStrength: 33.14
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Radius: 0
     - _ReceiveShadows: 0
-    - _Smoothness: 3.49
+    - _Smoothness: 3.85
     - _SrcBlend: 1
-    - _Surface: 0
+    - _Surface: 1
     - _VoronoiAgitation: 2.73
     - _VoronoiPower: 10.31
     - _VoronoiScale: 115.5
-    - _WorkflowMode: 1
+    - _WorkflowMode: 0
     - _ZTest: 4
-    - _ZWrite: 1
+    - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
     - ObjectsPosition: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1.2074121, g: 1.4125916, b: 1.1260753, a: 1}
     - _NormalSpeed: {r: 0, g: 0.02, b: 0, a: 0}
     - _ObjectsPosition: {r: 0, g: 0, b: 0, a: 0}
-    - _Rosa: {r: 0.91311556, g: 0, b: 0.9245283, a: 0}
-    - _VoronoiColor: {r: 1, g: 0.4764151, b: 0.98650235, a: 1}
+    - _Rosa: {r: 1, g: 0, b: 0.7904124, a: 0}
+    - _VoronoiColor: {r: 1, g: 0.24056602, b: 0.98409575, a: 1}
     - _VoronoiSpeed: {r: 0, g: 0.1, b: 0, a: 0}
     - _VoronoiTiling: {r: 1.35, g: 1.67, b: 0, a: 0}
   m_BuildTextureStacks: []
