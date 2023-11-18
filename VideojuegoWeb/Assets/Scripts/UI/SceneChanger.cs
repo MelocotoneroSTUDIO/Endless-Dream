@@ -34,4 +34,34 @@ public class SceneChanger : MonoBehaviour
         ChangeScene(Credits);
     }
 
+    public void M1Nivel1()
+    {
+
+    }
+
+    public void M1Nivel2()
+    {
+
+    }
+
+    public void M1Nivel3()
+    {
+
+    }
+
+    public void M2Nivel1()
+    {
+
+    }
+
+    public void M2Nivel2()
+    {
+
+    }
+
+    public void M2Nivel3()
+    {
+
+    }
+
 }
