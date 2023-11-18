@@ -8,23 +8,29 @@ using UnityEngine.SceneManagement;
 
 public class SignUpName : MonoBehaviour
 {
-
+    public GameObject nameUI;
+    public GameObject genreUI;
+    public GameObject edadUI;
     public InputField emailInput;
     public InputField passwordInput;
     //public Button registerButton;
     public Button goToNextButton;
     public Button goToPreviousButton;
     //public Camera mainCamera;
-    public CameraController cameraController;
+    //public CameraController cameraController;
     //ArrayList credentials;
     // Start is called before the first frame update
     void Start()
     {
+        nameUI.SetActive(true); // Asegúrate de que el NameUI esté activo al inicio
+        genreUI.SetActive(false);
+        edadUI.SetActive(false);
+
         //registerButton.onClick.AddListener(writeStuffToFile);
         goToNextButton.onClick.AddListener(goToNextStep);
         goToNextButton.onClick.AddListener(writeStuffToFile);
         goToPreviousButton.onClick.AddListener(goToPreviousScene);
-        if(emailInput == null)
+        /*if(emailInput == null)
         {
         emailInput = GetComponentInChildren<InputField>(); // Ejemplo de inicialización
         }
@@ -34,7 +40,7 @@ public class SignUpName : MonoBehaviour
             passwordInput = GetComponentInChildren<InputField>(); // Ejemplo de inicialización
         }
 
-    /*    if (File.Exists(Application.dataPath + "/credentials.txt"))
+          if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
             credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
         }
@@ -49,7 +55,9 @@ public class SignUpName : MonoBehaviour
     {
         //mainCamera.transform.Rotate(0f, 90f, 0f);
         //rotation *= Quaternion.Euler(0f, 90f, 0f);
-        cameraController.RotateCamera(90f);
+        //cameraController.RotateCamera(90f);
+        nameUI.SetActive(false); // Oculta el NameUI al presionar "Siguiente"
+        genreUI.SetActive(true); // Muestra el GenreUI al presionar "Siguiente"
     }
         void goToPreviousScene()
     {
