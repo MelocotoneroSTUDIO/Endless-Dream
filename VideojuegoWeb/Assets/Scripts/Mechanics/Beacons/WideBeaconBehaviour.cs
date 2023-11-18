@@ -87,7 +87,7 @@ public class WideBeaconBehaviour : MonoBehaviour
         Gizmos.color = Color.red;
         for(int i = 0; i < positions.Count; i++)
         {
-            Gizmos.DrawLine(positions[i].position, positions[i>=positions.Count? 0:i+1].position);
+            Gizmos.DrawLine(positions[i].position, positions[i+1>=positions.Count? 0:i+1].position);
         }
 
 
