@@ -8092,6 +8092,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3737170038770534234, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c0bae792008fc27488f1ac43aac4e2fa, type: 2}
     - target: {fileID: 4388258803717232965, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: feet
       value: 
@@ -17123,14 +17127,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713201516}
-  m_LocalRotation: {x: 0.4334893, y: -0.038451016, z: 0.1254184, w: 0.8915598}
+  m_LocalRotation: {x: 0.89686257, y: -0.15396704, z: -0.093024015, w: -0.404077}
   m_LocalPosition: {x: -56.96802, y: 74.180115, z: -114.46247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1333129488}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 51.5, y: 3.7, z: 17.8}
+  m_LocalEulerAnglesHint: {x: 228.89, y: 3.7, z: 17.8}
 --- !u!1 &1738730530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4607579965076306765, guid: f0e1f79b85c08c944845e11d4a7e8598, type: 3}
@@ -23557,7 +23561,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192474280606760305, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: field of view
-      value: 57.822895
+      value: 46.888584
       objectReference: {fileID: 0}
     - target: {fileID: 1232708017822337521, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_FollowOffset.y
