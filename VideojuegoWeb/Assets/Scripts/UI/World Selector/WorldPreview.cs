@@ -21,6 +21,7 @@ public class WorldPreview : MonoBehaviour
     [SerializeField] Canvas canvas;
 
     public bool selected;
+    public bool canBeSelected;
 
     [SerializeField] bool startAsSelected;
 
@@ -34,6 +35,7 @@ public class WorldPreview : MonoBehaviour
         {
             selected = true;
         }
+        canBeSelected = true;
     }
 
     private void OnMouseDown()
@@ -62,6 +64,7 @@ public class WorldPreview : MonoBehaviour
     [ContextMenu("Select For Level Selection")]
     void SelectForLevelSelection()
     {
+        
         worldCamera.enabled = false;
         zoomCamera.enabled = true;
         WorldHub.StartPreviewMode();
@@ -71,15 +74,19 @@ public class WorldPreview : MonoBehaviour
 
     public void Click()
     {
-        if (selected)
+        if(canBeSelected)
         {
-            SelectForLevelSelection();
-            
+            if (selected)
+            {
+                SelectForLevelSelection();
+
+            }
+            else
+            {
+                SelectForPreview();
+            }
         }
-        else
-        {
-            SelectForPreview();
-        }
+        
     }
 
     public void Deselect()
