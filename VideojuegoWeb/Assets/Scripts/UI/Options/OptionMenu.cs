@@ -13,15 +13,27 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] Button volumeDown;
     [SerializeField] AudioMixer audioMixer;
     int currentVolume;
-    
+
+    [SerializeField] TextMeshProUGUI sensitivityText;
+    [SerializeField] Button sensitivityUp;
+    [SerializeField] Button sensitivityDown;
+    float currentSensitivity;
+
+
 
     private void Awake()
     {
+        OptionsSaver.LoadOptions();
         currentVolume = 0;
-        ChangeVolume(5);
+        currentSensitivity = 0;
+        ChangeVolume(OptionsSaver.Options.volume);
+        ChangeSensitivity(OptionsSaver.Options.cameraSensitivity);
         
         volumeUp.onClick.AddListener(() => ChangeVolume(1));
         volumeDown.onClick.AddListener(() => ChangeVolume(-1));
+
+        sensitivityUp.onClick.AddListener(() => ChangeSensitivity(1));
+        sensitivityDown.onClick.AddListener(() => ChangeSensitivity(-1));
 
         Hide();
     }
@@ -39,10 +51,29 @@ public class OptionMenu : MonoBehaviour
             currentVolume = 10;
         }
 
+        OptionsSaver.Options.volume = currentVolume;
         volumenText.text = currentVolume.ToString();
 
         audioMixer.SetFloat("MasterVolume", Mathf.Log10(currentVolume)*20);
 
+
+    }
+
+    void ChangeSensitivity(float sensitivity)
+    {
+        currentSensitivity += sensitivity;
+        if (currentSensitivity < 0)
+        {
+            currentSensitivity = 0;
+        }
+
+        if (currentSensitivity > 10)
+        {
+            currentSensitivity = 10;
+        }
+
+        sensitivityText.text = currentSensitivity.ToString();
+        
     }
 
     public void Show()
@@ -52,6 +83,7 @@ public class OptionMenu : MonoBehaviour
 
     public void Hide()
     {
+        OptionsSaver.SaveOptions();
         gameObject.SetActive(false);
     }
 }

@@ -20,6 +20,7 @@ public class CameraMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     void Start()
     {
         transposer = VirtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
+        speed = OptionsSaver.Options.cameraSensitivity;
     }
 
     public void OnDrag(PointerEventData eventData)
