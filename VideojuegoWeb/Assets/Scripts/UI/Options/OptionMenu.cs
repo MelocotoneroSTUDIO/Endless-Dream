@@ -32,8 +32,8 @@ public class OptionMenu : MonoBehaviour
         volumeUp.onClick.AddListener(() => ChangeVolume(1));
         volumeDown.onClick.AddListener(() => ChangeVolume(-1));
 
-        sensitivityUp.onClick.AddListener(() => ChangeSensitivity(1));
-        sensitivityDown.onClick.AddListener(() => ChangeSensitivity(-1));
+        sensitivityUp.onClick.AddListener(() => ChangeSensitivity(0.1f));
+        sensitivityDown.onClick.AddListener(() => ChangeSensitivity(-0.1f));
 
         Hide();
     }
@@ -67,13 +67,13 @@ public class OptionMenu : MonoBehaviour
             currentSensitivity = 0;
         }
 
-        if (currentSensitivity > 10)
+        if (currentSensitivity > 5)
         {
-            currentSensitivity = 10;
+            currentSensitivity = 5;
         }
 
         OptionsSaver.Options.cameraSensitivity = currentSensitivity;
-        sensitivityText.text = currentSensitivity.ToString();
+        sensitivityText.text = currentSensitivity.ToString("0.0");
         
     }
 
