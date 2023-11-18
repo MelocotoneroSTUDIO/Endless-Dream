@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     const string WorldHubLevel = "Mundos";
     const string BackLevel = "Pant2";
     const string Credits = "Creditos";
+    const string LogIn = "Log In";
 
     public void ChangeScene(string sceneName)
     {
@@ -21,7 +22,7 @@ public class SceneChanger : MonoBehaviour
 
     public void ComenzarJuegos()
     {
-        ChangeScene(WorldHubLevel);
+        ChangeScene(LogIn);
     }
 
     public void VueltaAlMenu()
