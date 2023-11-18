@@ -20,10 +20,12 @@ public class CameraMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     void Start()
     {
         transposer = VirtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
+        speed = OptionsSaver.Options.cameraSensitivity;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        Debug.Log("BBBBBBBBBBB");
         if (draggingStarted) 
         {
             endPos = eventData.position;
@@ -31,6 +33,7 @@ public class CameraMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
             if (difference.magnitude > swipeThreshold)
             {
+                Debug.Log("AAAAAAA");
                 transposer.m_XAxis.Value = transposer.m_XAxis.Value + (difference.x * speed) * Time.deltaTime;
             }
 
@@ -41,6 +44,7 @@ public class CameraMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         draggingStarted = true;
         startPos = eventData.pressPosition;
+        Debug.Log("CCCCCCCCCC");
     }
 
     public void OnEndDrag(PointerEventData eventData)

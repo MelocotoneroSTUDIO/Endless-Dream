@@ -8,6 +8,7 @@ public class WorldHub : MonoBehaviour
 {
 
     [SerializeField] Button backButton;
+    [SerializeField] Button optionButton;
     [SerializeField] CinemachineVirtualCamera selectorCamera;
 
     WorldPreview[] WorldPreviews => FindObjectsByType<WorldPreview>(FindObjectsSortMode.None);
@@ -40,16 +41,24 @@ public class WorldHub : MonoBehaviour
         foreach (var worldPreview in FindObjectsByType<WorldPreview>(FindObjectsSortMode.None))
         {
             worldPreview.Deselect();
+            worldPreview.canBeSelected = true;
         }
 
         selectorCamera.enabled = true;
         backButton.gameObject.SetActive(false);
+        optionButton.gameObject.SetActive(true);
     }
 
 
     public void StartPreviewMode()
     {
         backButton.gameObject.SetActive(true);
+        optionButton.gameObject.SetActive(false);
+
+        foreach (var worldPreview in FindObjectsByType<WorldPreview>(FindObjectsSortMode.None))
+        {   
+            worldPreview.canBeSelected = false;
+        }
     }
 
     
