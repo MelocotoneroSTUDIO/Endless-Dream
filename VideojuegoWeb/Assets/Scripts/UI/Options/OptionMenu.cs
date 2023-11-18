@@ -72,6 +72,7 @@ public class OptionMenu : MonoBehaviour
             currentSensitivity = 10;
         }
 
+        OptionsSaver.Options.cameraSensitivity = currentSensitivity;
         sensitivityText.text = currentSensitivity.ToString();
         
     }
