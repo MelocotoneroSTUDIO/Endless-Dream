@@ -12,6 +12,7 @@ public class BreakingBlock : InteractableObject
     [Header("On hit shake stats")]
     public float shakeStrength = 1;
     public float shakeTime = 1;
+    private AudioSource audioSource;
 
     public override void Interact()
     {
@@ -20,8 +21,9 @@ public class BreakingBlock : InteractableObject
         transform.DOShakePosition(shakeTime,shakeStrength);
         if (hits >= breakResistance) 
         {
+            GetComponent<AudioSource>().Play();
             DOTween.Kill(transform);
-            Destroy(gameObject);
+            DOVirtual.DelayedCall(0.5f, () => Destroy(gameObject));
         }
     }
 }

@@ -1,13 +1,17 @@
 using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WorldPreview : MonoBehaviour
 {
 
     Rotation WorldRotation => FindAnyObjectByType<Rotation>();
+
+    [SerializeField] public Level[] levels;
 
     WorldPreview[] WorldPreviews => FindObjectsByType<WorldPreview>(FindObjectsSortMode.None);
 
@@ -25,6 +29,7 @@ public class WorldPreview : MonoBehaviour
 
     [SerializeField] bool startAsSelected;
 
+    [SerializeField] Color lockedColor;
 
     WorldHub WorldHub => FindAnyObjectByType<WorldHub>();
 
@@ -36,6 +41,17 @@ public class WorldPreview : MonoBehaviour
             selected = true;
         }
         canBeSelected = true;
+
+        foreach(var level in levels)
+        {
+            level.Initialize(FindAnyObjectByType<SceneChanger>(), lockedColor);
+        }
+
+    }
+
+    private void Awake()
+    {
+        
     }
 
     private void OnMouseDown()
@@ -94,5 +110,34 @@ public class WorldPreview : MonoBehaviour
         selected = false;
         canvas.gameObject.SetActive(false);
     }
+
+
+
+    [Serializable]
+    public class Level
+    {
+        public bool locked;
+        public string sceneName;
+        public Button button;
+        public Image lockImage;
+
+        public void Initialize(SceneChanger sceneChanger, Color lockedColor)
+        {
+            if (locked)
+            {
+               button.enabled = false;
+                button.image.color = lockedColor;
+                lockImage.enabled = true;
+            }
+            else
+            {
+                button.onClick.AddListener(() => sceneChanger.ChangeScene(sceneName));
+                lockImage.enabled = false;
+            }
+
+        }
+    }
+
+
 
 }

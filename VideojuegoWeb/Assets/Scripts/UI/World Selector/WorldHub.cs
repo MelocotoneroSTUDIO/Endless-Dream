@@ -13,10 +13,19 @@ public class WorldHub : MonoBehaviour
 
     WorldPreview[] WorldPreviews => FindObjectsByType<WorldPreview>(FindObjectsSortMode.None);
 
+
+
     private void Awake()
     {
         backButton.onClick.AddListener(StartSelectionMode);
         StartSelectionMode();
+
+        var levels = GetLevels();
+
+        for (int i = 0; i < SaveSystem.save.completedLevels; i++)
+        {
+            levels[i].locked = false;
+        }
     }
 
     // Start is called before the first frame update
@@ -61,5 +70,15 @@ public class WorldHub : MonoBehaviour
         }
     }
 
+    public WorldPreview.Level[] GetLevels()
+    {
+        List<WorldPreview.Level> levels = new List<WorldPreview.Level>();
+        foreach(var p in WorldPreviews)
+        {
+            levels.AddRange(p.levels);
+        }
+
+        return levels.ToArray();
+    }
     
 }

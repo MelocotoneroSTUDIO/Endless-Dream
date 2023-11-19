@@ -14,6 +14,6 @@ public class FollowPlayerY : MonoBehaviour
     void Update()
     {
         float playerY = playerPos.position.y;
-        transform.position = new Vector3(0, playerY+10, 0);
+        transform.position = new Vector3(0, playerY+30, 0);
     }
 }
