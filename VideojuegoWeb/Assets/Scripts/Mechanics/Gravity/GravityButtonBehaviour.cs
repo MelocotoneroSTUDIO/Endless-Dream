@@ -11,12 +11,17 @@ public class GravityButtonBehaviour : MonoBehaviour
     CinemachineBrain cinemachineBrain;
     CinemachineVirtualCamera virtualCamera;
     CinemachineOrbitalTransposer transposer;
+
+    EventSystem eventSystem;
     // Start is called before the first frame update
     void Start()
     {
+        eventSystem = FindObjectOfType<EventSystem>();
         cinemachineBrain = FindObjectOfType<CinemachineBrain>();
         virtualCamera = (CinemachineVirtualCamera)cinemachineBrain.ActiveVirtualCamera;
         transposer= virtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
+
+        eventSystem.OnHit += ResetCameraOffset;
     }
 
     // Update is called once per frame
@@ -44,6 +49,11 @@ public class GravityButtonBehaviour : MonoBehaviour
             }
             
         }
+    }
+
+    public void ResetCameraOffset() 
+    {
+        DOVirtual.Float(transposer.m_FollowOffset.y, Mathf.Abs(transposer.m_FollowOffset.y), 1, SetCameraOffset);
     }
 
     public void SetCameraOffset(float y) 
