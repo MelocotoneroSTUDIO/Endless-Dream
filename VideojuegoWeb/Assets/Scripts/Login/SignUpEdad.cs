@@ -24,6 +24,8 @@ public class SignUpEdad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ageDisplay.text = SaveSystem.save.age.ToString();
+
         increaseButton.onClick.AddListener(adderPlus);
         decreaseButton.onClick.AddListener(adderLess);
 
