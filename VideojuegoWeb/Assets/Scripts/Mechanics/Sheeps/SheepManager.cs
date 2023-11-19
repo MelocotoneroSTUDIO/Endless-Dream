@@ -5,7 +5,7 @@ using UnityEngine;
 public class SheepManager : MonoBehaviour
 {
     //Class that manages all sheeps in the level
-    private List<SheepBehaviour> sheeps = new List<SheepBehaviour>();
+    [SerializeField] private List<SheepBehaviour> sheeps = new List<SheepBehaviour>();
     public Transform playerFollow;
 
     public SheepBehaviour getFollowSheep() 
