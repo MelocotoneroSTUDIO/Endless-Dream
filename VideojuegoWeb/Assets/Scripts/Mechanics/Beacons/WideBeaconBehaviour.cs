@@ -49,11 +49,14 @@ public class WideBeaconBehaviour : MonoBehaviour
                     {
                         Debug.Log("Pillado");
                         eventSystem.OnHit.Invoke();
-                        DOTween.Kill(rotTween);
-                        DOTween.Kill(posTween);
-                        transform.parent.transform.position = positions[1].position;
-                        transform.parent.transform.rotation = positions[1].rotation;
+
+                        rotTween.Kill();
+                        posTween.Kill();
+                        transform.parent.transform.position = positions[0].position;
+                        transform.parent.transform.rotation = positions[0].rotation;
                         count = 1;
+
+                        moveBeam(positions[1].position, positions[1].rotation.eulerAngles);
                     }
                 }
             }
