@@ -5,19 +5,23 @@ using UnityEngine;
 public class LevelMusicController : MonoBehaviour
 {
     AudioSource audioSource;
+    public bool variousScenes;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        variousScenes=false;
+        audioSource = GetComponentInChildren<AudioSource>();
         audioSource.loop = true; // Para reproducir en bucle
         audioSource.Play(); // Para iniciar la reproducción
+        //DontDestroyOnLoad(gameObject); // Evita que el objeto se destruya al cambiar de escena
+
     }
 
 
-    // void Update()
-    // {
-    //     if (/* condición para finalizar el nivel */) {
-    //         audioSource.Stop(); // Para detener la reproducción
-    //     }
-    // }
+    /*void Update()
+     {
+         if (variousScenes) {
+             audioSource.Stop(); // Para detener la reproducción
+         }
+     }*/
 }
