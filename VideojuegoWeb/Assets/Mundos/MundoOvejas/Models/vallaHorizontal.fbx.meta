@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9595127c63875fa46a74e0eac3e1f4f3
+guid: a5b5cf4038fe8ef4bb35b556a79eca73
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: woodColumns
-    second: {fileID: 2100000, guid: 80ea89a205d04a944b07775a9cd9af7c, type: 2}
+      name: StylizedWood_brigde
+    second: {fileID: 2100000, guid: b3fa0d0f87c400d4d8603a23487ff866, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,7 +37,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -106,7 +106,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
+  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
