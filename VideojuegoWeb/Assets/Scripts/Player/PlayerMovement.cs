@@ -130,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
     //Change gravity method
     public void ChangeGravity() 
     {
+        transform.position = transform.position + (new Vector3(0,1,0) * gravityMultiplyer);
         gravityMultiplyer = gravityMultiplyer * -1f;
 
         transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1);
