@@ -53,7 +53,7 @@ public class DataCollector : MonoBehaviour
     }
 }
 
-[CustomEditor(typeof(DataCollector))]
+/*[CustomEditor(typeof(DataCollector))]
 public class ObjectBuilderEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -66,4 +66,4 @@ public class ObjectBuilderEditor : Editor
             myScript.SaveData();
         }
     }
-}
+}*/
