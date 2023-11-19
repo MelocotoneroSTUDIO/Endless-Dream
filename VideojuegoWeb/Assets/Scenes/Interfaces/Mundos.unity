@@ -258,6 +258,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109777113}
   m_CullTransparentMesh: 1
+--- !u!114 &154555959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &238918129
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,12 +698,32 @@ PrefabInstance:
       value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo1
+      value: 
+      objectReference: {fileID: 154555959}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo2
+      value: 
+      objectReference: {fileID: 618279961}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo3
+      value: 
+      objectReference: {fileID: 2075758563}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo4
+      value: 
+      objectReference: {fileID: 1429144727}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: worldCamera
       value: 
       objectReference: {fileID: 1814755634}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: levels.Array.data[0].locked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_text
+      value: 'Mundo 3: Bosque oscuro'
       objectReference: {fileID: 0}
     - target: {fileID: 8469108276354660656, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_text
@@ -728,7 +759,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6142644837413712795, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       insertIndex: 0
       addedObject: {fileID: 109777114}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3894998401902259479, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
 --- !u!4 &378568549 stripped
 Transform:
@@ -860,6 +894,22 @@ PrefabInstance:
       value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo1
+      value: 
+      objectReference: {fileID: 154555959}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo2
+      value: 
+      objectReference: {fileID: 618279961}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo3
+      value: 
+      objectReference: {fileID: 2075758563}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo4
+      value: 
+      objectReference: {fileID: 1429144727}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: worldCamera
       value: 
       objectReference: {fileID: 1814755634}
@@ -890,6 +940,10 @@ PrefabInstance:
     - target: {fileID: 7635519338593953768, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_text
+      value: 'Mundo 2: Pesadilla desdentada'
       objectReference: {fileID: 0}
     - target: {fileID: 8469108276354660656, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_text
@@ -925,7 +979,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6142644837413712795, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       insertIndex: 0
       addedObject: {fileID: 496288090}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3894998401902259479, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
 --- !u!1 &388970826
 GameObject:
@@ -1580,6 +1637,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &618279961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 387867731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &927256546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,12 +1873,56 @@ PrefabInstance:
       value: 315
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo1
+      value: 
+      objectReference: {fileID: 154555959}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo2
+      value: 
+      objectReference: {fileID: 618279961}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo3
+      value: 
+      objectReference: {fileID: 2075758563}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo4
+      value: 
+      objectReference: {fileID: 1429144727}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: worldCamera
       value: 
       objectReference: {fileID: 1814755634}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[0].button
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: levels.Array.data[0].locked
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].button
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].button
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[0].lockImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].lockImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].lockImage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_text
+      value: "Mundo 4: Locura Acu\xE1tica"
       objectReference: {fileID: 0}
     - target: {fileID: 9157286074862000971, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_Radius
@@ -1825,7 +1937,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6142644837413712795, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1533351509}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3894998401902259479, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
 --- !u!1 &1151560919
 GameObject:
@@ -2218,6 +2333,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8264836586064421159, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
   m_PrefabInstance: {fileID: 1390553703}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1429144727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 1054556404}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437427063
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,6 +3211,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &2075758563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8451537183700856575, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 301507514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2112257075 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 896419391297535966, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
@@ -3225,6 +3362,22 @@ PrefabInstance:
       value: 0.0078
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo1
+      value: 
+      objectReference: {fileID: 154555959}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo2
+      value: 
+      objectReference: {fileID: 618279961}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo3
+      value: 
+      objectReference: {fileID: 2075758563}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: titulo4
+      value: 
+      objectReference: {fileID: 1429144727}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: worldCamera
       value: 
       objectReference: {fileID: 1814755634}
@@ -3286,5 +3439,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6142644837413712795, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1690252418}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3894998401902259479, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 7f89938be6bb982409737649d10b5d35, type: 3}

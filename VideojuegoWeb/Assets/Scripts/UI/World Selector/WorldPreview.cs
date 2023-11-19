@@ -2,6 +2,7 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,10 @@ public class WorldPreview : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera worldCamera;
     [SerializeField] CinemachineVirtualCamera zoomCamera;
 
+    [SerializeField] TextMeshPro titulo1;
+    [SerializeField] TextMeshPro titulo2;
+    [SerializeField] TextMeshPro titulo3;
+    [SerializeField] TextMeshPro titulo4;
 
 
     [SerializeField] float angle;
@@ -64,6 +69,8 @@ public class WorldPreview : MonoBehaviour
     {
         canvas.gameObject.SetActive(false);
 
+        
+
         WorldRotation.SetRotation(angle);
 
         foreach (var r in WorldPreviews)
@@ -84,7 +91,12 @@ public class WorldPreview : MonoBehaviour
         worldCamera.enabled = false;
         zoomCamera.enabled = true;
         WorldHub.StartPreviewMode();
-        canvas.gameObject.SetActive(true); 
+        canvas.gameObject.SetActive(true);
+
+        titulo1.gameObject.SetActive(false);
+        titulo2.gameObject.SetActive(false);
+        titulo3.gameObject.SetActive(false);
+        titulo4.gameObject.SetActive(false);
     }
 
 
@@ -109,6 +121,11 @@ public class WorldPreview : MonoBehaviour
     {
         selected = false;
         canvas.gameObject.SetActive(false);
+
+        titulo1.gameObject.SetActive(true);
+        titulo2.gameObject.SetActive(true);
+        titulo3.gameObject.SetActive(true);
+        titulo4.gameObject.SetActive(true);
     }
 
 
