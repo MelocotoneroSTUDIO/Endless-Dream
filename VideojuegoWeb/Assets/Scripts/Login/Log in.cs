@@ -19,8 +19,8 @@ public class Login : MonoBehaviour
 
     public InputField usernameInput;
     public InputField passwordInput;
-    public Button loginButton;
-    public Button goToRegisterButton;
+    public List<Button> loginButton;
+    public List<Button> goToRegisterButton;
 
     ArrayList credentials;
 
@@ -35,12 +35,14 @@ public class Login : MonoBehaviour
         //goToNextButton.onClick.AddListener(writeStuffToFile);
         //goToPreviousButton.onClick.AddListener(goToPreviousScene);
 
-        loginButton.onClick.AddListener(login);
-        goToRegisterButton.onClick.AddListener(moveToSignUp);
+        foreach (Button button in loginButton) button.onClick.AddListener(login);
+        foreach (Button button in goToRegisterButton) button.onClick.AddListener(moveToSignUp);
+        //loginButton.onClick.AddListener(login);
+        //goToRegisterButton.onClick.AddListener(moveToSignUp);
 
     }
 
-    void goToNextStep()
+    void moveToSignUp()
     {
         currentUI.SetActive(false); // Oculta el NameUI al presionar "Siguiente"
         nextUI.SetActive(true); // Muestra el GenreUI al presionar "Siguiente"
@@ -85,12 +87,6 @@ public class Login : MonoBehaviour
         SceneManager.LoadScene("Mundos");
     }
 
-    public void moveToSignUp()
-    {
-        //SceneManager.LoadScene("SignUp");
-        //this.GetComponent<Canvas>().enabled = false;
-
-    }
 
     //void loadWelcomeScreen()
     //{

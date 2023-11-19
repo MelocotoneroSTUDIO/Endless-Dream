@@ -321,9 +321,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117856371}
+      - m_Target: {fileID: 832900879}
         m_TargetAssemblyTypeName: Login, Assembly-CSharp
-        m_MethodName: moveToSignUp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -428,8 +428,12 @@ MonoBehaviour:
   nextUI: {fileID: 1599819222}
   usernameInput: {fileID: 1264995130}
   passwordInput: {fileID: 2082253485}
-  loginButton: {fileID: 1609846889}
-  goToRegisterButton: {fileID: 60432293}
+  loginButton:
+  - {fileID: 1609846889}
+  - {fileID: 430283702}
+  goToRegisterButton:
+  - {fileID: 60432293}
+  - {fileID: 715318751}
 --- !u!114 &117856372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2554,9 +2558,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117856371}
+      - m_Target: {fileID: 832900879}
         m_TargetAssemblyTypeName: Login, Assembly-CSharp
-        m_MethodName: moveToSignUp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3510,11 +3514,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousUI: {fileID: 1599819222}
   nextUI: {fileID: 1749204486}
+  logIn: {fileID: 117856370}
   usernameInput: {fileID: 1390085081}
   maleButton: {fileID: 907529281}
   femaleButton: {fileID: 1403736783}
   goToNextButton: {fileID: 1314535645}
   goToPreviousButton: {fileID: 490650859}
+  login: {fileID: 1825694456}
+  signUp: {fileID: 777914328}
 --- !u!1 &907529280
 GameObject:
   m_ObjectHideFlags: 0
@@ -7132,12 +7139,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d266aefab37ca647bb59034b44f600b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  login: {fileID: 117856370}
   currentUI: {fileID: 1599819222}
   nextUI: {fileID: 900507470}
   emailInput: {fileID: 2132481583}
   passwordInput: {fileID: 134200712}
   goToNextButton: {fileID: 613069568}
   goToPreviousButton: {fileID: 1245015936}
+  logInButton:
+  - {fileID: 1245015936}
+  - {fileID: 973952160}
 --- !u!1 &1609846887
 GameObject:
   m_ObjectHideFlags: 0
@@ -7221,7 +7232,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1609846890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 6a68ae01b5e9ae2419dfbe46f38bfd74, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1609846890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7528,11 +7551,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b40f0fa727dac4ca63a8024cc2eda7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logIn: {fileID: 117856370}
+  signUp: {fileID: 1599819222}
   previousUI: {fileID: 900507470}
   increaseButton: {fileID: 1537459983}
   decreaseButton: {fileID: 1349379887}
   goToNextButton: {fileID: 1143193390}
   goToPreviousButton: {fileID: 1079017618}
+  login: {fileID: 698725827}
+  signup: {fileID: 200954856}
   ageDisplay: {fileID: 836203220}
 --- !u!1 &1759398289
 GameObject:

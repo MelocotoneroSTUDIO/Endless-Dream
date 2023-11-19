@@ -8,15 +8,18 @@ using UnityEngine.SceneManagement;
 
 public class SignUpGenre : MonoBehaviour
 {
-
     public GameObject previousUI;
     public GameObject nextUI;
+    public GameObject logIn;
 
     public InputField usernameInput;
     public Button maleButton;
     public Button femaleButton;
     public Button goToNextButton;
     public Button goToPreviousButton;
+
+    public Button login;
+    public Button signUp;
 
     //ArrayList credentials;
     //public float velocityCamera = 5.0f;
@@ -31,6 +34,8 @@ public class SignUpGenre : MonoBehaviour
         goToPreviousButton.onClick.AddListener(goToPreviousStep);
         goToNextButton.onClick.AddListener(goToNextStep);
         goToNextButton.onClick.AddListener(writeStuffToFile);
+        login.onClick.AddListener(goTologIn);
+        signUp.onClick.AddListener(goToSignUp);
     }
 
     void goToNextStep()
@@ -57,6 +62,17 @@ public class SignUpGenre : MonoBehaviour
     {
         SaveSystem.save.gender="Mujer";
         Debug.Log("Mujer asignada");
+    }
+    void goTologIn()
+    {
+        gameObject.SetActive(false); 
+        logIn.SetActive(true);
+    }
+
+    void goToSignUp()
+    {
+        gameObject.SetActive(false); 
+        previousUI.SetActive(true);
     }
 
 }

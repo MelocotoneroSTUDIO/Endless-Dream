@@ -9,6 +9,8 @@ using TMPro;
 
 public class SignUpEdad : MonoBehaviour
 {
+    public GameObject logIn;
+    public GameObject signUp;
     public GameObject previousUI;
 
     public Button increaseButton;
@@ -16,6 +18,9 @@ public class SignUpEdad : MonoBehaviour
     //public Button acceptButton;
     public Button goToNextButton;
     public Button goToPreviousButton;
+
+    public Button login;
+    public Button signup;
 
     public TextMeshProUGUI ageDisplay;
     //public Camera mainCamera;
@@ -32,6 +37,9 @@ public class SignUpEdad : MonoBehaviour
         goToNextButton.onClick.AddListener(goToNextScene);
         goToNextButton.onClick.AddListener(writeStuffToFile);
         goToPreviousButton.onClick.AddListener(goToPreviousStep);
+
+        login.onClick.AddListener(goTologIn);
+        signup.onClick.AddListener(goToSignUp);
     }
 
     void adderPlus()
@@ -62,5 +70,15 @@ public class SignUpEdad : MonoBehaviour
         SaveSystem.SaveData();
         Debug.Log("Todo guardado correctamente.");
     }
-   
+
+    void goTologIn()
+    {
+        gameObject.SetActive(false);
+        logIn.SetActive(true);
+    }
+    void goToSignUp()
+    {
+        gameObject.SetActive(false);
+        signUp.SetActive(true);
+    }
 }

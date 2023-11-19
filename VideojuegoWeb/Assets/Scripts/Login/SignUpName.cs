@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SignUpName : MonoBehaviour
 {
+    public GameObject login;
     public GameObject currentUI;
     public GameObject nextUI;
 
@@ -16,6 +17,8 @@ public class SignUpName : MonoBehaviour
 
     public Button goToNextButton;
     public Button goToPreviousButton;
+
+    public List<Button> logInButton;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +29,9 @@ public class SignUpName : MonoBehaviour
         //registerButton.onClick.AddListener(writeStuffToFile);
         goToNextButton.onClick.AddListener(goToNextStep);
         goToNextButton.onClick.AddListener(writeStuffToFile);
-        goToPreviousButton.onClick.AddListener(goToPreviousScene);
+        //goToPreviousButton.onClick.AddListener(goToPreviousScene);
+
+        foreach (var button in logInButton) button.onClick.AddListener(goToLogIn);
 
     }
 
@@ -35,9 +40,15 @@ public class SignUpName : MonoBehaviour
         currentUI.SetActive(false); // Oculta el NameUI al presionar "Siguiente"
         nextUI.SetActive(true); // Muestra el GenreUI al presionar "Siguiente"
     }
-    public void goToPreviousScene()
+    //public void goToPreviousScene()
+    //{
+    //    SceneManager.LoadScene("Log In");
+    //}
+
+    void goToLogIn()
     {
-        SceneManager.LoadScene("Log In");
+        currentUI.SetActive(false);
+        login.SetActive(true);
     }
 
     void writeStuffToFile()
