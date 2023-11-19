@@ -33,13 +33,13 @@ public class GravityButtonBehaviour : MonoBehaviour
             if (!isActive) 
             {
                 Debug.Log("Baja camara");
-                DOVirtual.Float(transposer.m_FollowOffset.y, transposer.m_FollowOffset.y - cameraYOffset,1,SetCameraOffset);
+                DOVirtual.Float(transposer.m_FollowOffset.y, transposer.m_FollowOffset.y * -1,1,SetCameraOffset);
                 isActive = true;
             }
             else 
             {
                 Debug.Log("Sube camara");
-                DOVirtual.Float(transposer.m_FollowOffset.y, transposer.m_FollowOffset.y + cameraYOffset, 1, SetCameraOffset);
+                DOVirtual.Float(transposer.m_FollowOffset.y, transposer.m_FollowOffset.y * -1, 1, SetCameraOffset);
                 isActive = false;
             }
             
