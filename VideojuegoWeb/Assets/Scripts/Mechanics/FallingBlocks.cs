@@ -39,8 +39,9 @@ public class FallingBlocks : MonoBehaviour
 
     private void blockFall() 
     {
-        audioSource2.Play();
+        
         transform.DOMoveY(transform.position.y - fallAmount, fallingTime).OnComplete(() => { transform.DOScale(Vector3.zero,scaleTime); StartCoroutine(Reset()); });
+        audioSource2.Play();
     }
 
     private IEnumerator Reset()
