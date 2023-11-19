@@ -56,11 +56,15 @@ public class SignUpGenre : MonoBehaviour
     void writeMaleToFile()
     {
         SaveSystem.save.gender="Hombre";
+        maleButton.image.color = Color.gray;
+        femaleButton.image.color = Color.white;
         Debug.Log("Hombre asignado");
     }
     void writeFemaleToFile()
     {
         SaveSystem.save.gender="Mujer";
+        maleButton.image.color = Color.white;
+        femaleButton.image.color = Color.gray;
         Debug.Log("Mujer asignada");
     }
     void goTologIn()
