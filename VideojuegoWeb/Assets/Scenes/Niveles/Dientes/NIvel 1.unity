@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &27756113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27756114}
+  m_Layer: 0
+  m_Name: parentDiente (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27756114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27756113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878296614}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &36332486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -180,9 +211,40 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
+--- !u!1 &76347035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76347036}
+  m_Layer: 0
+  m_Name: parentDiente (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76347036
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76347035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878296614}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &90203191
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,8 +367,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &153176224
 BoxCollider:
@@ -386,8 +448,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1 &282524298
 GameObject:
@@ -564,8 +626,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 10
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &363554314
 BoxCollider:
@@ -624,8 +686,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1001 &400521278
 PrefabInstance:
@@ -750,8 +812,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1 &520561746
 GameObject:
@@ -1336,8 +1398,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 230aedb30f27b4548ab0ef5da269bb58, type: 2}
     - target: {fileID: -2270367817812235531, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.697253
+      objectReference: {fileID: 0}
+    - target: {fileID: -2270367817812235531, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: -2270367817812235531, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.0393395
       objectReference: {fileID: 0}
     - target: {fileID: -1712570495036287376, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1499,6 +1569,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 230aedb30f27b4548ab0ef5da269bb58, type: 2}
+    - target: {fileID: 4275933094280306183, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.771271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4275933094280306183, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.337115
+      objectReference: {fileID: 0}
     - target: {fileID: 4321514657177891973, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -1515,6 +1593,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 230aedb30f27b4548ab0ef5da269bb58, type: 2}
+    - target: {fileID: 4726778829089515968, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726778829089515968, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5023984133028445005, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1606,6 +1692,9 @@ PrefabInstance:
     - {fileID: -1018664272722485354, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      insertIndex: 19
+      addedObject: {fileID: 1870552436}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1392110129}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
@@ -1614,6 +1703,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 543003671}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 27756114}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 76347036}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       insertIndex: -1
@@ -1681,9 +1776,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6912934454660867675, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 663363097}
-    - targetCorrespondingSourceObject: {fileID: -6912934454660867675, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 663363096}
     - targetCorrespondingSourceObject: {fileID: -1700970248734266650, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1166918590}
@@ -2200,27 +2292,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 3.8071055, z: 2}
   m_Center: {x: 0, y: -0.9035528, z: 0}
---- !u!65 &663363096
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596316935}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.44, y: 1.93, z: 1.44}
-  m_Center: {x: 0, y: 0.36, z: 0}
 --- !u!65 &663363097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2257,8 +2328,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1 &668960328
 GameObject:
@@ -2518,8 +2589,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &721111856
 BoxCollider:
@@ -2578,8 +2649,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &758260393
 BoxCollider:
@@ -2701,11 +2772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000187227
+      value: 0.0000000187227
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000044198294
+      value: -0.0000000044198294
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2849,8 +2920,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1 &874992111
 GameObject:
@@ -3024,8 +3095,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1001 &1042144440
 PrefabInstance:
@@ -3253,8 +3324,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &1117707947
 BoxCollider:
@@ -3452,8 +3523,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &1166918588
 BoxCollider:
@@ -3512,8 +3583,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1001 &1170781804
 PrefabInstance:
@@ -3649,8 +3720,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1 &1252072754
 GameObject:
@@ -3820,8 +3891,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1 &1300287882
 GameObject:
@@ -4125,8 +4196,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!114 &1491088695 stripped
 MonoBehaviour:
@@ -4196,8 +4267,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!1001 &1521247840
 PrefabInstance:
@@ -4522,6 +4593,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1870552435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870552436}
+  m_Layer: 0
+  m_Name: parentDiente
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1870552436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870552435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878296614}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1878044616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4579,8 +4681,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &1878296613
 BoxCollider:
@@ -4665,8 +4767,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!4 &1958487855 stripped
 Transform:
@@ -4730,8 +4832,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &2023887917
 BoxCollider:
@@ -4790,8 +4892,8 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
-  scaleTime: 20
+  resetTime: 5
+  scaleTime: 5
   strength: 0.2
 --- !u!65 &2125263795
 BoxCollider:
