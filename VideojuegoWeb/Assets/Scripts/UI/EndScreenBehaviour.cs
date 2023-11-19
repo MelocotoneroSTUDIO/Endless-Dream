@@ -65,12 +65,12 @@ public class EndScreenBehaviour : MonoBehaviour
 
     public void HomeButton() 
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Mundos");
     }
 
     public void NextButton() 
     {
-        SceneManager.LoadScene("LevelSelector");
+        SceneManager.LoadScene("Mundos");
     }
 
 }
