@@ -8,6 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour
 {
+    public GameObject currentUI;
+    public GameObject nextUI;
+
+    //public InputField emailInput;
+    //public InputField passwordInput;
+
+    //public Button goToNextButton;
+    //public Button goToPreviousButton;
 
     public InputField usernameInput;
     public InputField passwordInput;
@@ -19,18 +27,27 @@ public class Login : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentUI.SetActive(true); // Asegúrate de que el NameUI esté activo al inicio
+        nextUI.SetActive(false);
+
+        //registerButton.onClick.AddListener(writeStuffToFile);
+        //goToNextButton.onClick.AddListener(goToNextStep);
+        //goToNextButton.onClick.AddListener(writeStuffToFile);
+        //goToPreviousButton.onClick.AddListener(goToPreviousScene);
+
         loginButton.onClick.AddListener(login);
         goToRegisterButton.onClick.AddListener(moveToSignUp);
 
-        /*if (File.Exists(Application.dataPath + "/credentials.txt"))
-        {
-            credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
-        }
-        else
-        {
-            Debug.Log("Credential file doesn't exist");
-        }*/
+    }
 
+    void goToNextStep()
+    {
+        currentUI.SetActive(false); // Oculta el NameUI al presionar "Siguiente"
+        nextUI.SetActive(true); // Muestra el GenreUI al presionar "Siguiente"
+    }
+    public void goToPreviousScene()
+    {
+        SceneManager.LoadScene("WelcomeScreen");
     }
 
 
@@ -70,11 +87,13 @@ public class Login : MonoBehaviour
 
     public void moveToSignUp()
     {
-        SceneManager.LoadScene("SignUp");
+        //SceneManager.LoadScene("SignUp");
+        //this.GetComponent<Canvas>().enabled = false;
+
     }
 
-    void loadWelcomeScreen()
-    {
-        SceneManager.LoadScene("WelcomeScreen");
-    }
+    //void loadWelcomeScreen()
+    //{
+    //    SceneManager.LoadScene("WelcomeScreen");
+    //}
 }
