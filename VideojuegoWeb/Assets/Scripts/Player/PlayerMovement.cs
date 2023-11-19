@@ -34,11 +34,15 @@ public class PlayerMovement : MonoBehaviour
     float speed;
     public float allowPlayerMovementThreshold=0.2f;
 
+    //Animations
+    private Animator animator;
+
 
     void Start()
     {
         cam = Camera.main;
         controller=GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
         Debug.Log(SystemInfo.deviceType);
         //Determine inputType
         if (SystemInfo.deviceType == DeviceType.Handheld || Application.isMobilePlatform || forceJoystick) 
@@ -66,10 +70,12 @@ public class PlayerMovement : MonoBehaviour
         if(colliders.Length > 0 ) 
         {
             grounded = true;
+            animator.SetBool("Grounded", true);
         }
         else 
         {
-            grounded = false; 
+            grounded = false;
+            animator.SetBool("Grounded", false);
         }
         //grounded = controller.isGrounded;
         if (grounded)
@@ -103,7 +109,9 @@ public class PlayerMovement : MonoBehaviour
 
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMovement), rotationSpeed);
             controller.Move(desiredMovement);
+            animator.SetFloat("Speed", desiredMovement.magnitude);
         }
+
     }
 
     //Calculate movement vector depending on input
