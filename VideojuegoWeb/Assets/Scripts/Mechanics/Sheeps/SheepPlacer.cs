@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using DG.Tweening;
 
 public class SheepPlacer : InteractableObject
 {
@@ -12,11 +13,14 @@ public class SheepPlacer : InteractableObject
     public int requiredForActivation=1;
 
     private SheepManager sheepManager;
+    private AudioSource audioSource;
+
 
     // Start is called before the first frame update
     void Start()
     {
         sheepManager = FindObjectOfType<SheepManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -75,8 +79,10 @@ public class SheepPlacer : InteractableObject
         if (attachedObject != null) 
         {
             if (placedSheeps >= requiredForActivation) 
-            {
+            {   
+                //DOVirtual.DelayedCall(2.0f, () => audioSource.Play());
                 StartCoroutine(waitForSheepArrival(lastSheep));
+                //audioSource.Play();
             }
         }
     }

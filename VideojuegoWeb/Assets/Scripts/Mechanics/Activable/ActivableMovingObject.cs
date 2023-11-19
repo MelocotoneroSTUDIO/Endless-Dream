@@ -16,6 +16,8 @@ public class ActivableMovingObject : ActivableObject
     private bool moved = false;
     private Vector3 endPostion;
     private Vector3 startPos;
+    private AudioSource audioSource1;
+    private AudioSource audioSource2;
 
     public float timeBeforeFall=2;
 
@@ -25,6 +27,8 @@ public class ActivableMovingObject : ActivableObject
     {
         startPos = transform.position;
         endPostion = endPos.position;
+        audioSource1 = GetComponents<AudioSource>()[0]; // Accede al primer AudioSource
+        audioSource2 = GetComponents<AudioSource>()[1]; // Accede al segundo AudioSource
     }
 
 
@@ -33,6 +37,7 @@ public class ActivableMovingObject : ActivableObject
         base.Activate();
         if (!moved)
         {
+            audioSource1.Play();
             transform.DOMove(endPostion, time).OnComplete(() => { mesh?.BuildNavMesh(); });
             moved = true;
         }
@@ -45,12 +50,14 @@ public class ActivableMovingObject : ActivableObject
         if (moved)
         {
             StartCoroutine(waitDeactivate());
+            
         }
     }
 
     IEnumerator waitDeactivate() 
     {
         yield return new WaitForSeconds(time);
+        audioSource2.Play();
         transform.DOShakePosition(timeBeforeFall, 0.1f).OnComplete(() => { transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); }); });
         
         moved = false;
