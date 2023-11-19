@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     void checkGravity() 
     {
         //Apply gravity
-        Collider[] colliders = Physics.OverlapSphere(feet.position, 0.2f,7);
+        Collider[] colliders = Physics.OverlapSphere(feet.position, 0.2f,10);
         if(colliders.Length > 0 ) 
         {
             grounded = true;
