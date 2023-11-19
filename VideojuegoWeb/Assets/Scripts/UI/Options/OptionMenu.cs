@@ -65,7 +65,7 @@ public class OptionMenu : MonoBehaviour
         OptionsSaver.Options.volume = currentVolume;
         volumenText.text = currentVolume.ToString();
 
-        audioMixer.SetFloat("MasterVolume", Mathf.Log10(currentVolume)*20);
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(currentVolume/10)*20);
 
 
     }
