@@ -19,6 +19,8 @@ public class SheepBehaviour : InteractableObject
     public float updateTime= 0.5f;
     public bool isFollowing = false;
 
+    private Animator sheepAnimator;
+
     AudioSource audioSource;
     private NavMeshAgent agent=default;
     private Coroutine destinationCorutine;
@@ -30,6 +32,7 @@ public class SheepBehaviour : InteractableObject
         audioSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         agent.enabled = false;
+        sheepAnimator = this.GetComponentInChildren<Animator>();
     }
 
     public override void Interact()
@@ -48,6 +51,7 @@ public class SheepBehaviour : InteractableObject
         {
             isFollowing = true;
             destinationCorutine = StartCoroutine(updateDestination(updateTime));
+            sheepAnimator.SetBool("isFollowing", true);
         }
         else 
         {
@@ -64,7 +68,16 @@ public class SheepBehaviour : InteractableObject
         {
             yield return new WaitForSeconds(updateTime);
             SetDestination(playerFollow.position);
+            sheepAnimator.SetFloat("speed", agent.speed);
+            //Debug.Log("Velocidad Milo: " + SheepStates.idle);
+            
+            if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f) 
+            {  
+                sheepAnimator.SetBool("moving", false);
+            } else sheepAnimator.SetBool("moving", true);
         }
+
+        
     }
 
     public void SetDestination(Vector3 destination) 

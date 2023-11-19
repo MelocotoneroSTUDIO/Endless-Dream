@@ -3,7 +3,22 @@ guid: df87fadd3a881b749aca927c4a9ea363
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cara
+    second: {fileID: 2100000, guid: 8fa44818f0fe1b042a1ed660c137a173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lana
+    second: {fileID: 2100000, guid: 64f788ccb5508f2499534e5870efe802, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oveja
+    second: {fileID: 2100000, guid: 0750822fadd7bf64c8d1d1ed06cbe9d4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -128,13 +143,13 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
