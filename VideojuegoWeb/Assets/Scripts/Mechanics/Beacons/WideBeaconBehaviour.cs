@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class WideBeaconBehaviour : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class WideBeaconBehaviour : MonoBehaviour
     public Collider[] colliders;
     private EventSystem eventSystem;
 
+    private Tween posTween;
+    private Tween rotTween;
 
 
     private void Start()
@@ -46,6 +49,14 @@ public class WideBeaconBehaviour : MonoBehaviour
                     {
                         Debug.Log("Pillado");
                         eventSystem.OnHit.Invoke();
+
+                        rotTween.Kill();
+                        posTween.Kill();
+                        transform.parent.transform.position = positions[0].position;
+                        transform.parent.transform.rotation = positions[0].rotation;
+                        count = 1;
+
+                        moveBeam(positions[1].position, positions[1].rotation.eulerAngles);
                     }
                 }
             }
@@ -55,8 +66,8 @@ public class WideBeaconBehaviour : MonoBehaviour
 
     void moveBeam(Vector3 pos, Vector3 rot)
     {
-        transform.parent.transform.DORotate(rot, timeToMove);
-        transform.parent.transform.DOMove(pos, timeToMove).OnComplete(() => {
+        rotTween = transform.parent.transform.DORotate(rot, timeToMove);
+        posTween = transform.parent.transform.DOMove(pos, timeToMove).OnComplete(() => {
             count++;
             if (positions.Count <= count)
             {
