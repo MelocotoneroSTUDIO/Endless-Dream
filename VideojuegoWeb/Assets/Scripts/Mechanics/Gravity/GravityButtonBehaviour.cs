@@ -11,12 +11,20 @@ public class GravityButtonBehaviour : MonoBehaviour
     CinemachineBrain cinemachineBrain;
     CinemachineVirtualCamera virtualCamera;
     CinemachineOrbitalTransposer transposer;
+
+    EventSystem eventSystem;
+
+    float YfollowOffset;
     // Start is called before the first frame update
     void Start()
     {
+        eventSystem = FindObjectOfType<EventSystem>();
         cinemachineBrain = FindObjectOfType<CinemachineBrain>();
         virtualCamera = (CinemachineVirtualCamera)cinemachineBrain.ActiveVirtualCamera;
         transposer= virtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
+
+        eventSystem.OnHit += ResetCameraOffset;
+        YfollowOffset = transposer.m_FollowOffset.y;
     }
 
     // Update is called once per frame
@@ -33,17 +41,23 @@ public class GravityButtonBehaviour : MonoBehaviour
             if (!isActive) 
             {
                 Debug.Log("Baja camara");
-                DOVirtual.Float(transposer.m_FollowOffset.y, transposer.m_FollowOffset.y - cameraYOffset,1,SetCameraOffset);
+                DOVirtual.Float(transposer.m_FollowOffset.y, YfollowOffset * -1,1,SetCameraOffset);
                 isActive = true;
             }
             else 
             {
                 Debug.Log("Sube camara");
-                DOVirtual.Float(transposer.m_FollowOffset.y, transposer.m_FollowOffset.y + cameraYOffset, 1, SetCameraOffset);
+                DOVirtual.Float(transposer.m_FollowOffset.y, YfollowOffset * -1, 1, SetCameraOffset);
                 isActive = false;
             }
             
         }
+    }
+
+    public void ResetCameraOffset() 
+    {
+        DOVirtual.Float(transposer.m_FollowOffset.y, Mathf.Abs(YfollowOffset), 1, SetCameraOffset);
+        isActive = false;
     }
 
     public void SetCameraOffset(float y) 
