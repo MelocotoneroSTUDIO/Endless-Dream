@@ -2,6 +2,27 @@
 
 ## 0. HISTORIAL DE VERSIONES
 
+Versión 0.1:
+Maquetación de la portada y realizada la introducción.
+Versión 0.2:
+Realizada la Ficha Técnica y explicadas las herramientas de desarrollo
+Versión 0.3:
+Realización del apartado de las referencias del videojuego
+Versión 0.4:
+Comienzo del apartado del Modelo de negocio
+Versión 0.5: 
+Finalización del apartado modelo de negocios y comienzo de la redacción de las mecánicas.
+Versión 0.6: 
+Redactadas todas las mecánicas del videojuego.
+Versión 0.7: 
+Hecho todo el flujo de juego y las fichas de nivel
+Versión 0.8: 
+Completados los apartados de arte y conceptos y música y efectos de sonido
+Versión 0.9:
+Cambios con las imágenes finales en la interfaz, MDA apartado y cambio en el apartado de Niveles/Mundos.
+Versión 1.0:
+Añadido apartado enfoque MDA
+
 ## 1. INTRODUCCIÓN 
 
 Sirva este documento como escrito en el que se recogen todas las directrices relacionadas con el *Game Design* y la producción de *Endless Dream*, videojuego de puzles y plataformas 3D desarrollado por *Melocotonero Studio*.
@@ -527,3 +548,18 @@ Hemos creado cuidadosamente dos efectos de sonido esenciales:
 - **Efecto de Sonido de Ovejas con Cencerros:** Hemos incorporado un sonido de ovejas balando junto con el tintineo de cencerros. Este efecto proporciona realismo al entorno del juego y añade una capa de autenticidad a la experiencia de los jugadores al explorar el mundo de los sueños.
   
 En resumen, la música y los sonidos desempeñan un papel vital en Endless Dream, ya que contribuyen a la inmersión, la narrativa, la retroalimentación y la atmósfera general del juego. Nuestro enfoque en el estilo musical, la elección de la escala lidia y la creación de efectos de sonido específicos son aspectos clave que enriquecerán la experiencia de los jugadores en el mundo de los sueños.
+
+## 13. ENFOQUE MDA
+
+En este apartado, exploraremos la sinergia entre el diseño de juegos de plataformas y la pedagogía, sumergiéndonos en el enfoque MDA como marco conceptual. El enfoque MDA, que se centra en las Mecánicas que rigen la interacción del jugador, las Dinámicas que emergen de esas mecánicas, y la Estética que influye en la experiencia del usuario, ofrece una poderosa herramienta para el desarrollo de videojuegos educativos. Descubriremos cómo estas tres dimensiones se entrelazan para crear experiencias de juego significativas que no solo entretienen, sino que también educan y enriquecen.
+
+En cuanto a las estéticas claves de Endless Dream obtenemos que:
+
+- **Fantasía** emerge como la estética dominante al sumergirse y desarrollarse en un universo influenciado por los reinos oníricos. La estructura y composición del videojuego se entrelazan de manera intrínseca con escenarios imaginarios y escenificaciones extraídas de antiguas fábulas.
+- El **Desafío**, situado en el segundo plano de importancia, configura la esencia del videojuego. Dado su enfoque en rompecabezas en 3D y plataformas, todas las mecánicas se diseñan para superar una sucesión de desafíos estratégicos. Este componente es crucial para definir la experiencia del jugador.
+- El **Descubrimiento**, aunque menos prominente, aporta una capa adicional a las estéticas. A lo largo de los niveles, los jugadores deben desentrañar las interacciones posibles con el entorno, aplicándolas astutamente para avanzar con éxito en el juego.
+- Finalmente, el **coleccionismo** adquiere relevancia, ya que cada nivel insta al jugador a recolectar ítems específicos que incrementan la puntuación final. Esta dimensión añade un elemento de exploración y recompensa a la experiencia de juego.
+
+Entre las estéticas abordadas, aquella que mejor encarna la esencia central del videojuego en términos de jugabilidad es el **desafío**. Como se mencionó anteriormente, este desafío se presenta a través de la habilidad para gestionar recursos, entre otras competencias, las cuales el jugador deberá emplear para superar cada uno de los niveles. Ya sea controlando las ovejas en el primer mundo y estratégicamente ubicándolas para activar una serie de plataformas, o demostrando una rápida capacidad de reacción en el segundo mundo para atravesar todas las plataformas destructibles antes de caerse.
+
+Por último, las mecánicas claves giran en torno a la supervivencia de Milo y la forma de pasar los niveles sin poder saltar. Para una mayor explicación de ellas vuélvase a ver 7. MECÁNICAS.
