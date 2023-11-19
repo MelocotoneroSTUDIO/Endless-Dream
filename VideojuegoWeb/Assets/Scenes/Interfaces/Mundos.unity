@@ -123,6 +123,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &55512058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1538175369218000276, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &143118339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4677172962027140596, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &144636710 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3790626847709039082, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &238918129
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +581,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+--- !u!114 &344129161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 932660678399977254, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &378568549 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1704198378459552703, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
@@ -1089,6 +1133,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521822120}
   m_CullTransparentMesh: 1
+--- !u!1 &528524833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528524835}
+  - component: {fileID: 528524834}
+  m_Layer: 0
+  m_Name: Scene Changer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &528524834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528524833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45607c72d5d2bdf449becebc729d1533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &528524835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528524833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.5316687, y: 3.5973678, z: 2.4530551}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741085504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3659625679978942879, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &927256546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1323,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927256546}
   m_CullTransparentMesh: 1
+--- !u!114 &950820911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4661020529955201164, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+  m_PrefabInstance: {fileID: 5193406239168603631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1041805085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1704198378459552703, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
@@ -2378,8 +2488,72 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1814755634}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: lockedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: lockedColor.b
+      value: 0.3490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: lockedColor.g
+      value: 0.3490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: lockedColor.r
+      value: 0.3490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: startAsSelected
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[0].button
+      value: 
+      objectReference: {fileID: 344129161}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].button
+      value: 
+      objectReference: {fileID: 55512058}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].button
+      value: 
+      objectReference: {fileID: 950820911}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].locked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[0].lockImage
+      value: 
+      objectReference: {fileID: 144636710}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[0].sceneName
+      value: Nivel 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].lockImage
+      value: 
+      objectReference: {fileID: 741085504}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].sceneName
+      value: Nivel 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].lockImage
+      value: 
+      objectReference: {fileID: 143118339}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].sceneName
+      value: Nivel 3
       objectReference: {fileID: 0}
     - target: {fileID: 9157286074862000971, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_Radius
