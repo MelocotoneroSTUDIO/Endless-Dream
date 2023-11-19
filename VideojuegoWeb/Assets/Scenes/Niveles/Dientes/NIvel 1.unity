@@ -564,7 +564,7 @@ MonoBehaviour:
   fallAmount: 5
   timeBeforeFall: 3
   fallingTime: 3
-  resetTime: 20
+  resetTime: 10
   scaleTime: 20
   strength: 0.2
 --- !u!65 &363554314
@@ -1335,6 +1335,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 230aedb30f27b4548ab0ef5da269bb58, type: 2}
+    - target: {fileID: -2270367817812235531, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
     - target: {fileID: -1712570495036287376, guid: 9371f89f3e393a848b8d6ee1ef417a24, type: 3}
       propertyPath: m_LocalPosition.y
       value: 15.852155
@@ -2697,11 +2701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000187227
+      value: -0.0000000187227
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000044198294
+      value: 0.0000000044198294
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4353,11 +4357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676225230042397183, guid: 8ac435d11aecaba4e8ea501384d559f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.82
+      value: -12.57
       objectReference: {fileID: 0}
     - target: {fileID: 2676225230042397183, guid: 8ac435d11aecaba4e8ea501384d559f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.22
+      value: 4.33
       objectReference: {fileID: 0}
     - target: {fileID: 2676225230042397183, guid: 8ac435d11aecaba4e8ea501384d559f6, type: 3}
       propertyPath: m_LocalPosition.z

@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            gravity -= 5;
+            gravity -= 3;
         }
         controller.Move(new Vector3(0, gravity * gravityMultiplyer * playerMass * Time.deltaTime, 0));
     }
