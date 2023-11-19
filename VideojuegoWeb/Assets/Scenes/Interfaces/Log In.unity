@@ -425,7 +425,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 172931411}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 634049015}
+        m_TargetAssemblyTypeName: Login, Assembly-CSharp
+        m_MethodName: login
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &172931411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,8 +1220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameInput: {fileID: 1248612716}
   passwordInput: {fileID: 187328988}
-  loginButton: {fileID: 1422837581}
-  goToRegisterButton: {fileID: 1657971485}
+  loginButton: {fileID: 172931410}
+  goToRegisterButton: {fileID: 1422837581}
 --- !u!1 &658079141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,7 +2437,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1422837582}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 634049015}
+        m_TargetAssemblyTypeName: Login, Assembly-CSharp
+        m_MethodName: moveToSignUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1422837582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2644,7 +2668,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1441670705}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 634049015}
+        m_TargetAssemblyTypeName: Login, Assembly-CSharp
+        m_MethodName: moveToSignUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1441670705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3950,7 +3986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4173262917799366126
 RectTransform:
   m_ObjectHideFlags: 0

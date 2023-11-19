@@ -5,54 +5,60 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SignUpEdad : MonoBehaviour
 {
+    public GameObject previousUI;
+
     public Button increaseButton;
     public Button decreaseButton;
     //public Button acceptButton;
     public Button goToNextButton;
     public Button goToPreviousButton;
+
+    public TextMeshProUGUI ageDisplay;
     //public Camera mainCamera;
-    public CameraController cameraController;
+    
     //ArrayList credentials;
     // Start is called before the first frame update
     void Start()
     {
         increaseButton.onClick.AddListener(adderPlus);
         decreaseButton.onClick.AddListener(adderLess);
-        //acceptButton.onClick.AddListener(writeStuffToFile);
+
         goToNextButton.onClick.AddListener(goToNextScene);
         goToNextButton.onClick.AddListener(writeStuffToFile);
         goToPreviousButton.onClick.AddListener(goToPreviousStep);
+    }
 
+    void adderPlus()
+    {
+        SaveSystem.save.age += 1;
+        ageDisplay.text = SaveSystem.save.age.ToString();
     }
-    void adderPlus(){
-        PlayerDataController.instance.age += 1;
-    }
-        void adderLess(){
-        PlayerDataController.instance.age -= 1;
+    void adderLess()
+    {
+        SaveSystem.save.age -= 1;
+        if (SaveSystem.save.age < 0) 
+        {
+            SaveSystem.save.age = 0;
+        }
+        ageDisplay.text = SaveSystem.save.age.ToString();
     }
     void goToNextScene()
     {
-        //mainCamera.transform.Rotate(0f, 90f, 0f);
-        //rotation *= Quaternion.Euler(0f, 90f, 0f);
         SceneManager.LoadScene("Mundos");
     }
-        void goToPreviousStep()
+    void goToPreviousStep()
     {
-        cameraController.RotateCamera(-90f);
-        
+        gameObject.SetActive(false);
+        previousUI.SetActive(true);
     }
     void writeStuffToFile()
     {
-        PlayerDataController.instance.SavePlayerData();
+        SaveSystem.SaveData();
         Debug.Log("Todo guardado correctamente.");
     }
-   /*     private void Update()
-    {
-        // Realizar una interpolación suave hacia la rotación deseada
-        //mainCamera.transform.rotation = Quaternion.Lerp(mainCamera.transform.rotation, rotation, Time.deltaTime * velocityCamera);
-    }
-*/
+   
 }

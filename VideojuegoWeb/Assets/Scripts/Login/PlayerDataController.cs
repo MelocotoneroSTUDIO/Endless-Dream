@@ -31,7 +31,7 @@ public class PlayerDataController : MonoBehaviour
     {
         SaveInfo save = new SaveInfo
         {
-            useremail = email,
+            email = email,
             password = password,
             username = username,
             gender = gender,

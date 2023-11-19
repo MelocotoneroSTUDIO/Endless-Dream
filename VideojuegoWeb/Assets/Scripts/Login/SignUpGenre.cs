@@ -9,12 +9,14 @@ using UnityEngine.SceneManagement;
 public class SignUpGenre : MonoBehaviour
 {
 
+    public GameObject previousUI;
+    public GameObject nextUI;
+
     public InputField usernameInput;
     public Button maleButton;
     public Button femaleButton;
     public Button goToNextButton;
     public Button goToPreviousButton;
-    public CameraController cameraController;
 
     //ArrayList credentials;
     //public float velocityCamera = 5.0f;
@@ -22,6 +24,8 @@ public class SignUpGenre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        nextUI.SetActive(false);
+
         maleButton.onClick.AddListener(writeMaleToFile);
         femaleButton.onClick.AddListener(writeFemaleToFile);
         goToPreviousButton.onClick.AddListener(goToPreviousStep);
@@ -31,35 +35,28 @@ public class SignUpGenre : MonoBehaviour
 
     void goToNextStep()
     {
-        //mainCamera.transform.Rotate(0f, 90f, 0f);
-        //rotation *= Quaternion.Euler(0f, 90f, 0f);
-        cameraController.RotateCamera(90f);
+        gameObject.SetActive(false); // Oculta el NameUI al presionar "Siguiente"
+        nextUI.SetActive(true); // Muestra el GenreUI al presionar "Siguiente"
     }
-        void goToPreviousStep()
-    {
-            cameraController.RotateCamera(-90f);
 
-        //mainCamera.transform.Rotate(0f, 90f, 0f);
-        //rotation *= Quaternion.Euler(0f, 0f, 0f);
+    void goToPreviousStep()
+    {
+        gameObject.SetActive(false);
+        previousUI.SetActive(true);
     }
     void writeStuffToFile(){
-        PlayerDataController.instance.username=usernameInput.text;
+        SaveSystem.save.username = usernameInput.text;
         Debug.Log("Nombre asignado");
     }
     void writeMaleToFile()
     {
-        PlayerDataController.instance.gender="Hombre";
+        SaveSystem.save.gender="Hombre";
         Debug.Log("Hombre asignado");
     }
-        void writeFemaleToFile()
+    void writeFemaleToFile()
     {
-        PlayerDataController.instance.gender="Mujer";
+        SaveSystem.save.gender="Mujer";
         Debug.Log("Mujer asignada");
     }
-    /*    private void Update()
-    {
-        // Realizar una interpolación suave hacia la rotación deseada
-        //mainCamera.transform.rotation = Quaternion.Lerp(mainCamera.transform.rotation, rotation, Time.deltaTime * velocityCamera);
-    }*/
 
 }

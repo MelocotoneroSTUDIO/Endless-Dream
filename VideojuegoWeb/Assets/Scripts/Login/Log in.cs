@@ -36,7 +36,7 @@ public class Login : MonoBehaviour
 
 
     // Update is called once per frame
-    void login()
+    public void login()
     {
         /*bool isExists = false;
 
@@ -68,7 +68,7 @@ public class Login : MonoBehaviour
         SceneManager.LoadScene("Mundos");
     }
 
-    void moveToSignUp()
+    public void moveToSignUp()
     {
         SceneManager.LoadScene("SignUp");
     }
