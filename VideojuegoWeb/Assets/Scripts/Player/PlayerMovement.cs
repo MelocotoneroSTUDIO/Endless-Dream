@@ -146,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
     public void ResetGravity()
     {
          gravityMultiplyer = 1f;
+         transform.localScale = Vector3.one;
     }
 
     public void GravityRotation(float x) 
