@@ -10,6 +10,9 @@ public class FallingBlocks : MonoBehaviour
     public float fallingTime;
     public float resetTime;
     public float scaleTime;
+    private AudioSource audioSource1;
+    private AudioSource audioSource2;
+
     private Vector3 originalPos;
     private Vector3 originalScale;
 
@@ -21,19 +24,24 @@ public class FallingBlocks : MonoBehaviour
     {
         originalPos = transform.position;
         originalScale = transform.localScale;
+        audioSource1= GetComponents<AudioSource>()[0];
+        audioSource2= GetComponents<AudioSource>()[1];
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player") 
         {
+            audioSource1.Play();
             transform.DOShakePosition(timeBeforeFall,strength).OnComplete(() => { blockFall(); });
         }
     }
 
     private void blockFall() 
     {
+        
         transform.DOMoveY(transform.position.y - fallAmount, fallingTime).OnComplete(() => { transform.DOScale(Vector3.zero,scaleTime); StartCoroutine(Reset()); });
+        audioSource2.Play();
     }
 
     private IEnumerator Reset()

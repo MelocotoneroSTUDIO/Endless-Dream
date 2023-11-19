@@ -47,7 +47,7 @@ public class GravityButtonBehaviour : MonoBehaviour
             else 
             {
                 Debug.Log("Sube camara");
-                DOVirtual.Float(transposer.m_FollowOffset.y, YfollowOffset * -1, 1, SetCameraOffset);
+                DOVirtual.Float(transposer.m_FollowOffset.y, Mathf.Abs(YfollowOffset), 1, SetCameraOffset);
                 isActive = false;
             }
             
