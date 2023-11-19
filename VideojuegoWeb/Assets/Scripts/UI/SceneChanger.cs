@@ -9,6 +9,7 @@ public class SceneChanger : MonoBehaviour
     const string WorldHubLevel = "Mundos";
     const string BackLevel = "Pant2";
     const string Credits = "Creditos";
+    const string LogIn = "Log In";
 
     public void ChangeScene(string sceneName)
     {
@@ -21,7 +22,7 @@ public class SceneChanger : MonoBehaviour
 
     public void ComenzarJuegos()
     {
-        ChangeScene(WorldHubLevel);
+        ChangeScene(LogIn);
     }
 
     public void VueltaAlMenu()
@@ -32,6 +33,36 @@ public class SceneChanger : MonoBehaviour
     public void Creditos()
     {
         ChangeScene(Credits);
+    }
+
+    public void M1Nivel1()
+    {
+
+    }
+
+    public void M1Nivel2()
+    {
+
+    }
+
+    public void M1Nivel3()
+    {
+
+    }
+
+    public void M2Nivel1()
+    {
+
+    }
+
+    public void M2Nivel2()
+    {
+
+    }
+
+    public void M2Nivel3()
+    {
+
     }
 
 }
