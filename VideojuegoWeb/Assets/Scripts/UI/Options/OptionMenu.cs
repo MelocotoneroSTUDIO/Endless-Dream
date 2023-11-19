@@ -19,15 +19,21 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] Button sensitivityDown;
     float currentSensitivity;
 
+    [SerializeField] Button graphicLow;
+    [SerializeField] Button graphicMid;
+    [SerializeField] Button graphicHigh;
 
+    [SerializeField] Color selectedColor;
 
     private void Awake()
     {
+        
         OptionsSaver.LoadOptions();
         currentVolume = 0;
         currentSensitivity = 0;
         ChangeVolume(OptionsSaver.Options.volume);
         ChangeSensitivity(OptionsSaver.Options.cameraSensitivity);
+        SetQuality(OptionsSaver.Options.quality);
         
         volumeUp.onClick.AddListener(() => ChangeVolume(1));
         volumeDown.onClick.AddListener(() => ChangeVolume(-1));
@@ -36,6 +42,11 @@ public class OptionMenu : MonoBehaviour
         sensitivityDown.onClick.AddListener(() => ChangeSensitivity(-0.1f));
 
         Hide();
+
+        SetQuality(1);
+        graphicLow.onClick.AddListener(()=> SetQuality(0));
+        graphicMid.onClick.AddListener(()=> SetQuality(1));
+        graphicHigh.onClick.AddListener(()=> SetQuality(2));
     }
 
     void ChangeVolume(int volumen)
@@ -87,4 +98,52 @@ public class OptionMenu : MonoBehaviour
         OptionsSaver.SaveOptions();
         gameObject.SetActive(false);
     }
+
+    void SetQuality(int level)
+    {
+        switch (level)
+        {
+            case 0:
+                graphicLow.enabled = false;
+                graphicMid.enabled = true;
+                graphicHigh.enabled = true;
+
+                graphicLow.image.color = selectedColor;
+                graphicMid.image.color = Color.white;
+                graphicHigh.image.color = Color.white;
+
+                QualitySettings.SetQualityLevel(0,true);
+
+                break;
+
+            case 1:
+                graphicLow.enabled = true;
+                graphicMid.enabled = false;
+                graphicHigh.enabled = true;
+
+                graphicLow.image.color = Color.white;
+                graphicMid.image.color = selectedColor;
+                graphicHigh.image.color = Color.white;
+
+                QualitySettings.SetQualityLevel(1,true);
+
+                break;
+
+            case 2:
+                graphicLow.enabled = true;
+                graphicMid.enabled = true;
+                graphicHigh.enabled = false;
+
+                graphicLow.image.color = Color.white;
+                graphicMid.image.color = Color.white;
+                graphicHigh.image.color = selectedColor;
+
+                QualitySettings.SetQualityLevel(2, true);
+
+                break;
+        }
+        OptionsSaver.Options.quality = level;
+    }
+
+
 }

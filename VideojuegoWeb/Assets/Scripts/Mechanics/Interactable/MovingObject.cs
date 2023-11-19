@@ -10,6 +10,8 @@ public class MovingObject : InteractableObject
     
     public Transform endPos;
     public float time;
+    private EventSystem eventSystem;
+    private AudioSource audioSource;
     private bool moved=false;
     private Vector3 endPostion;
     private Vector3 startPos;
@@ -18,12 +20,14 @@ public class MovingObject : InteractableObject
     {
         startPos = transform.position;
         endPostion = endPos.position;
+        audioSource = GetComponent<AudioSource>();
     }
 
 
     public override void Interact()
     {
         base.Interact();
+        audioSource.Play();
         if (!moved) 
         {
             transform.DOMove(endPostion,time);
