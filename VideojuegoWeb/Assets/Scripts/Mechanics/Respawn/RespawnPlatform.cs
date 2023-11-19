@@ -17,6 +17,7 @@ public class RespawnPlatform : MonoBehaviour
 
     public void Respawn() 
     {
+        player.ResetGravity();
         player.blockPlayerMovement = true;
         player.gravity = 0;
         player.transform.position = respawnPosition.position;

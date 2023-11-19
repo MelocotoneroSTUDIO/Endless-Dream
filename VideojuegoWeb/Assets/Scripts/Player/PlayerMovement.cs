@@ -143,6 +143,11 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    public void ResetGravity()
+    {
+         gravityMultiplyer = 1f;
+    }
+
     public void GravityRotation(float x) 
     {
         Debug.Log(x);
