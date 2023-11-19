@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.AI.Navigation;
 using UnityEditor.AI;
 using UnityEngine;
@@ -23,12 +24,20 @@ public class ActivableMovingObject : ActivableObject
 
     public NavMeshSurface mesh;
 
+    public bool autoDeactivate = false;
+
+
     private void Start()
     {
         startPos = transform.position;
         endPostion = endPos.position;
-        audioSource1 = GetComponents<AudioSource>()[0]; // Accede al primer AudioSource
-        audioSource2 = GetComponents<AudioSource>()[1]; // Accede al segundo AudioSource
+        AudioSource[] audiosources = GetComponents<AudioSource>();
+        Debug.Log(audiosources.Length);
+        audioSource1 = audiosources[0]; // Accede al primer AudioSource
+        if (audiosources.Length > 1)
+        {
+            audioSource2 = audiosources[1]; // Accede al segundo AudioSource
+        }
     }
 
 
@@ -37,11 +46,16 @@ public class ActivableMovingObject : ActivableObject
         base.Activate();
         if (!moved)
         {
-            audioSource1.Play();
-            transform.DOMove(endPostion, time).OnComplete(() => { mesh?.BuildNavMesh(); });
+            audioSource1?.Play();
+            transform.DOMove(endPostion, time).OnComplete(() => { mesh?.BuildNavMesh(); 
+                if (autoDeactivate) 
+                {
+                    Deactivate();
+                }});
             moved = true;
         }
 
+        
     }
 
     public override void Deactivate()
@@ -56,9 +70,9 @@ public class ActivableMovingObject : ActivableObject
 
     IEnumerator waitDeactivate() 
     {
-        yield return new WaitForSeconds(time);
-        audioSource2.Play();
-        transform.DOShakePosition(timeBeforeFall, 0.1f).OnComplete(() => { transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); }); });
+        yield return new WaitForSeconds(timeBeforeFall);
+        audioSource2?.Play();
+        transform.DOShakePosition(time, 0.1f).OnComplete(() => { transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); }); });
         
         moved = false;
     }
