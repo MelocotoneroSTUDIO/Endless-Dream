@@ -28,6 +28,7 @@ public class FallingBlocks : MonoBehaviour
         audioSource2= GetComponents<AudioSource>()[1];
     }
 
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player") 
@@ -36,6 +37,7 @@ public class FallingBlocks : MonoBehaviour
             transform.DOShakePosition(timeBeforeFall,strength).OnComplete(() => { blockFall(); });
         }
     }
+    
 
     private void blockFall() 
     {
