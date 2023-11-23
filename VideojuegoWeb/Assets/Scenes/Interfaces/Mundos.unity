@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45940745, g: 0.4505188, b: 0.6311192, a: 1}
+  m_IndirectSpecularColor: {r: 0.107959665, g: 0.054985993, b: 0.6311192, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -739,7 +739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: levels.Array.data[0].locked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: levels.Array.data[0].sceneName
@@ -979,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: levels.Array.data[0].locked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: levels.Array.data[0].sceneName
@@ -1980,6 +1980,10 @@ PrefabInstance:
       propertyPath: titulo4
       value: 
       objectReference: {fileID: 1429144727}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: worldCamera
       value: 
@@ -3505,6 +3509,10 @@ PrefabInstance:
       propertyPath: worldCamera
       value: 
       objectReference: {fileID: 1814755634}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[1].locked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7635519338593953768, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_text
       value: Nivel 2
