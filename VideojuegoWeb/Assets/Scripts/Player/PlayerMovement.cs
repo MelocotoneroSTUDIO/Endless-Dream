@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     private Vector3 desiredMovement;
     [Header("Movement stats")]
-    public float velocity=10;
-    public float rotationSpeed=1;
+    public float velocity = 10;
+    public float rotationSpeed = 1;
     public float playerMass = 0.2f;
     private CharacterController controller;
     [SerializeField]
@@ -20,37 +20,45 @@ public class PlayerMovement : MonoBehaviour
 
     private Action InputMethod;
 
-    public bool forceJoystick=false;
+    public bool forceJoystick = false;
 
 
     public GameObject model;
 
-    public bool blockPlayerMovement=false;
+    public bool blockPlayerMovement = false;
 
     private Camera cam;
 
     float xInput;
     float yInput;
     float speed;
-    public float allowPlayerMovementThreshold=0.2f;
+    public float allowPlayerMovementThreshold = 0.2f;
 
     //Animations
     private Animator animator;
+    
+    private float fallStartHeight; // Variable para almacenar la altura desde la que comienza la caída
+    public float minHeightForFallAnimation = 1f; // Altura mínima para considerar una caída significativa
+    public float timeBeforeFallAnimation = 0.5f; // Tiempo antes de activar la animación de caída
+    private float lastGroundedTime; // Último tiempo en el que el jugador estuvo en el suelo
+
+
 
 
     void Start()
     {
         cam = Camera.main;
-        controller=GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         Debug.Log(SystemInfo.deviceType);
+
         //Determine inputType
-        if (SystemInfo.deviceType == DeviceType.Handheld || Application.isMobilePlatform || forceJoystick) 
+        if (SystemInfo.deviceType == DeviceType.Handheld || Application.isMobilePlatform || forceJoystick)
         {
             InputMethod += JoystickController;
             joystick.gameObject.SetActive(true);
         }
-        else 
+        else
         {
             InputMethod += KeyboardController;
         }
@@ -63,37 +71,47 @@ public class PlayerMovement : MonoBehaviour
         checkGravity();
     }
 
-    void checkGravity() 
+    void checkGravity()
     {
         //Apply gravity
-        Collider[] colliders = Physics.OverlapSphere(feet.position, 0.2f,11);
-        if(colliders.Length > 0 ) 
+        Collider[] colliders = Physics.OverlapSphere(feet.position, 0.2f, 11);
+        if (colliders.Length > 0)
         {
             grounded = true;
             animator.SetBool("Grounded", true);
         }
-        else 
+        else
         {
             grounded = false;
-            animator.SetBool("Grounded", false);
+            //animator.SetBool("Grounded", false);
         }
         //grounded = controller.isGrounded;
         if (grounded)
         {
+            lastGroundedTime = Time.time; // Actualiza el tiempo en el que el jugador estuvo en el suelo
             gravity = 0;
+            fallStartHeight = transform.position.y; // Actualiza la altura desde la que se inicia la caída
         }
         else
         {
             gravity -= 3;
+
+            float currentHeight = transform.position.y;
+            float fallHeight = fallStartHeight - currentHeight;
+
+            if (fallHeight >= minHeightForFallAnimation && Time.time - lastGroundedTime > timeBeforeFallAnimation)
+            {
+                animator.SetBool("Grounded", false); // Activa la animación de caída
+            }
         }
         controller.Move(new Vector3(0, gravity * gravityMultiplyer * playerMass * Time.deltaTime, 0));
     }
 
 
-    void CharacterMoveAndRotation() 
+    void CharacterMoveAndRotation()
     {
         InputMethod.Invoke();
-        speed = new Vector2(xInput,yInput).sqrMagnitude;
+        speed = new Vector2(xInput, yInput).sqrMagnitude;
         if (speed >= allowPlayerMovementThreshold && !blockPlayerMovement)
         {
             Vector3 forward = cam.transform.forward;
@@ -115,44 +133,46 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Calculate movement vector depending on input
-    void JoystickController() 
+    void JoystickController()
     {
         xInput = joystick.Horizontal;
         yInput = joystick.Vertical;
     }
 
-    void KeyboardController() 
+    void KeyboardController()
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
     }
 
     //Change gravity method
-    public void ChangeGravity() 
+    public void ChangeGravity()
     {
-        transform.position = transform.position + (new Vector3(0,1,0) * gravityMultiplyer);
+        transform.position = transform.position + (new Vector3(0, 1, 0) * gravityMultiplyer);
         gravityMultiplyer = gravityMultiplyer * -1f;
 
         transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1);
         model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0f, RotateMode.FastBeyond360);
 
-        model.transform.DOLocalRotate(new Vector3(-180, 0, 0), 2f,RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutExpo).OnComplete(
-            () => { /*transform.DOScale(new Vector3(1, 1 * gravityMultiplyer, 1), 0.1f); 
-                    model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear);*/ });
+        model.transform.DOLocalRotate(new Vector3(-180, 0, 0), 2f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.OutExpo).OnComplete(
+            () =>
+            { /*transform.DOScale(new Vector3(1, 1 * gravityMultiplyer, 1), 0.1f); 
+                    model.transform.DOLocalRotate(new Vector3(180, 0, 0), 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear);*/
+            });
         //DOVirtual.Float(0, 180, 1, GravityRotation).OnComplete(() => { transform.localScale = new Vector3(1, 1 * gravityMultiplyer, 1); }); ;
-        
+
     }
 
     public void ResetGravity()
     {
-         gravityMultiplyer = 1f;
-         transform.localScale = Vector3.one;
+        gravityMultiplyer = 1f;
+        transform.localScale = Vector3.one;
     }
 
-    public void GravityRotation(float x) 
+    public void GravityRotation(float x)
     {
         Debug.Log(x);
-        model.transform.localRotation = new Quaternion(x,model.transform.localRotation.y,model.transform.localRotation.z,model.transform.localRotation.w);
+        model.transform.localRotation = new Quaternion(x, model.transform.localRotation.y, model.transform.localRotation.z, model.transform.localRotation.w);
     }
 
 
@@ -160,4 +180,5 @@ public class PlayerMovement : MonoBehaviour
     {
         Gizmos.DrawWireSphere(feet.position, 0.2f);
     }
+
 }
