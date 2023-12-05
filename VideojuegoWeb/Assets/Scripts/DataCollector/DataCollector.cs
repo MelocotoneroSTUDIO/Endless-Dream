@@ -7,13 +7,16 @@ using UnityEngine.SceneManagement;
 public class DataCollector : MonoBehaviour
 {
     //Data variables updated onruntime
+    [SerializeField]
     DataClass data = new DataClass();
     public DataClass _data { get { return data; } }
 
     EventSystem eventSystem;
+    DatabaseManager databaseManager;
     private void Start()
     {
-        eventSystem = GetComponent<EventSystem>();
+        eventSystem = FindFirstObjectByType<EventSystem>();
+        databaseManager = GetComponent<DatabaseManager>();
         eventSystem.OnHit += addDeath;
         eventSystem.OnCoinPicked += addCoin;
         eventSystem.OnTreasurePicked += addTreasure;
@@ -50,12 +53,7 @@ public class DataCollector : MonoBehaviour
     {
         data.level = SceneManager.GetActiveScene().name;
         DataSaver.SaveData(data);
-    }
-
-    IEnumerator SaveDataToDB() 
-    {
-        yield return null;
-    
+        databaseManager.SendData(data);
     }
 }
 
