@@ -54,7 +54,7 @@ public class DataCollector : MonoBehaviour
 
     IEnumerator SaveDataToDB() 
     {
-    
+        yield return null;
     
     }
 }
