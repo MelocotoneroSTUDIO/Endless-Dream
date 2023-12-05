@@ -51,6 +51,10 @@ public class DataCollector : MonoBehaviour
 
     public void SaveData() 
     {
+        //TODO change username to unknown player id for confidentiallity
+        data.ID = SaveSystem.save.username;
+        data.gender = SaveSystem.save.gender;
+        data.age = SaveSystem.save.age;
         data.level = SceneManager.GetActiveScene().name;
         DataSaver.SaveData(data);
         databaseManager.SendData(data);
