@@ -51,9 +51,16 @@ public class DataCollector : MonoBehaviour
         data.level = SceneManager.GetActiveScene().name;
         DataSaver.SaveData(data);
     }
+
+    IEnumerator SaveDataToDB() 
+    {
+    
+    
+    }
 }
 
-/*[CustomEditor(typeof(DataCollector))]
+#if UNITY_EDITOR
+[CustomEditor(typeof(DataCollector))]
 public class ObjectBuilderEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -66,4 +73,5 @@ public class ObjectBuilderEditor : Editor
             myScript.SaveData();
         }
     }
-}*/
+}
+#endif

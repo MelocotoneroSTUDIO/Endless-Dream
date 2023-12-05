@@ -29,4 +29,11 @@ public class DataClass
 
         return result;
     }
+
+    public string DataToJson() 
+    {
+        string json ="";
+
+        return json;
+    }
 }
