@@ -8,7 +8,7 @@ public abstract class InteractableObject: MonoBehaviour
     public DataCollector collector;
     private void Start()
     {
-        collector = FindObjectOfType<DataCollector>();
+        collector = FindAnyObjectByType<DataCollector>();
     }
     //Abstract class for interactable objects
     public virtual void Interact() 

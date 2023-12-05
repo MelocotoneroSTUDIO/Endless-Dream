@@ -737,15 +737,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.39546806
+      value: -0.39546803
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.09335734
+      value: -0.09335732
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.88927984
+      value: 0.8892799
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
@@ -781,15 +781,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2508227311661709463, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000007450581
+      value: -0.000000037252903
       objectReference: {fileID: 0}
     - target: {fileID: 2508227311661709463, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802322
+      value: -0.000000059604645
       objectReference: {fileID: 0}
     - target: {fileID: 2508227311661709463, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000029802322
+      value: 0.000000022351742
       objectReference: {fileID: 0}
     - target: {fileID: 4202096080582314763, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_Follow
@@ -1088,7 +1088,7 @@ PrefabInstance:
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: collector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2103226299}
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: playerFollow
       value: 
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -2922,7 +2922,7 @@ PrefabInstance:
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: collector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2103226299}
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: playerFollow
       value: 
@@ -2965,7 +2965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -3194,7 +3194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -3716,7 +3716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -9772,7 +9772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   positions:
   - Position: {fileID: 401119204}
     isOcuppied: 0
@@ -10273,7 +10273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -10457,7 +10457,7 @@ PrefabInstance:
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: collector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2103226299}
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: playerFollow
       value: 
@@ -11825,7 +11825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27084c71223fff744bcb71625e89d5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   connectedObject: {fileID: 315935529}
 --- !u!65 &1374542403
 BoxCollider:
@@ -11907,7 +11907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -12352,7 +12352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -12837,7 +12837,7 @@ PrefabInstance:
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: collector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2103226299}
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: playerFollow
       value: 
@@ -13689,7 +13689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -13939,7 +13939,7 @@ PrefabInstance:
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: collector
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2103226299}
     - target: {fileID: 8845357059235354699, guid: a4aa5679437a22044b0071b22b16caf1, type: 3}
       propertyPath: playerFollow
       value: 
@@ -19042,7 +19042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   positions:
   - Position: {fileID: 2025642738}
     isOcuppied: 0
@@ -19684,7 +19684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   breakResistance: 1
   shakeStrength: 0.2
   shakeTime: 1
@@ -19832,7 +19832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27084c71223fff744bcb71625e89d5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 0}
+  collector: {fileID: 2103226299}
   connectedObject: {fileID: 1196243295}
 --- !u!65 &1967908685
 BoxCollider:
@@ -20493,6 +20493,17 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &2103226299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2444630045162623218, guid: c56ed742ea71b63449828ce44e9d0f26, type: 3}
+  m_PrefabInstance: {fileID: 6049831616916234383}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5755da7bf178bac449b923271bad7df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2125574120
 PrefabInstance:
   m_ObjectHideFlags: 0
