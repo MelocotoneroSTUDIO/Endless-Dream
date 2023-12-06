@@ -6,15 +6,14 @@ using UnityEngine.Video;
 public class CutscenePlayer : MonoBehaviour
 {
 
-    [SerializeField] string link;
-
     VideoPlayer Player => GetComponent<VideoPlayer>();
+    SceneChanger sceneChanger => FindAnyObjectByType<SceneChanger>();
 
     // Start is called before the first frame update
     void Start()
     {
-        Player.url = link;
         Player.Play();
+        Player.loopPointReached += (video)=> sceneChanger.ChangeScene("Pant1");
     }
 
     // Update is called once per frame
