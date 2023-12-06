@@ -8972,7 +8972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -9192,7 +9192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -10955,7 +10955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   positions:
   - Position: {fileID: 1108395733}
     isOcuppied: 0
@@ -11235,7 +11235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1949009960940691174, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8264836586064421159, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
       propertyPath: m_Pivot.x
@@ -11437,7 +11437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -11683,7 +11683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -11988,7 +11988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -12208,7 +12208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -12456,7 +12456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   positions:
   - Position: {fileID: 1162358914}
     isOcuppied: 0
@@ -13086,7 +13086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -13329,7 +13329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -13876,7 +13876,7 @@ PrefabInstance:
     - target: {fileID: 5091564449944977938, guid: b489be83d50c352479c14e0b20cb50e5, type: 3}
       propertyPath: collector
       value: 
-      objectReference: {fileID: 2016434751}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14107,7 +14107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   positions:
   - Position: {fileID: 1344963754}
     isOcuppied: 0
@@ -21482,7 +21482,7 @@ GameObject:
   - component: {fileID: 1598759582}
   - component: {fileID: 1598759581}
   m_Layer: 0
-  m_Name: Buton
+  m_Name: Option Buton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21590,7 +21590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -21916,7 +21916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   positions:
   - Position: {fileID: 1659534890}
     isOcuppied: 0
@@ -22538,7 +22538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -23168,7 +23168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454e2399fe2168742a002015f242dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   positions:
   - Position: {fileID: 1056687339}
     isOcuppied: 0
@@ -29225,7 +29225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
@@ -29840,17 +29840,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4181962807377510830, guid: f657a20196f8e33448d9695adb45bf3a, type: 3}
   m_PrefabInstance: {fileID: 2016434749}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2016434751 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4282974575894045350, guid: f657a20196f8e33448d9695adb45bf3a, type: 3}
-  m_PrefabInstance: {fileID: 2016434749}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226506155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5755da7bf178bac449b923271bad7df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2016434754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31073,7 +31062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f6ce1e8e1978499316b29013fe107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collector: {fileID: 2016434751}
+  collector: {fileID: 0}
   breakResistance: 1
   shakeStrength: 1
   shakeTime: 1
