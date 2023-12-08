@@ -14,18 +14,24 @@ public class AutoMovingObject : MonoBehaviour
     public float timeStatic;
     private Vector3 endPosition;
     private Vector3 startPos;
+    public Transform affectedObject;
 
     private void Start()
     {
         startPos = transform.position;
         endPosition = endPos.position;
 
+        if (affectedObject == null) 
+        {
+            affectedObject = transform.parent;
+        }
+
         Move(endPosition);
     }
 
     private void Move(Vector3 pos)
     {
-        transform.parent.transform.DOMove(pos, timeMoving).OnComplete(() => {
+        affectedObject.transform.DOMove(pos, timeMoving).OnComplete(() => {
             DOVirtual.DelayedCall(timeStatic, () => Move((pos == endPosition) ? startPos : endPosition));
         });
     }
@@ -39,7 +45,7 @@ public class AutoMovingObject : MonoBehaviour
         other.gameObject.transform.parent = null;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, endPos.position);
