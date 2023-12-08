@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 03460bc67a5812942bf763e2617cab18
+guid: 19821ea96830b3c4c8e1cf1bf43cb196
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Platform2_baked
+    second: {fileID: 2100000, guid: 0feef40187203d64d9f8b4b544a95cb5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +52,7 @@ ModelImporter:
     importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
-    swapUVChannels: 1
+    swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
