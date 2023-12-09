@@ -348,11 +348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000187227
+      value: -0.0000000187227
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000044198294
+      value: 0.0000000044198294
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3329,6 +3329,7 @@ MonoBehaviour:
   endPos: {fileID: 1700022079}
   timeMoving: 3
   timeStatic: 2
+  affectedObject: {fileID: 0}
 --- !u!65 &1282050798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4474,6 +4475,7 @@ MonoBehaviour:
   endPos: {fileID: 727699356}
   timeMoving: 4
   timeStatic: 3
+  affectedObject: {fileID: 0}
 --- !u!65 &1801590068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5292,6 +5294,10 @@ PrefabInstance:
     - target: {fileID: 4036955924358976966, guid: e04d06111b9454947bdd14f335de97a5, type: 3}
       propertyPath: m_Name
       value: Portal Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103330682072858038, guid: e04d06111b9454947bdd14f335de97a5, type: 3}
+      propertyPath: levelID
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
