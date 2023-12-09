@@ -45,6 +45,14 @@ public class ExitDoorBehaviour : MonoBehaviour
             SaveSystem.SaveData();
 
             //Data has been saved to stats and savefile proceed to load next level
+
+            PlayerMovement player = other.GetComponent<PlayerMovement>();
+            if (player != null) 
+            {
+                player.blockPlayerMovement = true;
+                //Trigger animation
+            }
+
             //TODO Missing change to next level or menu pop up
             endScreen.gameObject.SetActive(true);
             endScreen.currentLevelID = levelID;
