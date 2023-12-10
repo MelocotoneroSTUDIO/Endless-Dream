@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coleccionabVFX
       objectReference: {fileID: 0}
+    - target: {fileID: 367989834643490008, guid: ebd298eb366558241bdf083a22f3e148, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1031478669690871394, guid: ebd298eb366558241bdf083a22f3e148, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -248,6 +252,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031478669690871394, guid: ebd298eb366558241bdf083a22f3e148, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221431976502620870, guid: ebd298eb366558241bdf083a22f3e148, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1752,12 +1760,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e68b013d19d2624186604e289bc09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallAmount: -3
-  timeBeforeFall: 3
-  fallingTime: 1
-  resetTime: 3
-  scaleTime: 1
-  strength: 1
+  fallAmount: -6
+  timeBeforeFall: 1
+  fallingTime: 3
+  resetTime: 5
+  scaleTime: 5
+  strength: 0.2
 --- !u!82 &391265937
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1969,7 +1977,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.005}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.003}
   m_Center: {x: 4.656613e-10, y: 9.313224e-10, z: 0.012}
 --- !u!114 &391265940
 MonoBehaviour:
@@ -1984,7 +1992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -2605,11 +2613,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 657017900476670663, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.65
+      value: -10.46
       objectReference: {fileID: 0}
     - target: {fileID: 657017900476670663, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.91
+      value: 23.61
       objectReference: {fileID: 0}
     - target: {fileID: 657017900476670663, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3725,7 +3733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -4460,7 +4468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 3
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -4479,7 +4487,7 @@ BoxCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 2048
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 50
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -4697,7 +4705,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.005}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.003}
   m_Center: {x: -0.0000000027939677, y: 0.000000011175869, z: 0.012}
 --- !u!114 &558891894
 MonoBehaviour:
@@ -4712,7 +4720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -6368,7 +6376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1031478669690871394, guid: ebd298eb366558241bdf083a22f3e148, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.135
+      value: -8.819029
       objectReference: {fileID: 0}
     - target: {fileID: 1031478669690871394, guid: ebd298eb366558241bdf083a22f3e148, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6637,7 +6645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -7248,12 +7256,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e68b013d19d2624186604e289bc09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallAmount: -3
-  timeBeforeFall: 3
-  fallingTime: 1
-  resetTime: 3
-  scaleTime: 1
-  strength: 1
+  fallAmount: -6
+  timeBeforeFall: 1
+  fallingTime: 3
+  resetTime: 5
+  scaleTime: 5
+  strength: 0.2
 --- !u!82 &714872366
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7479,12 +7487,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e68b013d19d2624186604e289bc09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallAmount: -3
-  timeBeforeFall: 3
-  fallingTime: 1
-  resetTime: 3
-  scaleTime: 1
-  strength: 1
+  fallAmount: -6
+  timeBeforeFall: 1
+  fallingTime: 3
+  resetTime: 5
+  scaleTime: 5
+  strength: 0.2
 --- !u!1 &724562729
 GameObject:
   m_ObjectHideFlags: 0
@@ -9826,7 +9834,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.005}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.003}
   m_Center: {x: 0.000000004656613, y: 0.000000008847563, z: 0.012}
 --- !u!114 &825102231
 MonoBehaviour:
@@ -9841,7 +9849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -10072,7 +10080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -10586,7 +10594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -10613,15 +10621,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.08
+      value: -25.72
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.5
+      value: -65.34
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10882,7 +10890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 3
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -10901,7 +10909,7 @@ BoxCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 2048
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 50
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -12783,7 +12791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 3
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -12802,7 +12810,7 @@ BoxCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 2048
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 50
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -14441,7 +14449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -14939,12 +14947,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e68b013d19d2624186604e289bc09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallAmount: -3
-  timeBeforeFall: 3
-  fallingTime: 1
-  resetTime: 3
-  scaleTime: 1
-  strength: 1
+  fallAmount: -6
+  timeBeforeFall: 1
+  fallingTime: 3
+  resetTime: 5
+  scaleTime: 5
+  strength: 0.2
 --- !u!82 &1250173913
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15171,7 +15179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 3
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -15190,7 +15198,7 @@ BoxCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 2048
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 50
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -15211,15 +15219,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.08
+      value: -25.72
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.5
+      value: 12.46
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.5
+      value: -85.34
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15231,11 +15239,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000187227
+      value: 0.0000000187227
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000044198294
+      value: -0.0000000044198294
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18054,7 +18062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -19426,7 +19434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -20458,7 +20466,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700697, z: 0.005}
+  m_Size: {x: 0.019700699, y: 0.019700697, z: 0.003}
   m_Center: {x: 1.7293522e-18, y: 0.000000008381901, z: 0.012}
 --- !u!114 &1746597212
 MonoBehaviour:
@@ -20473,7 +20481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -20880,7 +20888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 3
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -20899,7 +20907,7 @@ BoxCollider:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 2048
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: 50
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
@@ -21157,7 +21165,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1825525463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1c0e2c39dc69f40a3c9d57bc37405e, type: 3}
+  m_Script: {fileID: 11500000, guid: 33250b75bf4370240b9657f0466efd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1825525465 stripped
@@ -21876,12 +21884,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e68b013d19d2624186604e289bc09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallAmount: -3
-  timeBeforeFall: 3
-  fallingTime: 1
-  resetTime: 3
-  scaleTime: 1
-  strength: 1
+  fallAmount: -6
+  timeBeforeFall: 1
+  fallingTime: 3
+  resetTime: 5
+  scaleTime: 5
+  strength: 0.2
 --- !u!82 &1898462809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22856,7 +22864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallAmount: 5
-  timeBeforeFall: 1
+  timeBeforeFall: 1.5
   fallingTime: 3
   resetTime: 5
   scaleTime: 5
@@ -29404,7 +29412,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02069126}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 1.7290875e-18, y: -0.000000030733645, z: -0.000060836774}
 --- !u!4 &5004320707799277941
 Transform:
@@ -31150,7 +31158,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.03}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 1.7290901e-18, y: 0.0000000027939673, z: -0.00006083724}
 --- !u!4 &6825286639529693113
 Transform:
@@ -31426,7 +31434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8757042446074643881}
   m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
-  m_LocalPosition: {x: -8.815971, y: 20.556854, z: -49.68158}
+  m_LocalPosition: {x: -14.5, y: 20.556854, z: -49.68158}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -31785,7 +31793,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.020691259}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 4.656613e-10, y: 9.313224e-10, z: -0.000060831186}
 --- !u!1 &7415244376982187451
 GameObject:
@@ -32206,7 +32214,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.03}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 1.7290875e-18, y: 0.000000028871, z: -0.000060836774}
 --- !u!1 &7691850450300307484
 GameObject:
@@ -32525,7 +32533,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700697, y: 0.019700695, z: 0.03}
+  m_Size: {x: 0.019700697, y: 0.019700695, z: 0.02}
   m_Center: {x: -0.0000000018626451, y: 0.000000040978193, z: -0.000060836774}
 --- !u!4 &7967766326129073453
 Transform:
@@ -32679,7 +32687,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.03}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 0.0000000027939677, y: 0.000000028870994, z: -0.000060836774}
 --- !u!4 &8057175114416069865
 Transform:
@@ -33265,7 +33273,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02069126}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 1.7290901e-18, y: 0.0000000027939673, z: -0.00006083724}
 --- !u!33 &8463746958272562946
 MeshFilter:
@@ -33552,7 +33560,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02069126}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: 0.000000004656613, y: 0.000000008847563, z: -0.000060847018}
 --- !u!1 &8608503701648771239
 GameObject:
@@ -33619,7 +33627,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700693, z: 0.03}
+  m_Size: {x: 0.019700699, y: 0.019700693, z: 0.02}
   m_Center: {x: 0.000000003259629, y: 0.000000026077032, z: -0.000060836774}
 --- !u!33 &8679531055825201711
 MeshFilter:
@@ -33648,7 +33656,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700697, z: 0.02069126}
+  m_Size: {x: 0.019700699, y: 0.019700697, z: 0.02}
   m_Center: {x: 1.7293522e-18, y: 0.000000008381901, z: -0.000060832117}
 --- !u!1 &8707273952738141917
 GameObject:
@@ -33795,7 +33803,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.03}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: -4.656613e-10, y: 0.00000002514571, z: -0.000060836774}
 --- !u!23 &8834595606984245996
 MeshRenderer:
@@ -34175,7 +34183,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.020691259}
+  m_Size: {x: 0.019700699, y: 0.019700695, z: 0.02}
   m_Center: {x: -0.0000000027939677, y: 0.000000011175869, z: -0.000060831186}
 --- !u!33 &9064716236268905858
 MeshFilter:
