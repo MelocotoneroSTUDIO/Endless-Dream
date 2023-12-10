@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3086977930051502085
 MeshFilter:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27084c71223fff744bcb71625e89d5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collector: {fileID: 0}
   connectedObject: {fileID: 0}
 --- !u!65 &7986453208879521722
 BoxCollider:

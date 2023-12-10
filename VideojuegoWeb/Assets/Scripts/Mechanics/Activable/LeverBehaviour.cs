@@ -7,12 +7,14 @@ public class LeverBehaviour : InteractableObject
     //Class that handles lever behaviour
     public ActivableObject connectedObject;
     private bool isPlayerNear = false;
+    private AudioSource audioSource;
 
     public override void Interact()
     {
         base.Interact();
         if (isPlayerNear)
         {
+            GetComponent<AudioSource>().Play();
             connectedObject.Activate();
         }
     }
