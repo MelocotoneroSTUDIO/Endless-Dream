@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     private Vector3 desiredMovement;
     [Header("Movement stats")]
+    //Sounds
+    private AudioSource audioSource1;
+    private AudioSource audioSource2;
+    private AudioSource audioSource3;
+    private AudioSource audioSource4;
     public float velocity = 10;
     public float rotationSpeed = 1;
     public float playerMass = 0.2f;
@@ -37,10 +42,13 @@ public class PlayerMovement : MonoBehaviour
     //Animations
     private Animator animator;
     
-    private float fallStartHeight; // Variable para almacenar la altura desde la que comienza la caída
-    public float minHeightForFallAnimation = 1f; // Altura mínima para considerar una caída significativa
-    public float timeBeforeFallAnimation = 0.5f; // Tiempo antes de activar la animación de caída
-    private float lastGroundedTime; // Último tiempo en el que el jugador estuvo en el suelo
+    private float fallStartHeight; // Variable para almacenar la altura desde la que comienza la caï¿½da
+    public float minHeightForFallAnimation = 1f; // Altura mï¿½nima para considerar una caï¿½da significativa
+    public float timeBeforeFallAnimation = 0.5f; // Tiempo antes de activar la animaciï¿½n de caï¿½da
+    private float lastGroundedTime; // ï¿½ltimo tiempo en el que el jugador estuvo en el suelo
+
+    //Sonidos
+    private bool hasFallen = false;//variable de control para reporducir el sonido solo una vez.
 
 
 
@@ -51,6 +59,10 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         Debug.Log(SystemInfo.deviceType);
+
+        //CargarSonidos
+        audioSource1= GetComponents<AudioSource>()[0];
+        audioSource2= GetComponents<AudioSource>()[1];
 
         //Determine inputType
         if (SystemInfo.deviceType == DeviceType.Handheld || Application.isMobilePlatform || forceJoystick)
@@ -79,6 +91,8 @@ public class PlayerMovement : MonoBehaviour
         {
             grounded = true;
             animator.SetBool("Grounded", true);
+            //Reestablece esta variable cuando toca suelo.
+            hasFallen = false;
         }
         else
         {
@@ -90,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         {
             lastGroundedTime = Time.time; // Actualiza el tiempo en el que el jugador estuvo en el suelo
             gravity = 0;
-            fallStartHeight = transform.position.y; // Actualiza la altura desde la que se inicia la caída
+            fallStartHeight = transform.position.y; // Actualiza la altura desde la que se inicia la caï¿½da
         }
         else
         {
@@ -101,7 +115,13 @@ public class PlayerMovement : MonoBehaviour
 
             if (fallHeight >= minHeightForFallAnimation && Time.time - lastGroundedTime > timeBeforeFallAnimation)
             {
-                animator.SetBool("Grounded", false); // Activa la animación de caída
+                animator.SetBool("Grounded", false); // Activa la animaciï¿½n de caï¿½da
+                if (!hasFallen)
+                    {
+                        //Sonido caÃ­da:
+                        audioSource1.Play();
+                        hasFallen = true;
+                    }
             }
         }
         controller.Move(new Vector3(0, gravity * gravityMultiplyer * playerMass * Time.deltaTime, 0));
