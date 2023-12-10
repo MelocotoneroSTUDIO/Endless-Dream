@@ -23,12 +23,13 @@ public class WideBeaconBehaviour : MonoBehaviour
 
     private Tween posTween;
     private Tween rotTween;
-
+    private AudioSource audioSource;
 
     private void Start()
     {
         eventSystem = FindObjectOfType<EventSystem>();
         moveBeam(positions[1].position, positions[1].rotation.eulerAngles);
+        audioSource= GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -48,6 +49,7 @@ public class WideBeaconBehaviour : MonoBehaviour
                     {
                         Debug.Log("Pillado");
                         eventSystem.OnHit.Invoke();
+                        audioSource.Play();
 
                         rotTween.Kill();
                         posTween.Kill();

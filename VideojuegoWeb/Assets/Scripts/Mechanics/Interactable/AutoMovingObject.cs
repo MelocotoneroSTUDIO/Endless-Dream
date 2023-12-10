@@ -16,10 +16,14 @@ public class AutoMovingObject : MonoBehaviour
     private Vector3 startPos;
     public Transform affectedObject;
 
+    //Sounds
+    private AudioSource audioSource;
+
     private void Start()
     {
         startPos = transform.position;
         endPosition = endPos.position;
+        audioSource = GetComponent<AudioSource>();
 
         if (affectedObject == null) 
         {
@@ -34,6 +38,7 @@ public class AutoMovingObject : MonoBehaviour
         affectedObject.transform.DOMove(pos, timeMoving).OnComplete(() => {
             DOVirtual.DelayedCall(timeStatic, () => Move((pos == endPosition) ? startPos : endPosition));
         });
+        audioSource.Play();
     }
     private void OnTriggerEnter(Collider other)
     {
