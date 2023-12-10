@@ -30,9 +30,18 @@ public class SoundManager : MonoBehaviour
             audioSource.Play();
         }
     }
-        public void Stop()
+         public void StopMusic()
     {
-        audioSource.Stop();
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
+    }
+
+    // Agrega este método para capturar el evento de salida de la aplicación
+    private void OnApplicationQuit()
+    {
+        StopMusic();
     }
 }
 

@@ -18,7 +18,7 @@ public class LevelMusicController : MonoBehaviour
         SoundManager soundManager = FindObjectOfType<SoundManager>();
         if (soundManager != null)
         {
-            soundManager.Stop();
+            soundManager.StopMusic();
             Destroy(soundManager.gameObject);// Elimina el objeto BtwScenesMusic
         }
     }
