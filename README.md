@@ -1,4 +1,4 @@
-# Endless-Dream
+![ficha4](https://github.com/MelocotoneroSTUDIO/Endless-Dream/assets/115928907/ea64121f-0732-4561-9ac6-bab072d46d86)# Endless-Dream
 
 ## 0. HISTORIAL DE VERSIONES
 
@@ -456,21 +456,18 @@ En este apartado,  se explica con detalle cómo planificamos y diseñamos los di
 - **Mecánica principal:**  Cuál es la mecánica característica del mundo comentado, sobre todo de cara al primer nivel.
 - **Mecánicas secundarias:** Las cuales se combinarán junto a la principal para el desarrollo del resto de niveles.
 - **Ambientación del mundo:** Comentaremos que sueño o pesadilla representa , es decir, el tema principal del mundo.
+- **Cómo pasar el nivel:** Pequeña guía que indica las premisas a seguir para pasar el mundo con éxito.
 
 Antes de comenzar a mostrar las fichas, cabe resaltar que al tratarse de un documento vivo, algo que ya comentamos en la introducción, la mayoría de  imágenes utilizadas son mockups y referencias que hemos tomado para la creación de esos niveles. Una vez esté el nivel terminado, se cambiará por su imagen correspondiente.
 
 
-![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/32.png)
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/ficha1.png)
 
-![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/33.png)
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/ficha2.png)
 
-![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/34.png)
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/ficha3.png)
 
-![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/35.png)
-
-![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/36.png)
-
-![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/37.png)
+![](https://github.com/MelocotoneroSTUDIO/Endless-Dream/blob/main/GDD%20Images/ficha4.png)
 
 ## 10. INTERFACES
 Las interfaces en un videojuego no son simples herramientas funcionales; son la manifestación de la visión y la narrativa del juego, una extensión de su alma digital. Estos elementos hacen posible que los jugadores naveguen, tomen decisiones y se sumerjan en los mundos que hemos creado. En este apartado, se mostrará la composición de las interfaces de todas las pantallas comentadas en el punto 8. FLUJO DE PANTALLAS.
