@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.107959665, g: 0.054985993, b: 0.6311192, a: 1}
+  m_IndirectSpecularColor: {r: 0.46165425, g: 0.45051748, b: 0.63111675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3695,6 +3695,28 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3605551071723304645, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_text
+      value: 'Proximamente,
+
+        Juega otros mundos'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605551071723304645, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_fontSize
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605551071723304645, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661020529955201164, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661020529955201164, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6142644837413712795, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_LocalPosition.z
       value: 2.81
@@ -3735,6 +3757,10 @@ PrefabInstance:
       propertyPath: worldCamera
       value: 
       objectReference: {fileID: 1814755634}
+    - target: {fileID: 7632642246288649014, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
+      propertyPath: levels.Array.data[2].locked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7894177869759569677, guid: 7f89938be6bb982409737649d10b5d35, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.98
