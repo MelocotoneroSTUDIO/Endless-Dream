@@ -175,6 +175,11 @@ public class PlayerMovement : MonoBehaviour
         model.transform.localRotation = new Quaternion(x, model.transform.localRotation.y, model.transform.localRotation.z, model.transform.localRotation.w);
     }
 
+    public void ActivateEndLevelAnimation() 
+    {
+        animator.SetTrigger("EndAnimation");
+    }
+
 
     private void OnDrawGizmos()
     {

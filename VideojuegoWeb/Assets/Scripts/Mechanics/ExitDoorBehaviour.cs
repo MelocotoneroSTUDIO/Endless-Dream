@@ -1,19 +1,31 @@
+using Cinemachine;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ExitDoorBehaviour : MonoBehaviour
 {
+    [SerializeField]
     TimerBehaviour timer;
+    [SerializeField]
     DataCollector collector;
     public int levelID;
     public EndScreenBehaviour endScreen;
+    [SerializeField] CinemachineVirtualCamera virtualCamera;
+    [SerializeField] Transform enterPortalPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = FindObjectOfType<TimerBehaviour>();
-        collector = FindObjectOfType<DataCollector>();
+        if (timer == null)
+        {
+            timer = FindObjectOfType<TimerBehaviour>();
+        }
+        if (collector == null)
+        {
+            collector = FindObjectOfType<DataCollector>();
+        }
     }
 
     // Update is called once per frame
@@ -49,17 +61,24 @@ public class ExitDoorBehaviour : MonoBehaviour
             PlayerMovement player = other.GetComponent<PlayerMovement>();
             if (player != null) 
             {
+                virtualCamera.Priority = 50;
                 player.blockPlayerMovement = true;
+                player.transform.position = enterPortalPos.position;
+                DOVirtual.DelayedCall(1f, () => { player.ActivateEndLevelAnimation();});
+                
                 //Trigger animation
             }
 
             //TODO Missing change to next level or menu pop up
-            endScreen.gameObject.SetActive(true);
-            endScreen.currentLevelID = levelID;
-            endScreen.treasuresObtained = collector._data.treasures;
-            endScreen.time = timer.getCurrentTimeSeconds();
+            DOVirtual.DelayedCall(3f,() => {
+                endScreen.gameObject.SetActive(true);
+                endScreen.currentLevelID = levelID;
+                endScreen.treasuresObtained = collector._data.treasures;
+                endScreen.time = timer.getCurrentTimeSeconds();
 
-            endScreen.ShowStats();
+                endScreen.ShowStats();
+            });
+            
         }
     }
 }
