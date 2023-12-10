@@ -568,7 +568,7 @@ Por último, las mecánicas claves giran en torno a la supervivencia de Milo y l
 
 En esta sección, nos sumergiremos en el análisis detallado y reflexivo de nuestro proyecto de videojuego, desentrañando los secretos y aprendizajes que surgieron a lo largo de su desarrollo. El post-mortem no solo representa un ejercicio de rendición de cuentas, sino también una valiosa oportunidad para comprender mejor las complejidades del proceso creativo y técnico. Además, ofreceremos una visión transparente de los altibajos que contribuyeron a la creación de nuestro amado videojuego.
 
-###13.1. Miembro 1:
+### 13.1. Miembro 1:
 **- ¿Qué ha ido bien?**
 El proceso de creación de este videojuego ha sido fundamental para consolidar y ampliar mis conocimientos en conceptos avanzados de Unity. Aunque mi especialización no se encuentra en la programación, he desempeñado mis responsabilidades de manera excepcional, brindando apoyo al resto del equipo en sus respectivas áreas (sin intervenir en aspectos artísticos). Mi enfoque principal ha sido la gestión integral del videojuego. A pesar de las fluctuaciones en la carga de trabajo, he trabajado constantemente para mantener la cohesión y la organización del grupo, facilitando así el desarrollo del proyecto de manera más fluida y colaborativa.
 Como Project Manager, he adquirido nuevas habilidades para gestionar de manera más eficiente y efectiva.
@@ -578,7 +578,7 @@ Como Project Manager del equipo y responsable de supervisar de manera meticulosa
 Además, reconozco que podría haber contribuido más activamente en el aspecto de la programación para distribuir de manera equitativa la carga de trabajo y acelerar el proceso. Esta acción habría evitado que toda la responsabilidad recayera en una sola persona, permitiéndonos avanzar de manera más eficiente y posiblemente alcanzar el desarrollo de niveles y mundos adicionales de forma más rápida.
 
 
-###13.2. Miembro 2:
+### 13.2. Miembro 2:
 **- ¿Qué ha ido bien?**
 Falta de roles en el equipo
 Ausencia de product owner que hubiese centralizado la idea del proyecto a una idea fija y concreta
@@ -589,7 +589,7 @@ En cuanto a la programación se comenzó muy fuerte creando estructuras en el c�
 En primer lugar es nuestro primer trabajo serio como equipo y estudio por tanto ha habido muchos aspectos y problemas que han retrasado el proyecto y se podrian solucionar con una mayor experiencia en la creacion de videojuegos (importacion de assets, produccion de interfaces responsive, codigo mas optimo, arreglo y prevencion de errores, etc).
 En segundo lugar ha habido un problema con no saber decir NO a nuevas ideas, se debería haber dedicado un tiempo al inicio a dejar claras las ideas y diseñar la jugabilidad de los niveles, y no haber estado añadiendo constantemente nuevas mecánicas a los niveles. Además, se pensó una idea de crear los niveles en piezas modulares que luego se pudiesen reutilizar para crear nuevos niveles y reforzar el aprendizaje computacional construyendo puzles sobre mecánicas ya  aprendidas cosa que luego no se llegó a realizar.
 
-###13.3. Miembro 3:
+### 13.3. Miembro 3:
 **- ¿Qué ha ido bien?**
 Como parte del equipo de arte, siento que los trabajos de los que he sido responsable los he realizado a buen ritmo y eso me ha permitido poder implementarlos con tiempo suficiente para poder no solo acabar teniendo un buen resultado sino habiendo además aprendido el funcionamiento de unity más en profundidad. 
 He sabido adaptarme de la mejor manera que he podido con el tiempo que teníamos al flujo de trabajo del proyecto, así como a la de mis compañeros. Estoy satisfecha con los resultados de la ambientación del juego y el estilo homogéneo del arte.
@@ -598,7 +598,7 @@ En el ámbito del modelado de los escenarios, la falta de experiencia en la impl
 A nivel de programación de los mismos, me vi un tanto limitada para hacer cambios en los scripts, dependiendo demasiado en los miembros del equipo que se encargaron más de la programación. Un mayor conocimiento en cómo estaban hechos los scripts daría más libertad de movimiento si necesito hacer algún cambio mientras cambio aspectos del diseño de nivel.
 Por último, destacar que es cierto que en el último momento hicimos cambios innecesarios que al hacerlos tan rápido generaron más problemas que soluciones. No eran innecesarios en el sentido de que no hacían falta meterlos en el juego, ciertos botones y menús habría que meterlos tarde o temprano, pero no eran imprescindibles y si se meten se meten bien, no hubiera habido problema en dejarlos para la Gold.
 
-###13.4. Miembro 4:
+### 13.4. Miembro 4:
 **- ¿Qué ha ido bien?**
 Durante el proceso de desarrollo de este videojuego, ha demostrado una gran disponibilidad y moldeabilidad ante las preferencias y críticas del equipo. Estaba siempre dispuesto a adaptarme y ajustar mi trabajo según las necesidades y sugerencias recibidas. Esto ha contribuido positivamente al ambiente de colaboración y ha permitido un flujo de trabajo eficiente. En concreto he modificado y creado la música y efectos de sonido ante las preferencias del equipo.
 Además, he mostrado una actitud abierta hacia las opiniones constructivas sobre mi trabajo. He valorado las críticas y sugerencias recibidas, reconociendo que eran oportunidades para mejorar y crecer como profesional. He utilizado estas retroalimentaciones de manera efectiva para ajustar mi enfoque y realizar mejoras significativas en mi contribución al proyecto.
@@ -607,7 +607,7 @@ Sin embargo, reconozco que hubo áreas en las que podría haber mejorado durante
 Además, debo admitir que la procrastinación fue un desafío personal durante este proyecto. En ocasiones, dejé mis obligaciones hasta el último momento, lo que generó estrés innecesario y afectó negativamente el flujo de trabajo del equipo. Es fundamental que mejore mi capacidad para gestionar el tiempo de manera más efectiva, priorizando las tareas y evitando posponerlas.
 En resumen, durante el desarrollo de este videojuego, he demostrado disponibilidad y moldeabilidad ante las preferencias y críticas del equipo, así como una actitud abierta hacia las opiniones constructivas. Sin embargo, reconozco que podría haber mejorado en términos de comunicación y gestión del tiempo para evitar la procrastinación. Estas lecciones me servirán para crecer y mejorar en futuros proyectos, incorporando lo aprendido en el desarrollo de videojuegos.
 
-###13.5. Miembro 5:
+### 13.5. Miembro 5:
 **- ¿Qué ha ido bien?**
 Trabajo en equipo sólido: La colaboración y la sinergia entre los miembros del equipo fueron pilares fundamentales en el éxito del proyecto. La comunicación fluida y el apoyo mutuo permitieron alcanzar los objetivos y superar desafíos.
 Cumplimiento de expectativas: El equipo logró alcanzar las expectativas establecidas para el juego en términos de mecánicas, jugabilidad y lanzamiento. Se entregó un producto que se alinea con la visión inicial y las metas del proyecto.
@@ -619,7 +619,7 @@ Procesos de revisión más estructurados: Implementar revisiones más regulares 
 En resumen, el trabajo en equipo fue excepcional y se lograron las expectativas, pero hubo áreas específicas, como la supervisión del diseño de niveles y la interfaz, que podrían haberse beneficiado de una dirección más enfocada. A futuro, considerar asignar roles específicos para estas áreas clave podría mejorar significativamente la calidad general del producto final.
 El equipo ha demostrado habilidades impresionantes y un compromiso notable, lo que sienta una base sólida para futuros proyectos y aprendizajes.
 
-###13.6. Miembro 6:
+### 13.6. Miembro 6:
 **-¿Qué ha ido mal y se podría haber mejorado?**
 En primer lugar, debido a la falta de conocimientos que nos proporciona esta carrera en cuanto al arte se refiere, lo que podría haberse hecho en poco tiempo, he tardado mucho ya que sabía lo que quería hacer pero no cómo hacerlo y tuve que invertir gran parte del tiempo en aprender como hacer las texturas, iluminación, etc 
 Sin embargo, esto no quita que yo haya sido poco eficiente ya que, al ser muy perfeccionista, le dedicó a las cosas mucho más de lo que debería y me complico demasiado, haciendo que se me acumule trabajo al final.
