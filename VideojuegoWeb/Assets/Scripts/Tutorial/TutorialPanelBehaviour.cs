@@ -14,6 +14,6 @@ public class TutorialPanelBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(cam.position);
+        transform.LookAt(-cam.position);
     }
 }
