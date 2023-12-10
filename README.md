@@ -1,4 +1,4 @@
-![ficha4](https://github.com/MelocotoneroSTUDIO/Endless-Dream/assets/115928907/ea64121f-0732-4561-9ac6-bab072d46d86)# Endless-Dream
+# Endless-Dream
 
 ## 0. HISTORIAL DE VERSIONES
 
