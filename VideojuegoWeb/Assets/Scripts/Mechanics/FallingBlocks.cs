@@ -19,6 +19,10 @@ public class FallingBlocks : MonoBehaviour
     [Header("PlatformShake")]
     public float strength = 1;
 
+    private bool hasWalked = false;
+    private bool hasFallen = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +37,13 @@ public class FallingBlocks : MonoBehaviour
     {
         if (other.gameObject.tag == "Player") 
         {
-            audioSource1.Play();
+            if (!hasWalked)
+                {
+                    //Sonido caída:
+                    audioSource1.Play();
+                    hasWalked = true;
+                }
+            //audioSource1.Play();
             transform.DOShakePosition(timeBeforeFall,strength).OnComplete(() => { blockFall(); });
         }
     }
@@ -41,9 +51,14 @@ public class FallingBlocks : MonoBehaviour
 
     private void blockFall() 
     {
-        
+        if (!hasFallen)
+        {
+            //Sonido caída:
+            audioSource2.Play();
+            hasFallen = true;
+        }
         transform.DOMoveY(transform.position.y - fallAmount, fallingTime).OnComplete(() => { transform.DOScale(Vector3.zero,scaleTime); StartCoroutine(Reset()); });
-        audioSource2.Play();
+        
     }
 
     private IEnumerator Reset()
@@ -51,5 +66,7 @@ public class FallingBlocks : MonoBehaviour
         yield return new WaitForSeconds(resetTime);
         transform.position = originalPos;
         transform.DOScale(originalScale,1);
+        hasWalked=false;
+        hasFallen=false;
     }
 }

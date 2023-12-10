@@ -15,6 +15,8 @@ public class GravityButtonBehaviour : MonoBehaviour
     EventSystem eventSystem;
 
     float YfollowOffset;
+    //Sounds
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class GravityButtonBehaviour : MonoBehaviour
 
         eventSystem.OnHit += ResetCameraOffset;
         YfollowOffset = transposer.m_FollowOffset.y;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class GravityButtonBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player") 
         {
             other.GetComponent<PlayerMovement>().ChangeGravity();
+            audioSource.Play();
             if (!isActive) 
             {
                 Debug.Log("Baja camara");
