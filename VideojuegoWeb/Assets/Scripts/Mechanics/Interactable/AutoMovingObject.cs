@@ -38,7 +38,9 @@ public class AutoMovingObject : MonoBehaviour
         affectedObject.transform.DOMove(pos, timeMoving).OnComplete(() => {
             DOVirtual.DelayedCall(timeStatic, () => Move((pos == endPosition) ? startPos : endPosition));
         });
-        audioSource.Play();
+        if (audioSource!= null){
+            audioSource.Play();
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
