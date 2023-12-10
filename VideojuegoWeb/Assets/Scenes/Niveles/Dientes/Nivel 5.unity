@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4591642, g: 0.4505188, b: 0.6311192, a: 1}
+  m_IndirectSpecularColor: {r: 0.5155666, g: 0.45051748, b: 0.63111675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2787,6 +2787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 500634974}
+  - component: {fileID: 500634975}
   m_Layer: 0
   m_Name: LevelMusicController
   m_TagString: Untagged
@@ -2810,6 +2811,18 @@ Transform:
   m_Father: {fileID: 282881108}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &500634975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500634973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e63fa12dd072a48b5fee0d59127db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &503578238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4806,11 +4819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000187227
+      value: -0.0000000187227
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000004419829
+      value: 0.000000004419829
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
