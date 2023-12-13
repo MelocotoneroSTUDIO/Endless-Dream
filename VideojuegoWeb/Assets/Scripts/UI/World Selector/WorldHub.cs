@@ -11,7 +11,7 @@ public class WorldHub : MonoBehaviour
     [SerializeField] Button optionButton;
     [SerializeField] CinemachineVirtualCamera selectorCamera;
 
-    WorldPreview[] WorldPreviews => FindObjectsByType<WorldPreview>(FindObjectsSortMode.None);
+    WorldPreview[] WorldPreviews => FindObjectsByType<WorldPreview>(FindObjectsSortMode.InstanceID);
 
 
 
@@ -27,7 +27,7 @@ public class WorldHub : MonoBehaviour
         Debug.Log("Completed levels = " + SaveSystem.save.completedLevels);
         Debug.Log("Levels: " + levels);
 
-        for (int i = levels.Length-1 ; i > levels.Length - SaveSystem.save.completedLevels; i--)
+        for (int i = 0 ; i < SaveSystem.save.completedLevels; i++)
         {
             levels[i].locked = false;
             levels[i].unlockLevel();
@@ -79,7 +79,10 @@ public class WorldHub : MonoBehaviour
     public WorldPreview.Level[] GetLevels()
     {
         List<WorldPreview.Level> levels = new List<WorldPreview.Level>();
-        foreach(var p in WorldPreviews)
+        List<WorldPreview> worlds = new List<WorldPreview>();
+        worlds.AddRange(WorldPreviews);
+        worlds.Sort((a,b) => a.gameObject.name.CompareTo(b.gameObject.name));
+        foreach(var p in worlds)
         {
             levels.AddRange(p.levels);
         }
