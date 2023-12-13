@@ -54,7 +54,6 @@ public class Login : MonoBehaviour
 
 
 
-    // Update is called once per frame
     public void login()
     {
         /*bool isExists = false;
