@@ -21,6 +21,8 @@ public class ActivableMovingObject : ActivableObject
 
     public NavMeshSurface mesh;
 
+    public bool autoFall = true;
+
     private void Start()
     {
         startPos = transform.position;
@@ -36,10 +38,17 @@ public class ActivableMovingObject : ActivableObject
         if (!moved)
         {
             audioSource1.Play();
-            transform.DOMove(endPostion, time).OnComplete(() => { mesh?.BuildNavMesh(); });
+            transform.DOMove(endPostion, time).OnComplete(() =>
+            {
+                mesh?.BuildNavMesh(); 
+                if (autoFall)
+                {
+                    Deactivate();
+                }
+            });
             moved = true;
         }
-
+        
     }
 
     public override void Deactivate()
@@ -54,9 +63,9 @@ public class ActivableMovingObject : ActivableObject
 
     IEnumerator waitDeactivate() 
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(timeBeforeFall);
         audioSource2.Play();
-        transform.DOShakePosition(timeBeforeFall, 0.1f).OnComplete(() => { transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); }); });
+        transform.DOShakePosition(1f, 0.1f).OnComplete(() => { transform.DOMove(startPos, time).OnComplete(() => { mesh?.BuildNavMesh(); }); });
         
         moved = false;
     }
