@@ -46,6 +46,7 @@ public class ExitDoorBehaviour : MonoBehaviour
             {
                 //Only if its first time level completion add one to completed levels
                 SaveSystem.save.completedLevels=levelID;
+                Debug.Log("Completed levels = " + SaveSystem.save.completedLevels);
             }
             if (SaveSystem.save.levelStars[levelID] < collector._data.treasures) 
             {

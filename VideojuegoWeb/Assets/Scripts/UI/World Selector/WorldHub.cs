@@ -22,9 +22,15 @@ public class WorldHub : MonoBehaviour
 
         var levels = GetLevels();
 
-        for (int i = 0; i < SaveSystem.save.completedLevels; i++)
+
+        Debug.Log("World previews: " + WorldPreviews[1]);
+        Debug.Log("Completed levels = " + SaveSystem.save.completedLevels);
+        Debug.Log("Levels: " + levels);
+
+        for (int i = levels.Length-1 ; i > levels.Length - SaveSystem.save.completedLevels; i--)
         {
             levels[i].locked = false;
+            levels[i].unlockLevel();
         }
     }
 

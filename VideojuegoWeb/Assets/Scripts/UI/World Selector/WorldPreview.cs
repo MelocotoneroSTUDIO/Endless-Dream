@@ -2,6 +2,7 @@ using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -138,8 +139,11 @@ public class WorldPreview : MonoBehaviour
         public Button button;
         public Image lockImage;
 
-        public void Initialize(SceneChanger sceneChanger, Color lockedColor)
+        private SceneChanger sceneChanger;
+
+        public void Initialize(SceneChanger scene, Color lockedColor)
         {
+            sceneChanger = scene;
             if (locked)
             {
                button.enabled = false;
@@ -153,6 +157,19 @@ public class WorldPreview : MonoBehaviour
             }
 
         }
+
+        public void unlockLevel()
+        {
+            if (!locked)
+            {
+                Debug.Log("Unlocking level: " + this);
+                button.enabled = true;
+                button.onClick.AddListener(() => sceneChanger.ChangeScene(sceneName));
+                lockImage.enabled = false;
+            }
+        }
+
+
     }
 
 
