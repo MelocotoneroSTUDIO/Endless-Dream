@@ -481,6 +481,10 @@ PrefabInstance:
       propertyPath: cameraYOffset
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 4097219834126991154, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 747585816}
     - target: {fileID: 7681627703412755452, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_Name
       value: GravityButton
@@ -2797,6 +2801,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4097219834126991154, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 747585816}
     - target: {fileID: 7681627703412755452, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_Name
       value: GravityButton (3)
@@ -3293,10 +3301,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -8591,6 +8599,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4097219834126991154, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 747585816}
     - target: {fileID: 7681627703412755452, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_Name
       value: GravityButton (1)
@@ -11020,15 +11032,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.72
+      value: -13.55
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.46
+      value: 4.75
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -65.34
+      value: 7.95
       objectReference: {fileID: 0}
     - target: {fileID: 7376068455196725536, guid: 00b955bda7d7a0c4ab2c8b4ff3dc29e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15623,15 +15635,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.72
+      value: -13.55
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.46
+      value: 14.75
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -85.34
+      value: -12.05
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15643,11 +15655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000187227
+      value: -0.0000000187227
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000044198294
+      value: 0.0000000044198294
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19499,6 +19511,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4097219834126991154, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 747585816}
     - target: {fileID: 7681627703412755452, guid: bdfec763c3d5e704bb59d5eed092c199, type: 3}
       propertyPath: m_Name
       value: GravityButton (2)
@@ -21691,7 +21707,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8093221876557190535, guid: c56ed742ea71b63449828ce44e9d0f26, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1825525464}
+      addedObject: {fileID: 1825525466}
   m_SourcePrefab: {fileID: 100100000, guid: c56ed742ea71b63449828ce44e9d0f26, type: 3}
 --- !u!4 &1825525462 stripped
 Transform:
@@ -21703,18 +21719,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8093221876557190535, guid: c56ed742ea71b63449828ce44e9d0f26, type: 3}
   m_PrefabInstance: {fileID: 1825525461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1825525464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825525463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33250b75bf4370240b9657f0466efd67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1825525465 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2444630045162623218, guid: c56ed742ea71b63449828ce44e9d0f26, type: 3}
@@ -21724,6 +21728,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5755da7bf178bac449b923271bad7df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1825525466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825525463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628f4d3ecf017fe418034f8eee0912d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1826568714

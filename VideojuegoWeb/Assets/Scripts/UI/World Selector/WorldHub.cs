@@ -27,7 +27,7 @@ public class WorldHub : MonoBehaviour
         Debug.Log("Completed levels = " + SaveSystem.save.completedLevels);
         Debug.Log("Levels: " + levels);
 
-        for (int i = 0 ; i < SaveSystem.save.completedLevels; i++)
+        for (int i = 0 ; i <= SaveSystem.save.completedLevels; i++)
         {
             levels[i].locked = false;
             levels[i].unlockLevel();

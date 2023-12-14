@@ -9,7 +9,7 @@ public class GravityButtonBehaviour : MonoBehaviour
     private static bool isActive=false;
     public float cameraYOffset;
     CinemachineBrain cinemachineBrain;
-    CinemachineVirtualCamera virtualCamera;
+    public CinemachineVirtualCamera virtualCamera;
     CinemachineOrbitalTransposer transposer;
 
     EventSystem eventSystem;
@@ -21,8 +21,8 @@ public class GravityButtonBehaviour : MonoBehaviour
     void Start()
     {
         eventSystem = FindObjectOfType<EventSystem>();
-        cinemachineBrain = FindObjectOfType<CinemachineBrain>();
-        virtualCamera = (CinemachineVirtualCamera)cinemachineBrain.ActiveVirtualCamera;
+        //cinemachineBrain = FindObjectOfType<CinemachineBrain>();
+        //virtualCamera = (CinemachineVirtualCamera)cinemachineBrain.ActiveVirtualCamera;
         transposer= virtualCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
 
         eventSystem.OnHit += ResetCameraOffset;

@@ -830,7 +830,7 @@ PrefabInstance:
     - target: {fileID: 5074512353664290214, guid: 8393a2d064d75b148b1a7e7e54c7e748, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 5a5cae85ecd591f459502fed2f29d415, type: 2}
+      objectReference: {fileID: 2100000, guid: 1b0d1bc602b2bd846ba25da30025ef8b, type: 2}
     - target: {fileID: 7036213049465896255, guid: 8393a2d064d75b148b1a7e7e54c7e748, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4604,6 +4604,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1488578499}
     m_Modifications:
+    - target: {fileID: 1510710505291691812, guid: c6ac504cfc5053a489db5c869c44f356, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3020835171777360201, guid: c6ac504cfc5053a489db5c869c44f356, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7116,6 +7120,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NIVEL2_LUCES_arbol
       objectReference: {fileID: 0}
+    - target: {fileID: 1231593415789183758, guid: 52b0189d2cd384e42ba9c1147a09d7b7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 968f239907ba51f4bb68877c86e20090, type: 2}
+    - target: {fileID: 6413635239611107464, guid: 52b0189d2cd384e42ba9c1147a09d7b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7780,10 +7792,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -9209,7 +9221,7 @@ PrefabInstance:
     - target: {fileID: 8153101253863224186, guid: 3fd109ee4519fb748892a0bc4c971c48, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 5a5cae85ecd591f459502fed2f29d415, type: 2}
+      objectReference: {fileID: 2100000, guid: 1b0d1bc602b2bd846ba25da30025ef8b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
