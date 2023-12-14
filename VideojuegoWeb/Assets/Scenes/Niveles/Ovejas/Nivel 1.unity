@@ -741,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.09335734
+      value: -0.09335733
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
@@ -749,7 +749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.20993046
+      value: -0.20993048
       objectReference: {fileID: 0}
     - target: {fileID: 1524051872746124090, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -781,15 +781,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2508227311661709463, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000007450581
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2508227311661709463, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802322
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2508227311661709463, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000029802322
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4202096080582314763, guid: 662a6282f5a806d4892ba710c5382145, type: 3}
       propertyPath: m_Follow
@@ -1511,6 +1511,7 @@ MonoBehaviour:
   time: 2
   timeBeforeFall: 3
   mesh: {fileID: 0}
+  autoFall: 1
 --- !u!82 &315935532
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9765,6 +9766,7 @@ MonoBehaviour:
   time: 1
   timeBeforeFall: 2
   mesh: {fileID: 2061413011}
+  autoFall: 1
 --- !u!114 &1017445781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10079,8 +10081,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -117, y: -71}
-  m_SizeDelta: {x: 201.25769, y: 99.351685}
+  m_AnchoredPosition: {x: -114, y: -87.301025}
+  m_SizeDelta: {x: 163.0404, y: 135.5763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048242850
 MonoBehaviour:
@@ -10307,10 +10309,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5390990705888514545, guid: 115e5f5f197651a4b81e581cf5742c96, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 115e5f5f197651a4b81e581cf5742c96, type: 3}
 --- !u!1001 &1090924002
 PrefabInstance:
@@ -10925,6 +10924,7 @@ MonoBehaviour:
   time: 2
   timeBeforeFall: 20
   mesh: {fileID: 0}
+  autoFall: 1
 --- !u!82 &1196243298
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13357,12 +13357,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 846704957572070024, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076718534696444907, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 278
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634652780484431808, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 49.16
+      objectReference: {fileID: 0}
     - target: {fileID: 1949009960940691174, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
       propertyPath: m_Name
       value: Opciones
       objectReference: {fileID: 0}
     - target: {fileID: 1949009960940691174, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348463918360757286, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771643635190138197, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8264836586064421159, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
@@ -19563,6 +19583,7 @@ MonoBehaviour:
   time: 2
   timeBeforeFall: 2
   mesh: {fileID: 2061413011}
+  autoFall: 1
 --- !u!65 &1850250316
 BoxCollider:
   m_ObjectHideFlags: 0

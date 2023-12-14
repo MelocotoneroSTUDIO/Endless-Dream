@@ -11159,6 +11159,7 @@ MonoBehaviour:
   time: 2
   timeBeforeFall: 2
   mesh: {fileID: 2126240941}
+  autoFall: 1
 --- !u!65 &1019685481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11409,11 +11410,27 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 846704957572070024, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076718534696444907, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 284
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634652780484431808, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55.16
+      objectReference: {fileID: 0}
     - target: {fileID: 1949009960940691174, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
       propertyPath: m_Name
       value: Opciones
       objectReference: {fileID: 0}
     - target: {fileID: 1949009960940691174, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348463918360757286, guid: 6575525f06e98a44a8e6dcc109bddba1, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -12660,6 +12677,7 @@ MonoBehaviour:
   time: 2
   timeBeforeFall: 2
   mesh: {fileID: 2126240941}
+  autoFall: 1
 --- !u!65 &1136120957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14314,6 +14332,7 @@ MonoBehaviour:
   time: 1
   timeBeforeFall: 2
   mesh: {fileID: 2126240941}
+  autoFall: 1
 --- !u!65 &1265934741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21925,7 +21944,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1604506359 stripped
 GameObject:
@@ -23547,6 +23566,7 @@ MonoBehaviour:
   time: 2
   timeBeforeFall: 2
   mesh: {fileID: 2126240941}
+  autoFall: 1
 --- !u!65 &1818111034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29370,10 +29390,10 @@ RectTransform:
   m_Father: {fileID: 1598759580}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 816, y: -423}
-  m_SizeDelta: {x: 160.4366, y: 133.7064}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -130, y: -91}
+  m_SizeDelta: {x: 126.1882, y: 105.1641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945080467
 MonoBehaviour:
