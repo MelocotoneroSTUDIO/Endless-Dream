@@ -58,6 +58,7 @@ public class DataCollector : MonoBehaviour
         data.level = SceneManager.GetActiveScene().name;
         DataSaver.SaveData(data);
         databaseManager.SendData(data);
+        databaseManager.SaveGame();
     }
 }
 

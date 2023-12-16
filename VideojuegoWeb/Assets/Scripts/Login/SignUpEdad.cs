@@ -24,6 +24,8 @@ public class SignUpEdad : MonoBehaviour
 
     public TextMeshProUGUI ageDisplay;
     //public Camera mainCamera;
+
+    public DatabaseManager databaseManager;
     
     //ArrayList credentials;
     // Start is called before the first frame update
@@ -58,7 +60,7 @@ public class SignUpEdad : MonoBehaviour
     }
     void goToNextScene()
     {
-        SceneManager.LoadScene("Mundos");
+        databaseManager.RegisterUser();
     }
     void goToPreviousStep()
     {

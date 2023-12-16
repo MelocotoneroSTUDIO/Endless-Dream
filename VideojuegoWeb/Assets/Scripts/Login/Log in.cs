@@ -22,7 +22,7 @@ public class Login : MonoBehaviour
     public List<Button> loginButton;
     public List<Button> goToRegisterButton;
 
-    ArrayList credentials;
+    public DatabaseManager databaseManager;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +30,8 @@ public class Login : MonoBehaviour
         currentUI.SetActive(true); // Asegúrate de que el NameUI esté activo al inicio
         nextUI.SetActive(false);
 
-        //registerButton.onClick.AddListener(writeStuffToFile);
-        //goToNextButton.onClick.AddListener(goToNextStep);
-        //goToNextButton.onClick.AddListener(writeStuffToFile);
-        //goToPreviousButton.onClick.AddListener(goToPreviousScene);
-
         foreach (Button button in loginButton) button.onClick.AddListener(login);
         foreach (Button button in goToRegisterButton) button.onClick.AddListener(moveToSignUp);
-        //loginButton.onClick.AddListener(login);
-        //goToRegisterButton.onClick.AddListener(moveToSignUp);
 
     }
 
@@ -56,35 +49,15 @@ public class Login : MonoBehaviour
 
     public void login()
     {
-        /*bool isExists = false;
+        string mail = usernameInput.text;
+        string password = passwordInput.text;
 
-        credentials = new ArrayList(File.ReadAllLines(Application.dataPath + "/credentials.txt"));
+        databaseManager.LoadGame(mail,password);
 
-        foreach (var i in credentials)
-        {
-            string line = i.ToString();
-            //Debug.Log(line);
-            //Debug.Log(line.Substring(11));
-            //substring 0-indexof(:) - indexof(:)+1 - i.length-1
-            if (i.ToString().Substring(0, i.ToString().IndexOf(":")).Equals(usernameInput.text) &&
-                i.ToString().Substring(i.ToString().IndexOf(":") + 1).Equals(passwordInput.text))
-            {
-                isExists = true;
-                break;
-            }
-        }
-
-        if (isExists)
-        {
-            Debug.Log($"Logging in '{usernameInput.text}'");
-            loadWelcomeScreen();
-        }
-        else
-        {
-            Debug.Log("Incorrect credentials");
-        }*/
-        SceneManager.LoadScene("Mundos");
+        //SceneManager.LoadScene("Mundos");
     }
+
+    
 
 
     //void loadWelcomeScreen()

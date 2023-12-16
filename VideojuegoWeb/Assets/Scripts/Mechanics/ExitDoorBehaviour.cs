@@ -40,7 +40,7 @@ public class ExitDoorBehaviour : MonoBehaviour
         {
             timer.stopTimer();
             collector.setTime(timer.getCurrentTimeSeconds());
-            collector.SaveData();
+            
             
             if(levelID >= SaveSystem.save.completedLevels) 
             {
@@ -56,7 +56,7 @@ public class ExitDoorBehaviour : MonoBehaviour
             SaveSystem.save.coins += collector._data.coins;
             //Save file info updated proceed to save
             SaveSystem.SaveData();
-
+            collector.SaveData();
             //Data has been saved to stats and savefile proceed to load next level
 
             PlayerMovement player = other.GetComponent<PlayerMovement>();
