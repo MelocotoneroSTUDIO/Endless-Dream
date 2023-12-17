@@ -15,6 +15,7 @@ public class FallingBlocks : MonoBehaviour
 
     private Vector3 originalPos;
     private Vector3 originalScale;
+    [SerializeField] Transform startPos;
 
     [Header("PlatformShake")]
     public float strength = 1;
@@ -26,10 +27,15 @@ public class FallingBlocks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         originalPos = transform.position;
         originalScale = transform.localScale;
         audioSource1= GetComponents<AudioSource>()[0];
         audioSource2= GetComponents<AudioSource>()[1];
+        if (startPos != null) 
+        {
+            originalPos = startPos.position;
+        }
     }
 
     
@@ -43,6 +49,10 @@ public class FallingBlocks : MonoBehaviour
                     audioSource1.Play();
                     hasWalked = true;
                 }
+            if (startPos != null)
+            {
+                originalPos = startPos.position;
+            }
             //audioSource1.Play();
             transform.DOShakePosition(timeBeforeFall,strength).OnComplete(() => { blockFall(); });
         }
